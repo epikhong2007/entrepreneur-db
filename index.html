@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>互联网创业者人物库 - 增强版</title>
+    <title>互联网创业者人物库 - v3</title>
     <style>
         * { margin:0; padding:0; box-sizing: border-box; }
         body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif; background: #f5f7fa; color: #333; }
@@ -40,7 +40,7 @@
         
         .form-group { margin-bottom: 15px; }
         .form-group label { display: block; margin-bottom: 5px; font-size: 14px; color: #666; }
-        .form-group input, .form-group textarea, .form-group select { width: 100%; padding: 8px 12px; border: 1px solid #ddd; border-radius: 6px; font-size: 14px; }
+        .form-group input, .form-group textarea, .form-group select { width: 100%; padding: 8px 12px; border:1px solid #ddd; border-radius: 6px; font-size: 14px; }
         .form-group input:focus, .form-group textarea:focus, .form-group select:focus { outline: none; border-color: #667eea; }
         
         .search-box { display: flex; gap: 10px; margin-bottom: 20px; }
@@ -98,137 +98,83 @@
         .change-log-date { color: #999; font-size: 12px; }
         .change-log-action { color: #667eea; font-weight: 500; }
         
-        .filter-bar { display: flex; gap: 10px; margin-bottom: 15px; flex-wrap: wrap; }
-        .filter-bar select, .filter-bar input { padding: 8px 12px; border: 1px solid #ddd; border-radius: 6px; font-size: 14px; }
+        /* 待审核页面样式 */
+        .review-card { border: 1px solid #eee; border-radius: 8px; padding: 15px; margin-bottom: 15px; background: white; }
+        .review-card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px; }
+        .review-card-title { font-size: 16px; font-weight: 600; color: #333; }
+        .review-card-badge { padding: 2px 8px; border-radius: 4px; font-size: 12px; }
+        .review-card-badge.medium { background: #fff7e6; color: #faad14; }
+        .review-card-badge.high { background: #f6ffed; color: #52c41a; }
+        .review-card-badge.low { background: #fff1f0; color: #ff4d4f; }
+        .review-card-body { font-size: 14px; color: #666; margin-bottom: 10px; }
+        .review-card-source { font-size: 12px; color: #999; margin-bottom: 5px; }
+        .review-card-link { font-size: 13px; color: #667eea; text-decoration: none; }
+        .review-card-link:hover { text-decoration: underline; }
+        .review-card-actions { display: flex; gap: 10px; margin-top: 10px; }
         
-        .alert-box { background: #fff7e6; border: 1px solid #ffd591; border-radius: 8px; padding: 15px; margin-bottom: 15px; }
-        .alert-box-title { font-weight: 600; color: #d48806; margin-bottom: 8px; }
-        
-        .verify-modal-content { max-width: 500px; }
-        .quick-verify-options { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 15px; }
-        
-        @media (max-width: 768px) {
-            .nav { padding: 0 10px; }
-            .nav-btn { padding: 10px 12px; font-size: 13px; }
-            .container { padding: 0 10px; }
-            .stats { grid-template-columns: 1fr; }
-        }
+        .filter-bar { display: flex; gap: 10px; margin-bottom: 15px; align-items: center; }
+        .filter-bar select { padding: 6px 12px; border: 1px solid #ddd; border-radius: 6px; font-size: 14px; }
     </style>
 </head>
 <body>
     <div class="header">
-        <h1>🚀 互联网创业者人物库</h1>
-        <p>追踪中文互联网大厂背景人物的职业动态 | 支持动态更新检测</p>
+        <h1>互联网创业者人物库</h1>
+        <p>记录创业者的职业轨迹与动态 - v3 增强版（支持自动检测审核）</p>
     </div>
     
     <div class="nav">
-        <button class="nav-btn active" onclick="showPage('dashboard')">📊 总览</button>
-        <button class="nav-btn" onclick="showPage('people')">👥 人物库</button>
-        <button class="nav-btn" onclick="showPage('updates')">🔔 更新提醒</button>
-        <button class="nav-btn" onclick="showPage('history')">📜 变动历史</button>
-        <button class="nav-btn" onclick="showPage('add')">➕ 添加人物</button>
-        <button class="nav-btn" onclick="showPage('import-export')">💾 导入导出</button>
+        <button class="nav-btn active" onclick="showPage('dashboard')">仪表盘</button>
+        <button class="nav-btn" onclick="showPage('people')">人物库</button>
+        <button class="nav-btn" onclick="showPage('add')">添加人物</button>
+        <button class="nav-btn" onclick="showPage('import-export')">导入/导出</button>
+        <button class="nav-btn" onclick="showPage('pending-review')" id="nav-pending">
+            待审核
+            <span id="pending-count" class="pending-badge" style="display:none; background:#ff4d4f; color:white; border-radius:50%; padding:2px 6px; font-size:11px; margin-left:5px;">0</span>
+        </button>
     </div>
     
     <div class="container">
-        <!-- 总览页面 -->
+        <!-- 仪表盘页面 -->
         <div id="page-dashboard" class="page active">
-            <div class="stats">
-                <div class="stat-card">
-                    <div class="stat-number" id="stat-total">0</div>
-                    <div class="stat-label">人物总数</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number" id="stat-recent">0</div>
-                    <div class="stat-label">本月新增</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number" id="stat-events">0</div>
-                    <div class="stat-label">动态总数</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number" id="stat-stale">0</div>
-                    <div class="stat-label">需更新信息</div>
-                </div>
-            </div>
-            
-            <div class="alert-box" id="stale-alert" style="display: none;">
-                <div class="alert-box-title">⚠️ 信息待更新提醒</div>
-                <div id="stale-alert-content"></div>
-            </div>
-            
+            <div class="stats" id="dashboard-stats"></div>
             <div class="card">
-                <div class="card-title">🕐 最近添加的人物</div>
-                <div id="recent-people"></div>
-            </div>
-            
-            <div class="card">
-                <div class="card-title">📰 最新动态</div>
-                <div id="recent-events"></div>
+                <div class="card-title">📊 数据概览</div>
+                <div id="dashboard-overview"></div>
             </div>
         </div>
         
         <!-- 人物库页面 -->
         <div id="page-people" class="page">
             <div class="action-bar">
-                <div class="search-box" style="flex: 1;">
-                    <input type="text" id="search-input" placeholder="搜索姓名、公司、职位..." onkeyup="searchPeople()">
+                <div class="search-box" style="flex:1;">
+                    <input type="text" id="search-input" placeholder="搜索人物姓名、公司、职位..." oninput="filterPeople()">
                 </div>
-                <select id="filter-company" onchange="filterPeople()" style="padding: 8px; border: 1px solid #ddd; border-radius: 6px;">
-                    <option value="">所有公司</option>
-                </select>
-                <select id="filter-stale" onchange="filterPeople()" style="padding: 8px; border: 1px solid #ddd; border-radius: 6px;">
-                    <option value="">所有状态</option>
-                    <option value="stale">需更新（30+天）</option>
-                    <option value="very-stale">急需更新（90+天）</option>
-                    <option value="fresh">近期已核实</option>
+                <select id="filter-stale" onchange="filterPeople()" style="padding:6px 12px; border:1px solid #ddd; border-radius:6px;">
+                    <option value="all">全部</option>
+                    <option value="stale">需更新（>30天）</option>
+                    <option value="very-stale">急需更新（>90天）</option>
+                    <option value="fresh">近期已验证</option>
                 </select>
             </div>
             <div id="people-list"></div>
-        </div>
-        
-        <!-- 更新提醒页面 -->
-        <div id="page-updates" class="page">
-            <div class="card">
-                <div class="card-title">🔔 信息待更新人物列表</div>
-                <p style="font-size: 14px; color: #999; margin-bottom: 15px;">以下人物的信息可能已过时，建议核实并更新</p>
-                <div id="stale-people-list"></div>
-            </div>
-        </div>
-        
-        <!-- 变动历史页面 -->
-        <div id="page-history" class="page">
-            <div class="card">
-                <div class="card-title">📜 数据变动历史</div>
-                <p style="font-size: 14px; color: #999; margin-bottom: 15px;">记录所有人物和动态的增删改操作</p>
-                <div id="change-history-list"></div>
-            </div>
         </div>
         
         <!-- 添加人物页面 -->
         <div id="page-add" class="page">
             <div class="card">
                 <div class="card-title">添加新人物</div>
-                <form id="add-person-form">
+                <form id="add-person-form" onsubmit="addPerson(event)">
                     <div class="form-group">
                         <label>姓名 *</label>
                         <input type="text" id="person-name" required>
                     </div>
                     <div class="form-group">
-                        <label>当前职位 *</label>
-                        <input type="text" id="person-title" placeholder="如：CEO、CTO、创始人" required>
-                    </div>
-                    <div class="form-group">
-                        <label>当前公司</label>
-                        <input type="text" id="person-company" placeholder="如：字节跳动、腾讯、阿里">
-                    </div>
-                    <div class="form-group">
-                        <label>大厂背景</label>
-                        <input type="text" id="person-background" placeholder="如：前腾讯VP、阿里P9、百度技术总监">
+                        <label>当前公司/职位</label>
+                        <input type="text" id="person-title" placeholder="例：阿里巴巴 创始人">
                     </div>
                     <div class="form-group">
                         <label>标签（用逗号分隔）</label>
-                        <input type="text" id="person-tags" placeholder="如：AI,电商,出海">
+                        <input type="text" id="person-tags" placeholder="例：互联网巨头, 电商, 支付宝">
                     </div>
                     <div class="form-group">
                         <label>备注</label>
@@ -239,73 +185,184 @@
             </div>
         </div>
         
-        <!-- 人物详情模态框 -->
-        <div id="modal-detail" class="modal">
-            <div class="modal-content" style="max-width: 800px;">
-                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
-                    <div class="modal-title" id="detail-name"></div>
-                    <button class="btn btn-secondary" onclick="closeModal('modal-detail')">关闭</button>
-                </div>
-                <div id="detail-content"></div>
-            </div>
-        </div>
-        
-        <!-- 核实信息模态框 -->
-        <div id="modal-verify" class="modal">
-            <div class="modal-content verify-modal-content">
-                <div class="modal-title">✅ 核实人物信息</div>
-                <div id="verify-person-name" style="font-size: 18px; font-weight: 600; margin-bottom: 15px;"></div>
-                <p style="font-size: 14px; color: #666; margin-bottom: 20px;">请确认以下信息是否为最新状态：</p>
-                <div id="verify-info" style="background: #f9f9f9; padding: 15px; border-radius: 8px; margin-bottom: 20px;"></div>
-                <div class="quick-verify-options">
-                    <button class="btn btn-success" onclick="verifyPersonConfirm(true)">✅ 信息无误，标记已核实</button>
-                    <button class="btn btn-warning" onclick="verifyPersonConfirm(false)">⚠️ 信息有变化，去更新</button>
-                </div>
-            </div>
-        </div>
-        
-        <!-- 导入导出页面 -->
+        <!-- 导入/导出页面 -->
         <div id="page-import-export" class="page">
             <div class="card">
-                <div class="card-title">📤 导出数据</div>
-                <p style="font-size: 14px; color: #666; margin-bottom: 15px;">将所有人物数据和动态导出为JSON文件，用于备份或迁移。</p>
-                <button class="btn btn-primary" onclick="exportData()">导出全部数据</button>
-            </div>
-            
-            <div class="card">
                 <div class="card-title">📥 导入数据</div>
-                <p style="font-size: 14px; color: #666; margin-bottom: 15px;">从JSON文件导入人物数据和动态（不会删除现有数据）。</p>
-                <input type="file" id="import-file" accept=".json" style="margin-bottom: 10px; display: block;">
-                <button class="btn btn-success" onclick="importData()">导入数据</button>
+                <p style="font-size:14px; color:#666; margin-bottom:15px;">从JSON文件导入人物数据（会合并到现有数据）</p>
+                <input type="file" id="import-file" accept=".json" onchange="importData(event)" style="margin-bottom:15px; display:block;">
+                <button class="btn btn-primary" onclick="document.getElementById('import-file').click()">选择文件导入</button>
             </div>
-            
             <div class="card">
-                <div class="card-title">⚙️ 更新检测设置</div>
-                <div class="form-group">
-                    <label>提醒阈值（天数）：超过此天数未核实，标记为"需更新"</label>
-                    <input type="number" id="stale-threshold" value="30" min="1" max="365" onchange="saveSettings()">
-                </div>
-                <div class="form-group">
-                    <label>紧急提醒阈值（天数）：超过此天数未核实，标记为"急需更新"</label>
-                    <input type="number" id="very-stale-threshold" value="90" min="1" max="365" onchange="saveSettings()">
-                </div>
-                <button class="btn btn-primary" onclick="saveSettings()">保存设置</button>
+                <div class="card-title">📤 导出数据</div>
+                <p style="font-size:14px; color:#666; margin-bottom:15px;">导出所有人物数据（JSON格式）</p>
+                <button class="btn btn-success" onclick="exportData()">导出数据</button>
             </div>
-            
             <div class="card">
-                <div class="card-title">🗑️ 危险操作</div>
-                <p style="font-size: 14px; color: #666; margin-bottom: 15px;">清空所有数据，此操作不可恢复！</p>
-                <button class="btn btn-danger" onclick="clearAllData()">清空全部数据</button>
+                <div class="card-title">📥 从初始数据集加载</div>
+                <p style="font-size:14px; color:#666; margin-bottom:15px;">从GitHub仓库加载初始数据集（100人）</p>
+                <button class="btn btn-warning" onclick="loadInitialData()">加载初始数据</button>
+            </div>
+        </div>
+        
+        <!-- 待审核页面 -->
+        <div id="page-pending-review" class="page">
+            <div class="card">
+                <div class="card-title">🔔 待审核的动态检测</div>
+                <p style="font-size:14px; color:#666; margin-bottom:15px;">
+                    以下是自动检测到的可能的人物变动，请审核后确认或忽略。
+                    <span id="last-check-time"></span>
+                </p>
+                
+                <div class="filter-bar">
+                    <select id="filter-confidence" onchange="filterPendingReview()" style="padding:6px 12px; border:1px solid #ddd; border-radius:6px; font-size:14px;">
+                        <option value="all">全部置信度</option>
+                        <option value="high">高</option>
+                        <option value="medium">中</option>
+                        <option value="low">低</option>
+                    </select>
+                    <button class="btn btn-secondary btn-small" onclick="loadPendingReview()">刷新</button>
+                </div>
+                
+                <div id="pending-review-list"></div>
             </div>
         </div>
     </div>
     
+    <!-- 人物详情模态框 -->
+    <div id="modal-person-detail" class="modal">
+        <div class="modal-content" style="max-width:800px;">
+            <div class="modal-title">人物详情</div>
+            <div id="person-detail-content"></div>
+            <div style="text-align:right; margin-top:20px;">
+                <button class="btn btn-secondary" onclick="closeModal('modal-person-detail')">关闭</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 添加事件模态框 -->
+    <div id="modal-add-event" class="modal">
+        <div class="modal-content">
+            <div class="modal-title">添加事件</div>
+            <form id="add-event-form" onsubmit="addEvent(event)">
+                <input type="hidden" id="event-person-id">
+                <div class="form-group">
+                    <label>事件类型</label>
+                    <select id="event-type" required>
+                        <option value="join">加入</option>
+                        <option value="leave">离职</option>
+                        <option value="promote">晋升</option>
+                        <option value="found">创业</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>公司/组织</label>
+                    <input type="text" id="event-company" required>
+                </div>
+                <div class="form-group">
+                    <label>职位</label>
+                    <input type="text" id="event-title">
+                </div>
+                <div class="form-group">
+                    <label>日期</label>
+                    <input type="date" id="event-date" required>
+                </div>
+                <div class="form-group">
+                    <label>备注</label>
+                    <textarea id="event-notes" rows="2"></textarea>
+                </div>
+                <div style="display:flex; gap:10px;">
+                    <button type="submit" class="btn btn-primary">添加事件</button>
+                    <button type="button" class="btn btn-secondary" onclick="closeModal('modal-add-event')">取消</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <!-- 编辑人物模态框 -->
+    <div id="modal-edit-person" class="modal">
+        <div class="modal-content">
+            <div class="modal-title">编辑人物</div>
+            <form id="edit-person-form" onsubmit="updatePerson(event)">
+                <input type="hidden" id="edit-person-id">
+                <div class="form-group">
+                    <label>姓名</label>
+                    <input type="text" id="edit-person-name" required>
+                </div>
+                <div class="form-group">
+                    <label>当前公司/职位</label>
+                    <input type="text" id="edit-person-title">
+                </div>
+                <div class="form-group">
+                    <label>标签（用逗号分隔）</label>
+                    <input type="text" id="edit-person-tags">
+                </div>
+                <div class="form-group">
+                    <label>备注</label>
+                    <textarea id="edit-person-notes" rows="3"></textarea>
+                </div>
+                <div style="display:flex; gap:10px;">
+                    <button type="submit" class="btn btn-primary">保存</button>
+                    <button type="button" class="btn btn-secondary" onclick="closeModal('modal-edit-person')">取消</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <!-- 审核编辑模态框 -->
+    <div id="modal-review-edit" class="modal">
+        <div class="modal-content">
+            <div class="modal-title">编辑检测到的变动</div>
+            <form id="review-edit-form" onsubmit="saveReviewEdit(event)">
+                <input type="hidden" id="review-edit-index">
+                <div class="form-group">
+                    <label>人物</label>
+                    <input type="text" id="review-edit-person-name" readonly style="background:#f5f5f5;">
+                </div>
+                <div class="form-group">
+                    <label>事件类型</label>
+                    <select id="review-edit-event-type">
+                        <option value="join">加入</option>
+                        <option value="leave">离职</option>
+                        <option value="promote">晋升</option>
+                        <option value="found">创业</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>公司/组织</label>
+                    <input type="text" id="review-edit-company">
+                </div>
+                <div class="form-group">
+                    <label>职位</label>
+                    <input type="text" id="review-edit-title">
+                </div>
+                <div class="form-group">
+                    <label>日期</label>
+                    <input type="date" id="review-edit-date">
+                </div>
+                <div class="form-group">
+                    <label>新闻标题</label>
+                    <input type="text" id="review-edit-news-title" readonly style="background:#f5f5f5;">
+                </div>
+                <div class="form-group">
+                    <label>新闻链接</label>
+                    <input type="text" id="review-edit-link" readonly style="background:#f5f5f5;">
+                </div>
+                <div style="display:flex; gap:10px;">
+                    <button type="submit" class="btn btn-primary">保存修改</button>
+                    <button type="button" class="btn btn-secondary" onclick="closeModal('modal-review-edit')">取消</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
     <script>
-        // ============ 数据库初始化 ============
+        // ========== 数据库配置 ==========
+        const DB_NAME = 'entrepreneur-db-v3';
+        const DB_VERSION = 1;
         let db = null;
-        const DB_NAME = 'EntrepreneurDB';
-        const DB_VERSION = 2;  // 升级版本号
         
+        // ========== 初始化数据库 ==========
         function initDB() {
             return new Promise((resolve, reject) => {
                 const request = indexedDB.open(DB_NAME, DB_VERSION);
@@ -317,834 +374,843 @@
                 };
                 
                 request.onupgradeneeded = (event) => {
-                    db = event.target.result;
+                    const db = event.target.result;
                     
-                    // 创建人物表
                     if (!db.objectStoreNames.contains('people')) {
                         const peopleStore = db.createObjectStore('people', { keyPath: 'id' });
                         peopleStore.createIndex('name', 'name', { unique: false });
-                        peopleStore.createIndex('company', 'company', { unique: false });
-                        peopleStore.createIndex('createdAt', 'createdAt', { unique: false });
-                        peopleStore.createIndex('updatedAt', 'updatedAt', { unique: false });
-                        peopleStore.createIndex('lastVerifiedAt', 'lastVerifiedAt', { unique: false });
                     }
                     
-                    // 创建动态表
                     if (!db.objectStoreNames.contains('events')) {
                         const eventsStore = db.createObjectStore('events', { keyPath: 'id' });
                         eventsStore.createIndex('personId', 'personId', { unique: false });
-                        eventsStore.createIndex('date', 'date', { unique: false });
                     }
                     
-                    // 创建变动历史表（新增）
-                    if (!db.objectStoreNames.contains('history')) {
-                        const historyStore = db.createObjectStore('history', { keyPath: 'id' });
-                        historyStore.createIndex('timestamp', 'timestamp', { unique: false });
-                        historyStore.createIndex('action', 'action', { unique: false });
-                        historyStore.createIndex('personId', 'personId', { unique: false });
-                    }
-                    
-                    // 创建设置表（新增）
-                    if (!db.objectStoreNames.contains('settings')) {
-                        const settingsStore = db.createObjectStore('settings', { keyPath: 'key' });
+                    if (!db.objectStoreNames.contains('changeLog')) {
+                        const logStore = db.createObjectStore('changeLog', { keyPath: 'id', autoIncrement: true });
+                        logStore.createIndex('timestamp', 'timestamp', { unique: false });
                     }
                 };
             });
         }
         
-        // ============ 设置管理 ============
-        function getSetting(key, defaultValue) {
-            return new Promise((resolve) => {
-                const transaction = db.transaction(['settings'], 'readonly');
-                const store = transaction.objectStore('settings');
-                const request = store.get(key);
-                request.onsuccess = () => {
-                    resolve(request.result ? request.result.value : defaultValue);
-                };
-                request.onerror = () => resolve(defaultValue);
-            });
-        }
-        
-        function setSetting(key, value) {
-            return new Promise((resolve, reject) => {
-                const transaction = db.transaction(['settings'], 'readwrite');
-                const store = transaction.objectStore('settings');
-                const request = store.put({ key, value });
-                request.onsuccess = () => resolve();
-                request.onerror = () => reject(request.error);
-            });
-        }
-        
-        async function saveSettings() {
-            const staleThreshold = parseInt(document.getElementById('stale-threshold').value) || 30;
-            const veryStaleThreshold = parseInt(document.getElementById('very-stale-threshold').value) || 90;
-            await setSetting('staleThreshold', staleThreshold);
-            await setSetting('veryStaleThreshold', veryStaleThreshold);
-            showToast('设置已保存');
-            loadDashboard();
-            loadPeople();
-        }
-        
-        // ============ 工具函数 ============
-        function generateId() {
-            return Date.now().toString(36) + Math.random().toString(36).substr(2, 9);
-        }
-        
-        function daysSince(dateString) {
-            if (!dateString) return 9999;
-            const date = new Date(dateString);
-            const now = new Date();
-            return Math.floor((now - date) / (1000 * 60 * 60 * 24));
-        }
-        
-        // ============ 历史记录 ============
-        function addHistory(action, personId, personName, details) {
-            return new Promise((resolve, reject) => {
-                const history = {
-                    id: generateId(),
-                    timestamp: new Date().toISOString(),
-                    action: action,  // 'create', 'update', 'delete', 'add_event', 'verify'
-                    personId: personId,
-                    personName: personName,
-                    details: details || ''
-                };
-                const transaction = db.transaction(['history'], 'readwrite');
-                const store = transaction.objectStore('history');
-                const request = store.add(history);
-                request.onsuccess = () => resolve();
-                request.onerror = () => reject(request.error);
-            });
-        }
-        
-        // ============ 页面导航 ============
-        function showPage(pageName) {
+        // ========== 页面导航 ==========
+        function showPage(pageId) {
             document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
             document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
-            document.getElementById('page-' + pageName).classList.add('active');
+            
+            document.getElementById(`page-${pageId}`).classList.add('active');
             event.target.classList.add('active');
             
-            if (pageName === 'dashboard') loadDashboard();
-            if (pageName === 'people') loadPeople();
-            if (pageName === 'updates') loadUpdatesPage();
-            if (pageName === 'history') loadHistoryPage();
+            if (pageId === 'dashboard') loadDashboard();
+            if (pageId === 'people') filterPeople();
+            if (pageId === 'pending-review') loadPendingReview();
         }
         
-        // ============ 数据库操作 ============
-        function addToDB(storeName, data) {
-            return new Promise((resolve, reject) => {
-                const transaction = db.transaction([storeName], 'readwrite');
-                const store = transaction.objectStore(storeName);
-                const request = store.add(data);
-                request.onsuccess = () => resolve(request.result);
-                request.onerror = () => reject(request.error);
-            });
-        }
-        
-        function updateInDB(storeName, data) {
-            return new Promise((resolve, reject) => {
-                const transaction = db.transaction([storeName], 'readwrite');
-                const store = transaction.objectStore(storeName);
-                const request = store.put(data);
-                request.onsuccess = () => resolve(request.result);
-                request.onerror = () => reject(request.error);
-            });
-        }
-        
-        function deleteFromDB(storeName, id) {
-            return new Promise((resolve, reject) => {
-                const transaction = db.transaction([storeName], 'readwrite');
-                const store = transaction.objectStore(storeName);
-                const request = store.delete(id);
-                request.onsuccess = () => resolve();
-                request.onerror = () => reject(request.error);
-            });
-        }
-        
-        function getAllFromDB(storeName) {
-            return new Promise((resolve, reject) => {
-                const transaction = db.transaction([storeName], 'readonly');
-                const store = transaction.objectStore(storeName);
-                const request = store.getAll();
-                request.onsuccess = () => resolve(request.result);
-                request.onerror = () => reject(request.error);
-            });
-        }
-        
-        function getByIdFromDB(storeName, id) {
-            return new Promise((resolve, reject) => {
-                const transaction = db.transaction([storeName], 'readonly');
-                const store = transaction.objectStore(storeName);
-                const request = store.get(id);
-                request.onsuccess = () => resolve(request.result);
-                request.onerror = () => reject(request.error);
-            });
-        }
-        
-        // ============ 仪表盘 ============
+        // ========== 仪表盘 ==========
         async function loadDashboard() {
-            const people = await getAllFromDB('people');
-            const events = await getAllFromDB('events');
-            const staleThreshold = await getSetting('staleThreshold', 30);
-            const veryStaleThreshold = await getSetting('veryStaleThreshold', 90);
+            const people = await getAllFromStore('people');
+            const events = await getAllFromStore('events');
             
-            // 统计
-            document.getElementById('stat-total').textContent = people.length;
-            document.getElementById('stat-events').textContent = events.length;
+            const now = new Date();
+            const staleThreshold = 30 * 24 * 60 * 60 * 1000;
+            const veryStaleThreshold = 90 * 24 * 60 * 60 * 1000;
             
-            const thisMonth = new Date().toISOString().substr(0, 7);
-            const recentCount = people.filter(p => p.createdAt && p.createdAt.startsWith(thisMonth)).length;
-            document.getElementById('stat-recent').textContent = recentCount;
+            let staleCount = 0;
+            let veryStaleCount = 0;
+            let freshCount = 0;
             
-            // 需更新统计
-            const staleCount = people.filter(p => {
-                const days = daysSince(p.lastVerifiedAt || p.updatedAt || p.createdAt);
-                return days > staleThreshold;
-            }).length;
-            document.getElementById('stat-stale').textContent = staleCount;
+            people.forEach(p => {
+                if (p.lastVerified) {
+                    const daysSince = (now - new Date(p.lastVerified)) / (24 * 60 * 60 * 1000);
+                    if (daysSince > 90) veryStaleCount++;
+                    else if (daysSince > 30) staleCount++;
+                    else freshCount++;
+                } else {
+                    veryStaleCount++;
+                }
+            });
             
-            // 提醒框
-            const staleAlert = document.getElementById('stale-alert');
-            if (staleCount > 0) {
-                staleAlert.style.display = 'block';
-                document.getElementById('stale-alert-content').innerHTML = 
-                    `有 <strong>${staleCount}</strong> 位人物的信息超过 ${staleThreshold} 天未核实，<a href="#" onclick="showPage('updates'); return false;" style="color: #667eea;">点击查看详情</a>`;
-            } else {
-                staleAlert.style.display = 'none';
-            }
+            document.getElementById('dashboard-stats').innerHTML = `
+                <div class="stat-card">
+                    <div class="stat-number">${people.length}</div>
+                    <div class="stat-label">总人物数</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" style="color:#52c41a;">${freshCount}</div>
+                    <div class="stat-label">近期已验证（<30天）</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" style="color:#faad14;">${staleCount}</div>
+                    <div class="stat-label">需更新（30-90天）</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" style="color:#ff4d4f;">${veryStaleCount}</div>
+                    <div class="stat-label">急需更新（>90天）</div>
+                </div>
+            `;
             
-            // 最近添加的人物
-            const recentPeople = people.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt)).slice(0, 5);
-            const recentPeopleHtml = recentPeople.map(p => {
-                const days = daysSince(p.lastVerifiedAt || p.updatedAt || p.createdAt);
-                let staleBadge = '';
-                if (days > veryStaleThreshold) staleBadge = '<span class="stale-badge alert">⚠️ 急需更新</span>';
-                else if (days > staleThreshold) staleBadge = '<span class="stale-badge warn">⏰ 待更新</span>';
-                return `
-                    <div class="person-card" onclick="showPersonDetail('${p.id}')">
-                        ${staleBadge}
-                        <div class="person-name">${p.name}</div>
-                        <div class="person-title">${p.title}</div>
-                        ${p.company ? `<div class="person-company">${p.company}</div>` : ''}
-                    </div>
-                `;
-            }).join('') || '<div class="empty-state">暂无数据</div>';
-            document.getElementById('recent-people').innerHTML = recentPeopleHtml;
-            
-            // 最新动态
-            const recentEvents = events.sort((a, b) => new Date(b.date) - new Date(a.date)).slice(0, 10);
-            const recentEventsHtml = recentEvents.map(e => {
-                const person = people.find(p => p.id === e.personId);
-                return `
-                    <div style="padding: 10px 0; border-bottom: 1px solid #eee;">
-                        <span style="color: #999; font-size: 12px;">${e.date}</span>
-                        <span style="margin-left: 10px; font-weight: 500;">${person ? person.name : '未知'}</span>
-                        <span style="margin-left: 5px; color: ${e.type === 'join' ? '#52c41a' : '#ff4d4f'}; font-size: 14px;">
-                            ${e.type === 'join' ? '🟢 入职' : '🔴 离职'} ${e.company}
-                        </span>
-                    </div>
-                `;
-            }).join('') || '<div class="empty-state">暂无动态</div>';
-            document.getElementById('recent-events').innerHTML = recentEventsHtml;
+            document.getElementById('dashboard-overview').innerHTML = `
+                <p style="font-size:14px; color:#666; line-height:1.8;">
+                    <strong>数据完整性：</strong>${people.filter(p => p.lastVerified).length}/${people.length} 人已验证<br>
+                    <strong>总事件数：</strong>${events.length}<br>
+                    <strong>建议操作：</strong>${veryStaleCount > 0 ? `有 ${veryStaleCount} 人超过90天未更新，建议优先核实` : '所有人物数据较新，保持关注'}
+                </p>
+            `;
         }
         
-        // ============ 人物列表 ============
-        async function loadPeople(filter = '') {
-            let people = await getAllFromDB('people');
-            const staleThreshold = await getSetting('staleThreshold', 30);
-            const veryStaleThreshold = await getSetting('veryStaleThreshold', 90);
+        // ========== 人物列表 ==========
+        async function filterPeople() {
+            const search = document.getElementById('search-input').value.toLowerCase();
+            const staleFilter = document.getElementById('filter-stale').value;
             
-            // 筛选
-            if (filter) {
+            let people = await getAllFromStore('people');
+            
+            if (search) {
                 people = people.filter(p => 
-                    p.name.includes(filter) || 
-                    (p.company && p.company.includes(filter)) ||
-                    (p.title && p.title.includes(filter)) ||
-                    (p.background && p.background.includes(filter))
+                    p.name.toLowerCase().includes(search) ||
+                    (p.title && p.title.toLowerCase().includes(search)) ||
+                    (p.tags && p.tags.some(t => t.toLowerCase().includes(search)))
                 );
             }
             
-            // 状态筛选
-            const staleFilter = document.getElementById('filter-stale').value;
-            if (staleFilter) {
+            if (staleFilter !== 'all') {
                 people = people.filter(p => {
-                    const days = daysSince(p.lastVerifiedAt || p.updatedAt || p.createdAt);
-                    if (staleFilter === 'stale') return days > staleThreshold && days <= veryStaleThreshold;
-                    if (staleFilter === 'very-stale') return days > veryStaleThreshold;
-                    if (staleFilter === 'fresh') return days <= staleThreshold;
+                    if (!p.lastVerified) return staleFilter !== 'fresh';
+                    const daysSince = (new Date() - new Date(p.lastVerified)) / (24 * 60 * 60 * 1000);
+                    if (staleFilter === 'stale') return daysSince > 30 && daysSince <= 90;
+                    if (staleFilter === 'very-stale') return daysSince > 90;
+                    if (staleFilter === 'fresh') return daysSince <= 30;
                     return true;
                 });
             }
             
-            const html = people.sort((a, b) => {
-                // 按是否需要更新排序（需更新的在前）
-                const daysA = daysSince(a.lastVerifiedAt || a.updatedAt || a.createdAt);
-                const daysB = daysSince(b.lastVerifiedAt || b.updatedAt || b.createdAt);
-                return daysB - daysA;
-            }).map(p => {
-                const days = daysSince(p.lastVerifiedAt || p.updatedAt || p.createdAt);
+            const listEl = document.getElementById('people-list');
+            
+            if (people.length === 0) {
+                listEl.innerHTML = '<div class="empty-state">暂无数据，请添加人物或从初始数据集加载</div>';
+                return;
+            }
+            
+            listEl.innerHTML = people.map(p => {
+                const daysSince = p.lastVerified ? Math.floor((new Date() - new Date(p.lastVerified)) / (24 * 60 * 60 * 1000)) : null;
                 let staleClass = '';
                 let staleBadge = '';
-                if (days > veryStaleThreshold) {
+                
+                if (daysSince !== null) {
+                    if (daysSince > 90) {
+                        staleClass = 'very-stale';
+                        staleBadge = '<span class="stale-badge alert">超过90天未更新</span>';
+                    } else if (daysSince > 30) {
+                        staleClass = 'stale';
+                        staleBadge = '<span class="stale-badge warn">超过30天未更新</span>';
+                    }
+                } else {
                     staleClass = 'very-stale';
-                    staleBadge = '<span class="stale-badge alert">⚠️ 急需更新</span>';
-                } else if (days > staleThreshold) {
-                    staleClass = 'stale';
-                    staleBadge = '<span class="stale-badge warn">⏰ 待更新</span>';
+                    staleBadge = '<span class="stale-badge alert">未验证</span>';
                 }
                 
                 return `
                     <div class="person-card ${staleClass}" onclick="showPersonDetail('${p.id}')">
                         ${staleBadge}
-                        <div style="display: flex; justify-content: space-between; align-items: start;">
-                            <div>
-                                <div class="person-name">${p.name}</div>
-                                <div class="person-title">${p.title}</div>
-                                ${p.company ? `<div class="person-company">${p.company}</div>` : ''}
-                                ${p.background ? `<div style="font-size: 12px; color: #999; margin-top: 3px;">背景：${p.background}</div>` : ''}
-                                <div style="font-size: 11px; color: #bbb; margin-top: 5px;">
-                                    最后核实：${p.lastVerifiedAt ? p.lastVerifiedAt.split('T')[0] : (p.updatedAt || p.createdAt || '未知').split('T')[0]}（${days}天前）
-                                </div>
-                            </div>
-                            <div style="text-align: right;">
-                                ${p.tags.map(t => `<span class="tag">${t}</span>`).join('')}
-                            </div>
-                        </div>
-                        <button class="btn btn-success btn-small verify-btn" onclick="event.stopPropagation(); openVerifyModal('${p.id}')">✅ 标记已核实</button>
+                        <div class="person-name">${p.name}</div>
+                        <div class="person-title">${p.title || '未设置'}</div>
+                        ${p.company ? `<div class="person-company">${p.company}</div>` : ''}
+                        ${p.tags ? `<div class="person-tags">${p.tags.map(t => `<span class="tag">${t}</span>`).join('')}</div>` : ''}
+                        <button class="btn btn-small btn-success verify-btn" onclick="event.stopPropagation(); markAsVerified('${p.id}')">标记已核实</button>
                     </div>
                 `;
-            }).join('') || '<div class="empty-state">暂无人物数据，点击"添加人物"开始</div>';
-            
-            document.getElementById('people-list').innerHTML = html;
-            
-            // 更新公司筛选器
-            updateCompanyFilter(people);
+            }).join('');
         }
         
-        function updateCompanyFilter(people) {
-            const companies = [...new Set(people.map(p => p.company).filter(c => c))];
-            const select = document.getElementById('filter-company');
-            const current = select.value;
-            select.innerHTML = '<option value="">所有公司</option>' + 
-                companies.map(c => `<option value="${c}">${c}</option>`).join('');
-            select.value = current;
-        }
-        
-        function searchPeople() {
-            const keyword = document.getElementById('search-input').value;
-            loadPeople(keyword);
-        }
-        
-        function filterPeople() {
-            const company = document.getElementById('filter-company').value;
-            if (company) {
-                getAllFromDB('people').then(people => {
-                    const filtered = people.filter(p => p.company === company);
-                    document.getElementById('people-list').innerHTML = filtered.map(p => `
-                        <div class="person-card" onclick="showPersonDetail('${p.id}')">
-                            <div class="person-name">${p.name}</div>
-                            <div class="person-title">${p.title}</div>
-                        </div>
-                    `).join('');
-                });
-            } else {
-                loadPeople();
-            }
-        }
-        
-        // ============ 更新提醒页面 ============
-        async function loadUpdatesPage() {
-            const people = await getAllFromDB('people');
-            const staleThreshold = await getSetting('staleThreshold', 30);
-            const veryStaleThreshold = await getSetting('veryStaleThreshold', 90);
-            
-            const stalePeople = people.filter(p => {
-                const days = daysSince(p.lastVerifiedAt || p.updatedAt || p.createdAt);
-                return days > staleThreshold;
-            }).sort((a, b) => {
-                const daysA = daysSince(a.lastVerifiedAt || a.updatedAt || a.createdAt);
-                const daysB = daysSince(b.lastVerifiedAt || b.updatedAt || b.createdAt);
-                return daysB - daysA;
-            });
-            
-            const veryStalePeople = stalePeople.filter(p => {
-                const days = daysSince(p.lastVerifiedAt || p.updatedAt || p.createdAt);
-                return days > veryStaleThreshold;
-            });
-            
-            let html = '';
-            
-            if (veryStalePeople.length > 0) {
-                html += `<div class="alert-box" style="margin-bottom: 20px;">
-                    <div class="alert-box-title">🔴 急需更新（${veryStalePeople.length}人）</div>
-                    <p style="font-size: 14px; color: #666;">以下人物的信息已超过 ${veryStaleThreshold} 天未核实，强烈建议优先更新：</p>
-                </div>`;
-                html += veryStalePeople.map(p => renderStalePersonItem(p, veryStaleThreshold)).join('');
-            }
-            
-            const normalStalePeople = stalePeople.filter(p => {
-                const days = daysSince(p.lastVerifiedAt || p.updatedAt || p.createdAt);
-                return days <= veryStaleThreshold;
-            });
-            
-            if (normalStalePeople.length > 0) {
-                html += `<div style="margin-top: 20px;">
-                    <div style="font-weight: 600; color: #faad14; margin-bottom: 10px;">🟡 建议更新（${normalStalePeople.length}人）</div>`;
-                html += normalStalePeople.map(p => renderStalePersonItem(p, staleThreshold)).join('');
-                html += `</div>`;
-            }
-            
-            if (stalePeople.length === 0) {
-                html = '<div class="empty-state"><div style="font-size: 48px; margin-bottom: 20px;">✅</div>所有人物信息都是最新的！</div>';
-            }
-            
-            document.getElementById('stale-people-list').innerHTML = html;
-        }
-        
-        function renderStalePersonItem(person, threshold) {
-            const days = daysSince(person.lastVerifiedAt || person.updatedAt || person.createdAt);
-            return `
-                <div class="person-card" style="display: flex; justify-content: space-between; align-items: center;">
-                    <div>
-                        <div class="person-name">${person.name}</div>
-                        <div class="person-title">${person.title} ${person.company ? `· ${person.company}` : ''}</div>
-                        <div style="font-size: 12px; color: #999; margin-top: 3px;">
-                            最后核实：${(person.lastVerifiedAt || person.updatedAt || person.createdAt || '').split('T')[0]}（${days}天前）
-                        </div>
-                    </div>
-                    <div>
-                        <button class="btn btn-success btn-small" onclick="openVerifyModal('${person.id}')">✅ 已核实</button>
-                        <button class="btn btn-primary btn-small" onclick="showPersonDetail('${person.id}')" style="margin-left: 5px;">查看详情</button>
-                    </div>
-                </div>
-            `;
-        }
-        
-        // ============ 变动历史页面 ============
-        async function loadHistoryPage() {
-            const history = await getAllFromDB('history');
-            const people = await getAllFromDB('people');
-            
-            const sortedHistory = history.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
-            
-            const html = sortedHistory.length > 0 ? sortedHistory.map(h => {
-                const actionText = {
-                    'create': '➕ 添加人物',
-                    'update': '✏️ 更新信息',
-                    'delete': '🗑️ 删除人物',
-                    'add_event': '📝 添加动态',
-                    'verify': '✅ 核实信息'
-                }[h.action] || h.action;
-                
-                const person = people.find(p => p.id === h.personId);
-                const personName = h.personName || (person ? person.name : '未知');
-                
-                return `
-                    <div class="change-log-item">
-                        <div class="change-log-date">${h.timestamp.split('T')[0]} ${h.timestamp.split('T')[1].split('.')[0]}</div>
-                        <div>
-                            <span class="change-log-action">${actionText}</span>
-                            <strong>${personName}</strong>
-                            ${h.details ? `<div style="color: #666; margin-top: 3px; font-size: 12px;">${h.details}</div>` : ''}
-                        </div>
-                    </div>
-                `;
-            }).join('') : '<div class="empty-state">暂无历史记录</div>';
-            
-            document.getElementById('change-history-list').innerHTML = html;
-        }
-        
-        // ============ 人物详情 ============
+        // ========== 人物详情 ==========
         async function showPersonDetail(personId) {
-            const person = await getByIdFromDB('people', personId);
-            if (!person) return;
+            const person = await getFromStore('people', personId);
+            const events = await getAllFromStore('events', 'personId', personId);
+            const changeLog = await getAllFromStore('changeLog', 'personId', personId);
             
-            document.getElementById('detail-name').textContent = person.name;
+            const daysSince = person.lastVerified ? Math.floor((new Date() - new Date(person.lastVerified)) / (24 * 60 * 60 * 1000)) : null;
             
-            const events = await getAllFromDB('events');
-            const personEvents = events.filter(e => e.personId === personId).sort((a, b) => new Date(b.date) - new Date(a.date));
-            
-            const days = daysSince(person.lastVerifiedAt || person.updatedAt || person.createdAt);
-            const staleThreshold = await getSetting('staleThreshold', 30);
-            const veryStaleThreshold = await getSetting('veryStaleThreshold', 90);
-            
-            let verifyStatus = '';
-            if (days > veryStaleThreshold) {
-                verifyStatus = '<div style="background: #fff1f0; border: 1px solid #ffa39e; border-radius: 6px; padding: 10px; margin-bottom: 15px; color: #ff4d4f; font-size: 14px;">⚠️ <strong>信息可能已过时</strong>（${days}天未核实）</div>';
-            } else if (days > staleThreshold) {
-                verifyStatus = '<div style="background: #fff7e6; border: 1px solid #ffd591; border-radius: 6px; padding: 10px; margin-bottom: 15px; color: #d48806; font-size: 14px;">⏰ <strong>建议核实信息</strong>（${days}天未核实）</div>';
-            } else {
-                verifyStatus = '<div style="background: #f6ffed; border: 1px solid #b7eb8f; border-radius: 6px; padding: 10px; margin-bottom: 15px; color: #52c41a; font-size: 14px;">✅ <strong>信息已核实</strong>（${days}天前）</div>';
-            }
-            
-            const content = `
-                ${verifyStatus}
+            document.getElementById('person-detail-content').innerHTML = `
                 <div class="detail-section">
                     <h3>基本信息</h3>
-                    <p><strong>职位：</strong>${person.title}</p>
-                    ${person.company ? `<p><strong>公司：</strong>${person.company}</p>` : ''}
-                    ${person.background ? `<p><strong>大厂背景：</strong>${person.background}</p>` : ''}
-                    ${person.tags.length ? `<p><strong>标签：</strong>${person.tags.map(t => `<span class="tag">${t}</span>`).join(' ')}</p>` : ''}
+                    <p><strong>姓名：</strong>${person.name}</p>
+                    <p><strong>当前职位：</strong>${person.title || '未设置'}</p>
+                    <p><strong>标签：</strong>${person.tags ? person.tags.join(', ') : '无'}</p>
+                    <p><strong>最后验证：</strong>${person.lastVerified ? `${person.lastVerified}（${daysSince}天前）` : '未验证'}</p>
                     ${person.notes ? `<p><strong>备注：</strong>${person.notes}</p>` : ''}
-                    <p style="font-size: 12px; color: #999; margin-top: 10px;">
-                        创建时间：${(person.createdAt || '').split('T')[0]}<br>
-                        最后更新：${(person.updatedAt || '').split('T')[0]}<br>
-                        最后核实：${(person.lastVerifiedAt || '未核实').split('T')[0]}
-                    </p>
-                    <button class="btn btn-success" style="margin-top: 10px;" onclick="openVerifyModal('${personId}')">✅ 标记已核实</button>
-                    <button class="btn btn-secondary" style="margin-top: 10px; margin-left: 5px;" onclick="editPerson('${personId}')">编辑信息</button>
                 </div>
                 
                 <div class="detail-section">
-                    <h3>职业动态</h3>
-                    <div class="timeline">
-                        ${personEvents.map(e => `
-                            <div class="timeline-item">
-                                <div class="timeline-date">${e.date}</div>
-                                <div class="timeline-content ${e.type}">
-                                    <strong>${e.type === 'join' ? '🟢 入职' : '🔴 离职'}</strong> ${e.company}
-                                    ${e.position ? ` - ${e.position}` : ''}
+                    <h3>职业经历</h3>
+                    ${events.length > 0 ? `
+                        <div class="timeline">
+                            ${events.sort((a, b) => new Date(b.date) - new Date(a.date)).map(e => `
+                                <div class="timeline-item">
+                                    <div class="timeline-date">${e.date}</div>
+                                    <div class="timeline-content ${e.type}">
+                                        <strong>${e.type === 'join' ? '加入' : e.type === 'leave' ? '离职' : e.type === 'promote' ? '晋升' : '创业'}</strong>
+                                        ${e.company} ${e.title ? `- ${e.title}` : ''}
+                                        ${e.notes ? `<br><small style="color:#999;">${e.notes}</small>` : ''}
+                                    </div>
                                 </div>
-                                ${e.description ? `<div style="font-size: 13px; color: #666; margin-top: 3px;">${e.description}</div>` : ''}
-                            </div>
-                        `).join('') || '<p style="color: #999;">暂无动态记录</p>'}
-                    </div>
-                    <button class="btn btn-primary" onclick="showAddEventForm('${personId}')">添加动态</button>
+                            `).join('')}
+                        </div>
+                    ` : '<p style="color:#999;">暂无职业经历记录</p>'}
+                    <button class="btn btn-primary btn-small" onclick="openAddEventModal('${personId}')">添加事件</button>
                 </div>
                 
                 <div class="detail-section">
-                    <h3>操作</h3>
-                    <button class="btn btn-danger" onclick="deletePerson('${personId}')">删除此人物</button>
+                    <h3>修改记录</h3>
+                    ${changeLog.length > 0 ? `
+                        ${changeLog.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp)).slice(0, 10).map(log => `
+                            <div class="change-log-item">
+                                <span class="change-log-date">${new Date(log.timestamp).toLocaleString()}</span> - 
+                                <span class="change-log-action">${log.action}</span>
+                                ${log.details ? `: ${log.details}` : ''}
+                            </div>
+                        `).join('')}
+                    ` : '<p style="color:#999;">暂无修改记录</p>'}
                 </div>
                 
-                <div id="add-event-form" style="display: none;">
-                    <div class="event-form">
-                        <h3>添加职业动态</h3>
-                        <div class="form-group">
-                            <label>类型</label>
-                            <select id="event-type">
-                                <option value="join">入职</option>
-                                <option value="leave">离职</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label>公司名称</label>
-                            <input type="text" id="event-company">
-                        </div>
-                        <div class="form-group">
-                            <label>职位</label>
-                            <input type="text" id="event-position">
-                        </div>
-                        <div class="form-group">
-                            <label>日期</label>
-                            <input type="date" id="event-date" value="${new Date().toISOString().split('T')[0]}">
-                        </div>
-                        <div class="form-group">
-                            <label>描述（可选）</label>
-                            <textarea id="event-description" rows="2"></textarea>
-                        </div>
-                        <button class="btn btn-success" onclick="addEvent('${personId}')">保存动态</button>
-                        <button class="btn btn-secondary" onclick="document.getElementById('add-event-form').style.display='none'">取消</button>
-                    </div>
+                <div style="display:flex; gap:10px; margin-top:20px;">
+                    <button class="btn btn-warning" onclick="openEditPersonModal('${personId}')">编辑</button>
+                    <button class="btn btn-success" onclick="markAsVerified('${personId}'); showPersonDetail('${personId}');">标记已核实</button>
+                    <button class="btn btn-danger" onclick="deletePerson('${personId}')">删除</button>
                 </div>
             `;
             
-            document.getElementById('detail-content').innerHTML = content;
-            document.getElementById('modal-detail').classList.add('active');
+            openModal('modal-person-detail');
         }
         
-        function showAddEventForm(personId) {
-            document.getElementById('add-event-form').style.display = 'block';
-        }
-        
-        // ============ 核实功能 ============
-        let currentVerifyPersonId = null;
-        
-        async function openVerifyModal(personId) {
-            currentVerifyPersonId = personId;
-            const person = await getByIdFromDB('people', personId);
+        // ========== 添加/编辑人物 ==========
+        async function addPerson(event) {
+            event.preventDefault();
             
-            document.getElementById('verify-person-name').textContent = person.name;
-            document.getElementById('verify-info').innerHTML = `
-                <p><strong>当前职位：</strong>${person.title}</p>
-                ${person.company ? `<p><strong>当前公司：</strong>${person.company}</p>` : ''}
-                ${person.background ? `<p><strong>背景：</strong>${person.background}</p>` : ''}
-                <p style="margin-top: 10px; font-size: 12px; color: #999;">
-                    最后核实时间：${(person.lastVerifiedAt || '从未核实').split('T')[0]}
-                </p>
-            `;
-            
-            document.getElementById('modal-verify').classList.add('active');
-        }
-        
-        async function verifyPersonConfirm(isAccurate) {
-            if (!currentVerifyPersonId) return;
-            
-            const person = await getByIdFromDB('people', currentVerifyPersonId);
-            
-            if (isAccurate) {
-                // 标记已核实
-                person.lastVerifiedAt = new Date().toISOString();
-                person.updatedAt = new Date().toISOString();
-                await updateInDB('people', person);
-                
-                // 记录历史
-                await addHistory('verify', person.id, person.name, '信息已核实，标记为最新');
-                
-                showToast(`✅ ${person.name} 的信息已标记为最新`);
-            } else {
-                // 关闭模态框，打开编辑页面
-                document.getElementById('modal-verify').classList.remove('active');
-                showPersonDetail(currentVerifyPersonId);
-                return;
-            }
-            
-            document.getElementById('modal-verify').classList.remove('active');
-            loadDashboard();
-            loadPeople();
-        }
-        
-        // ============ 添加/编辑人物 ============
-        document.getElementById('add-person-form').addEventListener('submit', async (e) => {
-            e.preventDefault();
+            const name = document.getElementById('person-name').value;
+            const title = document.getElementById('person-title').value;
+            const tags = document.getElementById('person-tags').value.split(',').map(t => t.trim()).filter(t => t);
+            const notes = document.getElementById('person-notes').value;
             
             const person = {
-                id: generateId(),
-                name: document.getElementById('person-name').value,
-                title: document.getElementById('person-title').value,
-                company: document.getElementById('person-company').value,
-                background: document.getElementById('person-background').value,
-                tags: document.getElementById('person-tags').value.split(',').map(t => t.trim()).filter(t => t),
-                notes: document.getElementById('person-notes').value,
-                createdAt: new Date().toISOString(),
-                updatedAt: new Date().toISOString(),
-                lastVerifiedAt: new Date().toISOString()  // 新建时自动标记为已核实
-            };
-            
-            await addToDB('people', person);
-            await addHistory('create', person.id, person.name, `添加人物：${person.name}，职位：${person.title}`);
-            
-            showToast('人物添加成功！');
-            document.getElementById('add-person-form').reset();
-        });
-        
-        async function addEvent(personId) {
-            const event = {
-                id: generateId(),
-                personId: personId,
-                type: document.getElementById('event-type').value,
-                company: document.getElementById('event-company').value,
-                position: document.getElementById('event-position').value,
-                date: document.getElementById('event-date').value,
-                description: document.getElementById('event-description').value,
+                id: 'p' + Date.now(),
+                name,
+                title,
+                tags,
+                notes,
+                lastVerified: null,
                 createdAt: new Date().toISOString()
             };
             
-            await addToDB('events', event);
+            await addToStore('people', person);
+            await addToStore('changeLog', {
+                personId: person.id,
+                action: '创建人物',
+                details: `添加人物 ${name}`,
+                timestamp: new Date().toISOString()
+            });
             
-            // 更新人物的当前公司和职位
-            const person = await getByIdFromDB('people', personId);
-            if (event.type === 'join') {
-                person.company = event.company;
-                person.title = event.position || person.title;
-            }
-            person.updatedAt = new Date().toISOString();
-            await updateInDB('people', person);
+            event.target.reset();
+            showToast('添加成功');
+            showPage('people');
+        }
+        
+        async function openEditPersonModal(personId) {
+            const person = await getFromStore('people', personId);
             
-            await addHistory('add_event', personId, person.name, `${event.type === 'join' ? '入职' : '离职'}：${event.company}`);
+            document.getElementById('edit-person-id').value = person.id;
+            document.getElementById('edit-person-name').value = person.name;
+            document.getElementById('edit-person-title').value = person.title || '';
+            document.getElementById('edit-person-tags').value = person.tags ? person.tags.join(', ') : '';
+            document.getElementById('edit-person-notes').value = person.notes || '';
             
-            showToast('动态添加成功！');
-            showPersonDetail(personId); // 刷新详情
+            openModal('modal-edit-person');
+        }
+        
+        async function updatePerson(event) {
+            event.preventDefault();
+            
+            const personId = document.getElementById('edit-person-id').value;
+            const person = await getFromStore('people', personId);
+            
+            person.name = document.getElementById('edit-person-name').value;
+            person.title = document.getElementById('edit-person-title').value;
+            person.tags = document.getElementById('edit-person-tags').value.split(',').map(t => t.trim()).filter(t => t);
+            person.notes = document.getElementById('edit-person-notes').value;
+            
+            await updateInStore('people', person);
+            await addToStore('changeLog', {
+                personId: person.id,
+                action: '更新人物',
+                details: `更新 ${person.name} 的信息`,
+                timestamp: new Date().toISOString()
+            });
+            
+            closeModal('modal-edit-person');
+            showPersonDetail(personId);
+            showToast('更新成功');
         }
         
         async function deletePerson(personId) {
-            if (!confirm('确定要删除此人物及其所有动态吗？')) return;
+            if (!confirm('确定要删除这个人吗？')) return;
             
-            const person = await getByIdFromDB('people', personId);
-            await addHistory('delete', personId, person.name, `删除人物：${person.name}`);
+            const person = await getFromStore('people', personId);
+            await deleteFromStore('people', personId);
             
-            await deleteFromDB('people', personId);
-            
-            // 删除相关动态
-            const events = await getAllFromDB('events');
-            const personEvents = events.filter(e => e.personId === personId);
-            for (const e of personEvents) {
-                await deleteFromDB('events', e.id);
+            const events = await getAllFromStore('events', 'personId', personId);
+            for (const event of events) {
+                await deleteFromStore('events', event.id);
             }
             
-            closeModal('modal-detail');
-            showToast('人物已删除');
+            closeModal('modal-person-detail');
+            showPage('people');
+            showToast('删除成功');
         }
         
-        async function editPerson(personId) {
-            const person = await getByIdFromDB('people', personId);
-            const name = prompt('姓名：', person.name);
-            if (name) {
-                const oldName = person.name;
-                person.name = name;
-                person.title = prompt('职位：', person.title) || person.title;
-                person.company = prompt('公司：', person.company) || '';
-                person.updatedAt = new Date().toISOString();
-                await updateInDB('people', person);
-                
-                await addHistory('update', personId, person.name, `更新信息：${oldName} → ${person.name}`);
-                
-                showToast('信息已更新');
-                showPersonDetail(personId);
-            }
+        // ========== 事件管理 ==========
+        function openAddEventModal(personId) {
+            document.getElementById('event-person-id').value = personId;
+            document.getElementById('event-date').value = new Date().toISOString().split('T')[0];
+            openModal('modal-add-event');
         }
         
-        // ============ 模态框 ============
-        function closeModal(modalId) {
-            document.getElementById(modalId).classList.remove('active');
-        }
-        
-        // ============ 导入导出 ============
-        async function exportData() {
-            const people = await getAllFromDB('people');
-            const events = await getAllFromDB('events');
-            const history = await getAllFromDB('history');
-            const settings = {};
-            const allSettings = await getAllFromDB('settings');
-            allSettings.forEach(s => settings[s.key] = s.value);
+        async function addEvent(event) {
+            event.preventDefault();
             
-            const data = {
-                version: 2,
-                exportDate: new Date().toISOString(),
-                people: people,
-                events: events,
-                history: history,
-                settings: settings
+            const personId = document.getElementById('event-person-id').value;
+            const type = document.getElementById('event-type').value;
+            const company = document.getElementById('event-company').value;
+            const title = document.getElementById('event-title').value;
+            const date = document.getElementById('event-date').value;
+            const notes = document.getElementById('event-notes').value;
+            
+            const eventObj = {
+                id: 'e' + Date.now(),
+                personId,
+                type,
+                company,
+                title,
+                date,
+                notes,
+                createdAt: new Date().toISOString()
             };
             
+            await addToStore('events', eventObj);
+            
+            const person = await getFromStore('people', personId);
+            await addToStore('changeLog', {
+                personId: personId,
+                action: '添加事件',
+                details: `${type === 'join' ? '加入' : type === 'leave' ? '离职' : type === 'promote' ? '晋升' : '创业'} ${company}`,
+                timestamp: new Date().toISOString()
+            });
+            
+            event.target.reset();
+            closeModal('modal-add-event');
+            showPersonDetail(personId);
+            showToast('事件添加成功');
+        }
+        
+        // ========== 验证标记 ==========
+        async function markAsVerified(personId) {
+            const person = await getFromStore('people', personId);
+            person.lastVerified = new Date().toISOString().split('T')[0];
+            
+            await updateInStore('people', person);
+            await addToStore('changeLog', {
+                personId: personId,
+                action: '标记已核实',
+                details: `更新验证时间为 ${person.lastVerified}`,
+                timestamp: new Date().toISOString()
+            });
+            
+            showToast('已标记为已核实');
+            if (document.getElementById('page-people').classList.contains('active')) {
+                filterPeople();
+            }
+        }
+        
+        // ========== 导入/导出 ==========
+        async function exportData() {
+            const people = await getAllFromStore('people');
+            const events = await getAllFromStore('events');
+            const changeLog = await getAllFromStore('changeLog');
+            
+            const data = { people, events, changeLog, exportDate: new Date().toISOString() };
             const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
             const url = URL.createObjectURL(blob);
+            
             const a = document.createElement('a');
             a.href = url;
             a.download = `entrepreneur-db-${new Date().toISOString().split('T')[0]}.json`;
             a.click();
-            URL.revokeObjectURL(url);
             
-            showToast('数据导出成功！');
+            showToast('导出成功');
         }
         
-        async function importData() {
-            const fileInput = document.getElementById('import-file');
-            if (!fileInput.files[0]) {
-                alert('请先选择文件');
-                return;
-            }
+        async function importData(event) {
+            const file = event.target.files[0];
+            if (!file) return;
             
-            const file = fileInput.files[0];
             const reader = new FileReader();
-            
             reader.onload = async (e) => {
                 try {
                     const data = JSON.parse(e.target.result);
                     
                     if (data.people) {
                         for (const person of data.people) {
-                            try {
-                                // 确保有新字段
-                                if (!person.lastVerifiedAt) person.lastVerifiedAt = person.updatedAt || person.createdAt;
-                                await addToDB('people', person);
-                            } catch (err) {
-                                // 如果已存在则跳过
+                            const existing = await getFromStore('people', person.id);
+                            if (!existing) {
+                                await addToStore('people', person);
                             }
                         }
                     }
                     
                     if (data.events) {
                         for (const event of data.events) {
-                            try {
-                                await addToDB('events', event);
-                            } catch (err) {
-                                // 如果已存在则跳过
+                            const existing = await getFromStore('events', event.id);
+                            if (!existing) {
+                                await addToStore('events', event);
                             }
                         }
                     }
                     
-                    if (data.history) {
-                        for (const h of data.history) {
-                            try {
-                                await addToDB('history', h);
-                            } catch (err) {
-                                // 如果已存在则跳过
-                            }
-                        }
-                    }
-                    
-                    if (data.settings) {
-                        for (const [key, value] of Object.entries(data.settings)) {
-                            await setSetting(key, value);
-                        }
-                    }
-                    
-                    showToast('数据导入成功！');
-                    loadDashboard();
+                    showToast('导入成功');
+                    filterPeople();
                 } catch (err) {
-                    alert('文件格式错误：' + err.message);
+                    alert('导入失败：文件格式错误');
                 }
             };
-            
             reader.readAsText(file);
         }
         
-        // ============ 清空数据 ============
-        async function clearAllData() {
-            if (!confirm('确定要清空所有数据吗？此操作不可恢复！')) return;
-            if (!confirm('再次确认：所有人物和动态将被删除！')) return;
+        async function loadInitialData() {
+            if (!confirm('将从GitHub加载初始数据集（100人），确定继续？')) return;
             
-            const transaction = db.transaction(['people', 'events', 'history'], 'readwrite');
-            await new Promise((resolve) => {
-                transaction.objectStore('people').clear();
-                transaction.objectStore('events').clear();
-                transaction.objectStore('history').clear();
-                transaction.oncomplete = resolve;
-            });
+            showToast('正在加载初始数据...', 'info');
             
-            showToast('所有数据已清空');
-            loadDashboard();
-        }
-        
-        // ============ Toast提示 ============
-        function showToast(message) {
-            const toast = document.createElement('div');
-            toast.className = 'toast';
-            toast.textContent = message;
-            document.body.appendChild(toast);
-            setTimeout(() => toast.remove(), 3000);
-        }
-        
-        // ============ 初始化 ============
-        async function init() {
             try {
-                await initDB();
+                const response = await fetch('https://raw.githubusercontent.com/epikhong2007/entrepreneur-db/main/initial-data.json');
+                const data = await response.json();
                 
-                // 加载设置
-                const staleThreshold = await getSetting('staleThreshold', 30);
-                const veryStaleThreshold = await getSetting('veryStaleThreshold', 90);
-                document.getElementById('stale-threshold').value = staleThreshold;
-                document.getElementById('very-stale-threshold').value = veryStaleThreshold;
+                let count = 0;
+                for (const person of data.people) {
+                    const existing = await getFromStore('people', person.id);
+                    if (!existing) {
+                        await addToStore('people', person);
+                        count++;
+                    }
+                }
                 
-                await loadDashboard();
-                showToast('人物库加载成功！');
+                if (data.events) {
+                    for (const event of data.events) {
+                        const existing = await getFromStore('events', event.id);
+                        if (!existing) {
+                            await addToStore('events', event);
+                        }
+                    }
+                }
+                
+                showToast(`加载成功，新增 ${count} 人`);
+                loadDashboard();
+                filterPeople();
             } catch (err) {
-                console.error('初始化失败：', err);
-                alert('数据库初始化失败，请刷新页面重试');
+                alert('加载失败：' + err.message);
             }
         }
         
-        // 点击模态框外部关闭
-        document.querySelectorAll('.modal').forEach(modal => {
-            modal.addEventListener('click', (e) => {
-                if (e.target === modal) {
-                    modal.classList.remove('active');
+        // ========== 待审核功能 ==========
+        async function loadPendingReview() {
+            const listEl = document.getElementById('pending-review-list');
+            listEl.innerHTML = '<div style="text-align:center; padding:20px; color:#999;">正在加载...</div>';
+            
+            try {
+                // 从 GitHub raw URL 加载 pending-review.json
+                const response = await fetch('https://raw.githubusercontent.com/epikhong2007/entrepreneur-db/main/pending-review.json?t=' + Date.now());
+                const data = await response.json();
+                
+                // 更新最后检查时间
+                if (data.lastCheck) {
+                    document.getElementById('last-check-time').innerHTML = `<br><small>最后检测时间：${new Date(data.lastCheck).toLocaleString()}</small>`;
                 }
-            });
-        });
+                
+                // 更新待审核数量徽章
+                const pendingCount = data.items ? data.items.filter(item => !item.reviewed).length : 0;
+                const badgeEl = document.getElementById('pending-count');
+                if (pendingCount > 0) {
+                    badgeEl.style.display = 'inline-block';
+                    badgeEl.textContent = pendingCount;
+                } else {
+                    badgeEl.style.display = 'none';
+                }
+                
+                if (!data.items || data.items.length === 0) {
+                    listEl.innerHTML = '<div class="empty-state">暂无待审核项目<br><small>自动检测脚本每天运行，检测到变动会显示在这里</small></div>';
+                    return;
+                }
+                
+                // 显示待审核列表
+                listEl.innerHTML = data.items.map((item, index) => {
+                    const confidenceText = { high: '高', medium: '中', low: '低' }[item.confidence] || '中';
+                    const eventText = { join: '加入', leave: '离职', promote: '晋升', found: '创业' }[item.detectedEvent] || item.detectedEvent;
+                    
+                    return `
+                        <div class="review-card ${item.reviewed ? 'reviewed' : ''}" style="${item.reviewed ? 'opacity:0.6;' : ''}">
+                            <div class="review-card-header">
+                                <div class="review-card-title">
+                                    ${item.personName}
+                                    <span style="font-size:13px; color:#666; font-weight:normal;"> - ${eventText}</span>
+                                    ${item.reviewed ? '<span style="color:#52c41a; font-size:12px; margin-left:10px;">✓ 已审核</span>' : ''}
+                                </div>
+                                <span class="review-card-badge ${item.confidence}">置信度：${confidenceText}</span>
+                            </div>
+                            <div class="review-card-body">
+                                <div><strong>公司/职位：</strong>${item.company || '未指定'}</div>
+                                <div style="margin-top:5px;"><strong>检测日期：</strong>${new Date(item.date).toLocaleString()}</div>
+                            </div>
+                            <div class="review-card-source">
+                                <strong>来源：</strong>${item.source || '未知'}
+                            </div>
+                            <a href="${item.link}" target="_blank" class="review-card-link">${item.title}</a>
+                            
+                            ${!item.reviewed ? `
+                                <div class="review-card-actions">
+                                    <button class="btn btn-success btn-small" onclick="confirmReviewItem(${index})">确认并更新</button>
+                                    <button class="btn btn-warning btn-small" onclick="editReviewItem(${index})">编辑</button>
+                                    <button class="btn btn-danger btn-small" onclick="ignoreReviewItem(${index})">忽略</button>
+                                </div>
+                            ` : `
+                                <div class="review-card-actions">
+                                    <span style="color:#999; font-size:13px;">审核结果：${item.reviewResult || '已处理'}</span>
+                                </div>
+                            `}
+                        </div>
+                    `;
+                }).join('');
+                
+            } catch (err) {
+                listEl.innerHTML = '<div style="text-align:center; padding:20px; color:#ff4d4f;">加载失败：' + err.message + '</div>';
+            }
+        }
         
-        // 启动
-        init();
+        async function confirmReviewItem(index) {
+            if (!confirm('确认将此变动添加到人物库？')) return;
+            
+            try {
+                // 1. 获取 pending-review.json
+                const response = await fetch('https://raw.githubusercontent.com/epikhong2007/entrepreneur-db/main/pending-review.json?t=' + Date.now());
+                const data = await response.json();
+                
+                const item = data.items[index];
+                
+                // 2. 查找或创建人物
+                let person = await getFromStore('people', item.personId);
+                
+                if (!person) {
+                    // 创建新人物
+                    person = {
+                        id: item.personId,
+                        name: item.personName,
+                        title: item.company || '',
+                        tags: [],
+                        notes: `自动检测到${item.detectedEvent === 'leave' ? '离职' : '加入'}事件`,
+                        lastVerified: new Date().toISOString().split('T')[0],
+                        createdAt: new Date().toISOString()
+                    };
+                    await addToStore('people', person);
+                }
+                
+                // 3. 添加事件
+                const eventObj = {
+                    id: 'e' + Date.now(),
+                    personId: item.personId,
+                    type: item.eventType || item.detectedEvent,
+                    company: item.company || '',
+                    title: '',
+                    date: new Date(item.date).toISOString().split('T')[0],
+                    notes: `自动检测自：${item.title}`,
+                    createdAt: new Date().toISOString()
+                };
+                await addToStore('events', eventObj);
+                
+                // 4. 标记为新已审核
+                item.reviewed = true;
+                item.reviewResult = '已确认并添加';
+                item.reviewedAt = new Date().toISOString();
+                
+                // 5. 保存更新后的 pending-review.json
+                // 注意：由于浏览器安全限制，无法直接写入 GitHub
+                // 需要用户提供 token 或使用后端 API
+                // 这里先保存到 localStorage，然后提示用户手动更新
+                localStorage.setItem('pending-review-updated', JSON.stringify(data));
+                
+                // 6. 更新人物的 lastVerified
+                person.lastVerified = new Date().toISOString().split('T')[0];
+                await updateInStore('people', person);
+                
+                // 7. 添加修改记录
+                await addToStore('changeLog', {
+                    personId: item.personId,
+                    action: '自动检测确认',
+                    details: `确认${item.detectedEvent === 'leave' ? '离职' : '加入'}事件：${item.title}`,
+                    timestamp: new Date().toISOString()
+                });
+                
+                showToast('确认成功，已添加到人物库');
+                
+                // 8. 提示用户导出更新后的文件
+                if (confirm('已更新本地数据。是否下载更新后的 pending-review.json 并手动上传到 GitHub？')) {
+                    exportUpdatedPendingReview(data);
+                } else {
+                    loadPendingReview();
+                }
+                
+            } catch (err) {
+                alert('确认失败：' + err.message);
+            }
+        }
+        
+        async function editReviewItem(index) {
+            // 加载待审核数据
+            const response = await fetch('https://raw.githubusercontent.com/epikhong2007/entrepreneur-db/main/pending-review.json?t=' + Date.now());
+            const data = await response.json();
+            
+            const item = data.items[index];
+            
+            // 填充编辑表单
+            document.getElementById('review-edit-index').value = index;
+            document.getElementById('review-edit-person-name').value = item.personName;
+            document.getElementById('review-edit-event-type').value = item.eventType || item.detectedEvent;
+            document.getElementById('review-edit-company').value = item.company || '';
+            document.getElementById('review-edit-title').value = '';
+            document.getElementById('review-edit-date').value = new Date(item.date).toISOString().split('T')[0];
+            document.getElementById('review-edit-news-title').value = item.title;
+            document.getElementById('review-edit-link').value = item.link;
+            
+            openModal('modal-review-edit');
+        }
+        
+        async function saveReviewEdit(event) {
+            event.preventDefault();
+            
+            const index = parseInt(document.getElementById('review-edit-index').value);
+            
+            try {
+                // 加载待审核数据
+                const response = await fetch('https://raw.githubusercontent.com/epikhong2007/entrepreneur-db/main/pending-review.json?t=' + Date.now());
+                const data = await response.json();
+                
+                // 更新项目
+                data.items[index].eventType = document.getElementById('review-edit-event-type').value;
+                data.items[index].company = document.getElementById('review-edit-company').value;
+                data.items[index].title = document.getElementById('review-edit-title').value;
+                data.items[index].date = document.getElementById('review-edit-date').value;
+                
+                // 保存到 localStorage
+                localStorage.setItem('pending-review-updated', JSON.stringify(data));
+                
+                closeModal('modal-review-edit');
+                showToast('修改已保存，请记得导出更新后的文件');
+                loadPendingReview();
+                
+            } catch (err) {
+                alert('保存失败：' + err.message);
+            }
+        }
+        
+        async function ignoreReviewItem(index) {
+            if (!confirm('确定要忽略此检测项？忽略后将不会再显示。')) return;
+            
+            try {
+                // 加载待审核数据
+                const response = await fetch('https://raw.githubusercontent.com/epikhong2007/entrepreneur-db/main/pending-review.json?t=' + Date.now());
+                const data = await response.json();
+                
+                // 标记为已审核（忽略）
+                data.items[index].reviewed = true;
+                data.items[index].reviewResult = '已忽略（误报）';
+                data.items[index].reviewedAt = new Date().toISOString();
+                
+                // 保存到 localStorage
+                localStorage.setItem('pending-review-updated', JSON.stringify(data));
+                
+                showToast('已忽略此检测项');
+                
+                // 提示导出
+                if (confirm('已标记为忽略。是否下载更新后的 pending-review.json 并手动上传到 GitHub？')) {
+                    exportUpdatedPendingReview(data);
+                } else {
+                    loadPendingReview();
+                }
+                
+            } catch (err) {
+                alert('操作失败：' + err.message);
+            }
+        }
+        
+        function exportUpdatedPendingReview(data) {
+            const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'pending-review.json';
+            a.click();
+            
+            showToast('已下载 pending-review.json，请手动上传到 GitHub 仓库');
+        }
+        
+        function filterPendingReview() {
+            // 简单的客户端筛选
+            const confidenceFilter = document.getElementById('filter-confidence').value;
+            
+            if (confidenceFilter === 'all') {
+                loadPendingReview();
+                return;
+            }
+            
+            // 重新加载并筛选
+            fetch('https://raw.githubusercontent.com/epikhong2007/entrepreneur-db/main/pending-review.json?t=' + Date.now())
+                .then(res => res.json())
+                .then(data => {
+                    if (data.items) {
+                        data.items = data.items.filter(item => item.confidence === confidenceFilter);
+                        // 重新渲染（这里需要重新调用渲染函数，简化为重新加载）
+                        loadPendingReview();
+                    }
+                });
+        }
+        
+        // ========== GitHub API 功能 ==========
+        // 注意：由于浏览器安全限制，建议使用个人访问令牌
+        // 这里提供一个可选的功能，让用户输入 token 后自动更新 GitHub 文件
+        
+        async function updateFileOnGitHub(path, content, message) {
+            const token = localStorage.getItem('github-token');
+            if (!token) {
+                alert('请先设置 GitHub Token（在设置页面）');
+                return false;
+            }
+            
+            try {
+                // 获取文件当前 SHA
+                const getResponse = await fetch(`https://api.github.com/repos/epikhong2007/entrepreneur-db/contents/${path}`, {
+                    headers: { 'Authorization': `token ${token}` }
+                });
+                const fileData = await getResponse.json();
+                const sha = fileData.sha;
+                
+                // 更新文件
+                const updateResponse = await fetch(`https://api.github.com/repos/epikhong2007/entrepreneur-db/contents/${path}`, {
+                    method: 'PUT',
+                    headers: {
+                        'Authorization': `token ${token}`,
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        message: message,
+                        content: btoa(unescape(encodeURIComponent(JSON.stringify(content, null, 2)))),
+                        sha: sha
+                    })
+                });
+                
+                if (updateResponse.ok) {
+                    return true;
+                } else {
+                    throw new Error('更新失败');
+                }
+            } catch (err) {
+                alert('GitHub API 错误：' + err.message);
+                return false;
+            }
+        }
+        
+        // ========== 工具函数 ==========
+        function openModal(modalId) {
+            document.getElementById(modalId).classList.add('active');
+        }
+        
+        function closeModal(modalId) {
+            document.getElementById(modalId).classList.remove('active');
+        }
+        
+        function showToast(message, type = 'success') {
+            const toast = document.createElement('div');
+            toast.className = 'toast';
+            toast.textContent = message;
+            if (type === 'info') toast.style.background = '#1677ff';
+            document.body.appendChild(toast);
+            
+            setTimeout(() => toast.remove(), 3000);
+        }
+        
+        // ========== IndexedDB 工具函数 ==========
+        function getAllFromStore(storeName, indexName, indexValue) {
+            return new Promise((resolve, reject) => {
+                const transaction = db.transaction([storeName], 'readonly');
+                const store = transaction.objectStore(storeName);
+                
+                let request;
+                if (indexName && indexValue) {
+                    const index = store.index(indexName);
+                    request = index.getAll(indexValue);
+                } else {
+                    request = store.getAll();
+                }
+                
+                request.onsuccess = () => resolve(request.result);
+                request.onerror = () => reject(request.error);
+            });
+        }
+        
+        function getFromStore(storeName, id) {
+            return new Promise((resolve, reject) => {
+                const transaction = db.transaction([storeName], 'readonly');
+                const store = transaction.objectStore(storeName);
+                const request = store.get(id);
+                
+                request.onsuccess = () => resolve(request.result);
+                request.onerror = () => reject(request.error);
+            });
+        }
+        
+        function addToStore(storeName, item) {
+            return new Promise((resolve, reject) => {
+                const transaction = db.transaction([storeName], 'readwrite');
+                const store = transaction.objectStore(storeName);
+                const request = store.put(item);
+                
+                request.onsuccess = () => resolve();
+                request.onerror = () => reject(request.error);
+            });
+        }
+        
+        function updateInStore(storeName, item) {
+            return addToStore(storeName, item);
+        }
+        
+        function deleteFromStore(storeName, id) {
+            return new Promise((resolve, reject) => {
+                const transaction = db.transaction([storeName], 'readwrite');
+                const store = transaction.objectStore(storeName);
+                const request = store.delete(id);
+                
+                request.onsuccess = () => resolve();
+                request.onerror = () => reject(request.error);
+            });
+        }
+        
+        // ========== 初始化 ==========
+        window.onload = async () => {
+            try {
+                await initDB();
+                loadDashboard();
+                loadPendingReview();  // 加载待审核数量
+                showToast('系统初始化成功');
+            } catch (err) {
+                alert('初始化失败：' + err.message);
+            }
+        };
     </script>
 </body>
 </html>
