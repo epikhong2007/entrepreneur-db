@@ -1,0 +1,1188 @@
+{
+  "version": "1.0",
+  "exportDate": "2026-06-13",
+  "people": [
+    {
+      "id": "p001",
+      "name": "张一鸣",
+      "title": "字节跳动创始人",
+      "company": "字节跳动",
+      "background": "南开大学软件工程学士，曾任职于酷讯、微软、饭否",
+      "tags": "互联网,AI,内容平台",
+      "notes": "2021年卸任CEO，2023年卸任董事长",
+      "createdAt": "2026-06-13"
+    },
+    {
+      "id": "p002",
+      "name": "王兴",
+      "title": "美团创始人兼CEO",
+      "company": "美团",
+      "background": "清华大学电子工程系学士，美国特拉华大学计算机硕士",
+      "tags": "互联网,本地生活,电商",
+      "notes": "连续创业者，创办校内网、饭否、美团",
+      "createdAt": "2026-06-13"
+    },
+    {
+      "id": "p003",
+      "name": "程维",
+      "title": "滴滴出行创始人",
+      "company": "滴滴出行",
+      "background": "北京化工大学自动化专业，曾任职于阿里巴巴支付宝",
+      "tags": "出行,共享经济",
+      "notes": "原支付宝B2C事业部副总",
+      "createdAt": "2026-06-13"
+    },
+    {
+      "id": "p004",
+      "name": "黄峥",
+      "title": "拼多多创始人",
+      "company": "拼多多",
+      "background": "浙江大学计算机学士，美国威斯康星大学麦迪逊分校硕士",
+      "tags": "电商,社交电商",
+      "notes": "2021年卸任董事长，转向科研和慈善",
+      "createdAt": "2026-06-13"
+    },
+    {
+      "id": "p005",
+      "name": "雷军",
+      "title": "小米科技创始人",
+      "company": "小米科技",
+      "background": "武汉大学计算机学士，金山软件前CEO",
+      "tags": "硬件,智能手机,IoT",
+      "notes": "金山软件、欢聚时代、小米科技三重身份",
+      "createdAt": "2026-06-13"
+    },
+    {
+      "id": "p006",
+      "name": "李彦宏",
+      "title": "百度创始人兼CEO",
+      "company": "百度",
+      "background": "北京大学信息管理学士，美国布法罗大学计算机硕士",
+      "tags": "搜索,AI,自动驾驶",
+      "notes": "2023年百度推出文心一言大模型",
+      "createdAt": "2026-06-13"
+    },
+    {
+      "id": "p007",
+      "name": "马化腾",
+      "title": "腾讯创始人兼CEO",
+      "company": "腾讯",
+      "background": "深圳大学计算机及应用学士",
+      "tags": "社交,游戏,云计算",
+      "notes": "中国最大互联网公司之一创始人",
+      "createdAt": "2026-06-13"
+    },
+    {
+      "id": "p008",
+      "name": "马云",
+      "title": "阿里巴巴创始人",
+      "company": "阿里巴巴",
+      "background": "杭州师范大学英语学士",
+      "tags": "电商,云计算,金融",
+      "notes": "2019年卸任阿里巴巴董事局主席",
+      "createdAt": "2026-06-13"
+    },
+    {
+      "id": "p009",
+      "name": "刘强东",
+      "title": "京东集团创始人",
+      "company": "京东",
+      "background": "中国人民大学社会学学士，中欧国际工商学院MBA",
+      "tags": "电商,物流",
+      "notes": "2022年卸任京东CEO",
+      "createdAt": "2026-06-13"
+    },
+    {
+      "id": "p010",
+      "name": "周鸿祎",
+      "title": "360集团创始人",
+      "company": "360集团",
+      "background": "西安交通大学管理学院硕士",
+      "tags": "网络安全,AI",
+      "notes": "2024年宣布全面转型AI",
+      "createdAt": "2026-06-13"
+    },
+    {
+      "id": "p011",
+      "name": "张小龙",
+      "title": "微信之父",
+      "company": "腾讯",
+      "background": "华中科技大学电信系硕士",
+      "tags": "社交,产品",
+      "notes": "Foxmail创始人，微信创始人",
+      "createdAt": "2026-06-13"
+    },
+    {
+      "id": "p012",
+      "name": "宿华",
+      "title": "快手联合创始人",
+      "company": "快手",
+      "background": "清华大学软件学院硕士",
+      "tags": "短视频,内容平台",
+      "notes": "2023年卸任快手CEO",
+      "createdAt": "2026-06-13"
+    },
+    {
+      "id": "p013",
+      "name": "程一笑",
+      "title": "快手CEO",
+      "company": "快手",
+      "background": "东北大学软件工程学士",
+      "tags": "短视频,内容平台",
+      "notes": "接替宿华担任快手CEO",
+      "createdAt": "2026-06-13"
+    },
+    {
+      "id": "p014",
+      "name": "李想",
+      "title": "理想汽车创始人",
+      "company": "理想汽车",
+      "background": "高中辍学，连续创业者",
+      "tags": "新能源汽车,智能驾驶",
+      "notes": "创办泡泡网、汽车之家、理想汽车",
+      "createdAt": "2026-06-13"
+    },
+    {
+      "id": "p015",
+      "name": "何小鹏",
+      "title": "小鹏汽车创始人",
+      "company": "小鹏汽车",
+      "background": "华南理工大学计算机学士、硕士",
+      "tags": "新能源汽车,智能驾驶",
+      "notes": "UC浏览器创始人，后创办小鹏汽车",
+      "createdAt": "2026-06-13"
+    },
+    {
+      "id": "p016",
+      "name": "李斌",
+      "title": "蔚来汽车创始人",
+      "company": "蔚来汽车",
+      "background": "北京大学社会学学士、硕士",
+      "tags": "新能源汽车,换电",
+      "notes": "易车网、易鑫集团创始人",
+      "createdAt": "2026-06-13"
+    },
+    {
+      "id": "p017",
+      "name": "王传福",
+      "title": "比亚迪创始人兼董事长",
+      "company": "比亚迪",
+      "background": "中南大学冶金物理化学硕士",
+      "tags": "新能源汽车,电池",
+      "notes": "全球新能源汽车销量领先",
+      "createdAt": "2026-06-13"
+    },
+    {
+      "id": "p018",
+      "name": "曾毓群",
+      "title": "宁德时代创始人",
+      "company": "宁德时代",
+      "background": "中科院物理研究所博士",
+      "tags": "新能源,电池",
+      "notes": "全球动力电池龙头企业",
+      "createdAt": "2026-06-13"
+    },
+    {
+      "id": "p019",
+      "name": "张邦鑫",
+      "title": "好未来创始人",
+      "company": "好未来",
+      "background": "四川大学化工学士，北京大学生物科学硕士",
+      "tags": "教育科技",
+      "notes": "从家教起步创办好未来（原学而思）",
+      "createdAt": "2026-06-13"
+    },
+    {
+      "id": "p020",
+      "name": "陈向东",
+      "title": "高途集团创始人",
+      "company": "高途集团",
+      "background": "河南中医药大学学士，中国人民大学经济学博士",
+      "tags": "教育科技",
+      "notes": "原新东方执行总裁",
+      "createdAt": "2026-06-13"
+    },
+    {
+      "id": "p021",
+      "name": "李开复",
+      "title": "创新工场创始人",
+      "company": "创新工场",
+      "background": "哥伦比亚大学计算机学士，卡内基梅隆大学博士",
+      "tags": "VC,AI",
+      "notes": "曾任微软全球副总裁、Google中国区总裁",
+      "createdAt": "2026-06-13"
+    },
+    {
+      "id": "p022",
+      "name": "沈南鹏",
+      "title": "红杉资本全球执行合伙人",
+      "company": "红杉资本",
+      "background": "上海交通大学学士，耶鲁大学MBA",
+      "tags": "VC,投资",
+      "notes": "连续创业者，创办携程、如家",
+      "createdAt": "2026-06-13"
+    },
+    {
+      "id": "p023",
+      "name": "张磊",
+      "title": "高瓴资本创始人",
+      "company": "高瓴资本",
+      "background": "耶鲁大学MBA",
+      "tags": "VC,投资",
+      "notes": "投资腾讯、京东、美团等",
+      "createdAt": "2026-06-13"
+    },
+    {
+      "id": "p024",
+      "name": "梁建章",
+      "title": "携程联合创始人",
+      "company": "携程",
+      "background": "复旦大学少年班，斯坦福大学经济学博士",
+      "tags": "在线旅游,人口学",
+      "notes": "多次担任携程CEO",
+      "createdAt": "2026-06-13"
+    },
+    {
+      "id": "p025",
+      "name": "季琦",
+      "title": "华住集团创始人",
+      "company": "华住集团",
+      "background": "上海交通大学机械工程学士、硕士",
+      "tags": "酒店,连锁",
+      "notes": "创办携程、如家、华住（汉庭）",
+      "createdAt": "2026-06-13"
+    },
+    {
+      "id": "p026",
+      "name": "曹国伟",
+      "title": "新浪董事长兼CEO",
+      "company": "新浪",
+      "background": "上海复旦大学新闻学士，美国俄克拉荷马大学新闻硕士",
+      "tags": "社交媒体,投资",
+      "notes": "主导新浪微博发展",
+      "createdAt": "2026-06-13"
+    },
+    {
+      "id": "p027",
+      "name": "张勇",
+      "title": "谊品生鲜董事长，原阿里巴巴CEO",
+      "company": "谊品生鲜",
+      "background": "上海财经大学金融学士",
+      "tags": "电商,新零售",
+      "notes": "曾任阿里巴巴集团CEO，2023年离职",
+      "createdAt": "2026-06-13"
+    },
+    {
+      "id": "p028",
+      "name": "井贤栋",
+      "title": "蚂蚁集团董事长",
+      "company": "蚂蚁集团",
+      "background": "上海交通大学管理学院学士，明尼苏达大学MBA",
+      "tags": "金融科技",
+      "notes": "接替彭蕾担任蚂蚁集团董事长",
+      "createdAt": "2026-06-13"
+    },
+    {
+      "id": "p029",
+      "name": "蒋凡",
+      "title": "阿里巴巴合伙人",
+      "company": "阿里巴巴",
+      "background": "复旦大学计算机学士",
+      "tags": "电商,AI",
+      "notes": "曾负责淘宝、天猫，后调任海外业务",
+      "createdAt": "2026-06-13"
+    },
+    {
+      "id": "p030",
+      "name": "王海峰",
+      "title": "百度首席技术官",
+      "company": "百度",
+      "background": "哈尔滨工业大学计算机博士",
+      "tags": "AI,自然语言处理",
+      "notes": "百度AI技术平台负责人",
+      "createdAt": "2026-06-13"
+    },
+    {
+      "id": "p031",
+      "name": "王小川",
+      "title": "百川智能创始人",
+      "company": "百川智能",
+      "background": "清华大学计算机学士、硕士、博士",
+      "tags": "AI,大模型",
+      "notes": "搜狗CEO，2023年创办百川智能",
+      "createdAt": "2026-06-13"
+    },
+    {
+      "id": "p032",
+      "name": "李沐",
+      "title": "Amazon首席科学家",
+      "company": "Amazon",
+      "background": "上海交通大学学士，卡内基梅隆大学博士",
+      "tags": "AI,深度学习",
+      "notes": "《动手学深度学习》作者，MXNet核心贡献者",
+      "createdAt": "2026-06-13"
+    },
+    {
+      "id": "p033",
+      "name": "余凯",
+      "title": "地平线创始人兼CEO",
+      "company": "地平线",
+      "background": "南京大学电子工程学士，慕尼黑大学博士",
+      "tags": "AI芯片,自动驾驶",
+      "notes": "原百度深度学习研究院负责人",
+      "createdAt": "2026-06-13"
+    },
+    {
+      "id": "p034",
+      "name": "印奇",
+      "title": "旷视科技联合创始人兼CEO",
+      "company": "旷视科技",
+      "background": "清华大学姚班，普林斯顿大学博士",
+      "tags": "CV,AI",
+      "notes": "清华姚班三剑客之一",
+      "createdAt": "2026-06-13"
+    },
+    {
+      "id": "p035",
+      "name": "唐文斌",
+      "title": "旷视科技联合创始人",
+      "company": "旷视科技",
+      "background": "清华大学姚班",
+      "tags": "CV,AI",
+      "notes": "清华姚班三剑客之一",
+      "createdAt": "2026-06-13"
+    },
+    {
+      "id": "p036",
+      "name": "杨沐",
+      "title": "旷视科技联合创始人",
+      "company": "旷视科技",
+      "background": "清华大学姚班",
+      "tags": "CV,AI",
+      "notes": "清华姚班三剑客之一",
+      "createdAt": "2026-06-13"
+    },
+    {
+      "id": "p037",
+      "name": "张正友",
+      "title": "创新工场技术副总裁",
+      "company": "创新工场",
+      "background": "法国INRIA博士",
+      "tags": "CV,机器人",
+      "notes": "张正友标定法发明者",
+      "createdAt": "2026-06-13"
+    },
+    {
+      "id": "p038",
+      "name": "楼天城",
+      "title": "小马智行联合创始人兼CTO",
+      "company": "小马智行",
+      "background": "清华大学计算机博士",
+      "tags": "自动驾驶,AI",
+      "notes": "ACM-ICPC世界冠军，百度无人车团队负责人",
+      "createdAt": "2026-06-13"
+    },
+    {
+      "id": "p039",
+      "name": "彭军",
+      "title": "小马智行联合创始人兼CEO",
+      "company": "小马智行",
+      "background": "清华大学学士，美国斯坦福大学博士",
+      "tags": "自动驾驶,AI",
+      "notes": "原百度自动驾驶事业部首席科学家",
+      "createdAt": "2026-06-13"
+    },
+    {
+      "id": "p040",
+      "name": "邓力",
+      "title": "Citadel首席AI官",
+      "company": "Citadel",
+      "background": "威斯康星大学麦迪逊分校博士",
+      "tags": "AI,语音识别",
+      "notes": "原微软首席科学家，深度学习在语音识别应用的先驱",
+      "createdAt": "2026-06-13"
+    },
+    {
+      "id": "p041",
+      "name": "林斌",
+      "title": "小米联合创始人",
+      "company": "小米",
+      "background": "中山大学计算机学士，德克萨斯大学计算机硕士",
+      "tags": "硬件,智能手机",
+      "notes": "原Google中国工程研究院副院长",
+      "createdAt": "2026-06-13"
+    },
+    {
+      "id": "p042",
+      "name": "黎万强",
+      "title": "小米联合创始人",
+      "company": "小米",
+      "background": "西安工程大学工业设计学士",
+      "tags": "硬件,营销",
+      "notes": "小米联合创始人，负责营销和MIUI",
+      "createdAt": "2026-06-13"
+    },
+    {
+      "id": "p043",
+      "name": "洪锋",
+      "title": "小米联合创始人",
+      "company": "小米",
+      "background": "上海交通大学学士，ArtCenter College of Design硕士",
+      "tags": "硬件,设计",
+      "notes": "原Google中国高级产品经理",
+      "createdAt": "2026-06-13"
+    },
+    {
+      "id": "p044",
+      "name": "刘德",
+      "title": "小米联合创始人",
+      "company": "小米",
+      "background": "北京理工大学工业设计学士，ArtCenter College of Design硕士",
+      "tags": "硬件,设计",
+      "notes": "小米生态链负责人",
+      "createdAt": "2026-06-13"
+    },
+    {
+      "id": "p045",
+      "name": "王川",
+      "title": "小米联合创始人",
+      "company": "小米",
+      "background": "北京广播学院电子工程学士",
+      "tags": "硬件,电视",
+      "notes": "原多看科技创始人，负责小米电视",
+      "createdAt": "2026-06-13"
+    },
+    {
+      "id": "p046",
+      "name": "周受资",
+      "title": "前TikTok CEO",
+      "company": "前TikTok",
+      "background": "伦敦大学学院经济学学士，哈佛商学院MBA",
+      "tags": "互联网,投资",
+      "notes": "原小米CFO，后任TikTok CEO",
+      "createdAt": "2026-06-13"
+    },
+    {
+      "id": "p047",
+      "name": "阳陆育",
+      "title": "香港特别行政区立法会议员，前字节跳动Product Lead",
+      "company": "香港特别行政区政府",
+      "background": "浙江大学学士",
+      "tags": "互联网,AI",
+      "notes": "负责字节跳动AI音乐产品RippleAI",
+      "createdAt": "2026-06-13"
+    },
+    {
+      "id": "p048",
+      "name": "朱文佳",
+      "title": "前字节跳动搜索负责人",
+      "company": "前字节跳动",
+      "background": "北京大学计算机学士、硕士",
+      "tags": "搜索,AI",
+      "notes": "负责字节跳动搜索业务",
+      "createdAt": "2026-06-13"
+    },
+    {
+      "id": "p049",
+      "name": "陈睿",
+      "title": "B站董事长兼CEO",
+      "company": "哔哩哔哩",
+      "background": "成都信息工程大学计算机学士",
+      "tags": "视频,社区",
+      "notes": "金山软件前副总裁，猎豹移动联合创始人",
+      "createdAt": "2026-06-13"
+    },
+    {
+      "id": "p050",
+      "name": "徐逸",
+      "title": "B站创始人",
+      "company": "哔哩哔哩",
+      "background": "北京邮电大学",
+      "tags": "视频,社区",
+      "notes": "B站（哔哩哔哩）创始人",
+      "createdAt": "2026-06-13"
+    },
+    {
+      "id": "p051",
+      "name": "古永锵",
+      "title": "优酷创始人",
+      "company": "前优酷",
+      "background": "加州大学伯克利分校学士，斯坦福大学MBA",
+      "tags": "视频,媒体",
+      "notes": "2012年优酷土豆合并，2016年卸任",
+      "createdAt": "2026-06-13"
+    },
+    {
+      "id": "p052",
+      "name": "龚宇",
+      "title": "爱奇艺创始人兼CEO",
+      "company": "爱奇艺",
+      "background": "清华大学自动化博士",
+      "tags": "视频,媒体",
+      "notes": "原搜狐首席运营官",
+      "createdAt": "2026-06-13"
+    },
+    {
+      "id": "p053",
+      "name": "张朝阳",
+      "title": "搜狐创始人兼CEO",
+      "company": "搜狐",
+      "background": "清华大学物理学士，麻省理工学院博士",
+      "tags": "门户,视频",
+      "notes": "中国互联网早期代表人物",
+      "createdAt": "2026-06-13"
+    },
+    {
+      "id": "p054",
+      "name": "丁磊",
+      "title": "网易创始人兼CEO",
+      "company": "网易",
+      "background": "电子科技大学通信工程学士",
+      "tags": "门户,游戏,电商",
+      "notes": "中国最早一代互联网创业者",
+      "createdAt": "2026-06-13"
+    },
+    {
+      "id": "p055",
+      "name": "史玉柱",
+      "title": "巨人网络创始人",
+      "company": "巨人网络",
+      "background": "浙江大学数学系，深圳大学软科学硕士",
+      "tags": "游戏,保健品",
+      "notes": "从巨人大厦失败到脑白金成功，再度创业游戏",
+      "createdAt": "2026-06-13"
+    },
+    {
+      "id": "p056",
+      "name": "江南春",
+      "title": "分众传媒创始人兼董事局主席",
+      "company": "分众传媒",
+      "background": "华东师范大学中文系学士",
+      "tags": "广告,媒体",
+      "notes": "创建电梯广告模式",
+      "createdAt": "2026-06-13"
+    },
+    {
+      "id": "p057",
+      "name": "张近东",
+      "title": "苏宁控股集团创始人",
+      "company": "苏宁",
+      "background": "南京师范大学中文系",
+      "tags": "零售,电商",
+      "notes": "从空调专卖店到电商转型",
+      "createdAt": "2026-06-13"
+    },
+    {
+      "id": "p058",
+      "name": "郭去疾",
+      "title": "兰亭集势创始人",
+      "company": "兰亭集势",
+      "background": "中国科学技术大学学士，伊利诺伊大学硕士",
+      "tags": "跨境电商",
+      "notes": "原Google中国首席战略官",
+      "createdAt": "2026-06-13"
+    },
+    {
+      "id": "p059",
+      "name": "陈欧",
+      "title": "聚美优品创始人",
+      "company": "聚美优品",
+      "background": "新加坡南洋理工大学学士，斯坦福大学MBA",
+      "tags": "电商,美妆",
+      "notes": "纽交所最年轻上市公司CEO",
+      "createdAt": "2026-06-13"
+    },
+    {
+      "id": "p060",
+      "name": "王怀南",
+      "title": "宝宝树创始人",
+      "company": "宝宝树",
+      "background": "清华大学学士，美国乔治华盛顿大学硕士",
+      "tags": "母婴,社区",
+      "notes": "原Google中国运营总监",
+      "createdAt": "2026-06-13"
+    },
+    {
+      "id": "p061",
+      "name": "方三文",
+      "title": "雪球创始人兼CEO",
+      "company": "雪球",
+      "background": "北京大学哲学系",
+      "tags": "金融,社区",
+      "notes": "原网易副总编辑",
+      "createdAt": "2026-06-13"
+    },
+    {
+      "id": "p062",
+      "name": "王亮",
+      "title": "keep创始人兼CEO",
+      "company": "Keep",
+      "background": "北京信息科技大学计算机学士",
+      "tags": "健身,运动科技",
+      "notes": "从健身APP到智能硬件和运动品牌",
+      "createdAt": "2026-06-13"
+    },
+    {
+      "id": "p063",
+      "name": "陈少杰",
+      "title": "斗鱼创始人兼CEO",
+      "company": "斗鱼",
+      "background": "武汉理工大学",
+      "tags": "游戏直播",
+      "notes": "从A站离职创办斗鱼",
+      "createdAt": "2026-06-13"
+    },
+    {
+      "id": "p064",
+      "name": "董荣杰",
+      "title": "虎牙直播CEO",
+      "company": "虎牙直播",
+      "background": "中山大学",
+      "tags": "游戏直播",
+      "notes": "原YY游戏直播负责人",
+      "createdAt": "2026-06-13"
+    },
+    {
+      "id": "p065",
+      "name": "张一甲的甲子光年创始人",
+      "title": "甲子光年创始人兼CEO",
+      "company": "甲子光年",
+      "background": "北京大学",
+      "tags": "科技媒体,AI",
+      "notes": "专注科技产业研究和媒体",
+      "createdAt": "2026-06-13"
+    },
+    {
+      "id": "p066",
+      "name": "闵万里（山景）",
+      "title": "北高峰资本创始人",
+      "company": "北高峰资本",
+      "background": "中国科学技术大学学士，芝加哥大学博士",
+      "tags": "AI,VC",
+      "notes": "原阿里云首席科学家（已离职）",
+      "createdAt": "2026-06-13"
+    },
+    {
+      "id": "p067",
+      "name": "贾扬清",
+      "title": "阿里巴巴副总裁，前Meta/Facebook AI架构负责人",
+      "company": "阿里巴巴",
+      "background": "清华大学学士、硕士，加州大学伯克利分校博士",
+      "tags": "AI,深度学习框架",
+      "notes": "Caffe作者，TensorFlow核心贡献者",
+      "createdAt": "2026-06-13"
+    },
+    {
+      "id": "p068",
+      "name": "颜水成",
+      "title": "昆仑万维首席科学家",
+      "company": "昆仑万维",
+      "background": "北京大学数学学士、硕士、博士",
+      "tags": "CV,AI",
+      "notes": "原依图科技首席技术官，IEEE Fellow",
+      "createdAt": "2026-06-13"
+    },
+    {
+      "id": "p069",
+      "name": "周志华",
+      "title": "南京大学人工智能学院院长",
+      "company": "南京大学",
+      "background": "南京大学计算机博士",
+      "tags": "AI,机器学习",
+      "notes": "ACM/IEEE Fellow，著有《机器学习》（西瓜书）",
+      "createdAt": "2026-06-13"
+    },
+    {
+      "id": "p070",
+      "name": "崔宝秋",
+      "title": "小米集团副总裁、技术委员会主席",
+      "company": "小米",
+      "background": "北京大学博士",
+      "tags": "AI,云计算",
+      "notes": "原IBM、LinkedIn高级工程师",
+      "createdAt": "2026-06-13"
+    },
+    {
+      "id": "p071",
+      "name": "弋力",
+      "title": "清华大学交叉信息研究院助理教授",
+      "company": "清华大学",
+      "background": "清华大学学士，斯坦福大学博士",
+      "tags": "3D视觉,具身智能",
+      "notes": "研究方向为3D视觉理解和具身智能",
+      "createdAt": "2026-06-13"
+    },
+    {
+      "id": "p072",
+      "name": "孙剑",
+      "title": "旷视科技首席科学家（已故）",
+      "company": "旷视科技",
+      "background": "西安交通大学博士",
+      "tags": "CV,深度学习",
+      "notes": "ResNet作者之一，2022年逝世",
+      "createdAt": "2026-06-13"
+    },
+    {
+      "id": "p073",
+      "name": "谢源",
+      "title": "加州大学圣塔芭芭拉分校教授",
+      "company": "UCSB",
+      "background": "清华大学学士，普林斯顿大学博士",
+      "tags": "AI芯片,计算机体系结构",
+      "notes": "IEEE/ACM Fellow，AI芯片领域专家",
+      "createdAt": "2026-06-13"
+    },
+    {
+      "id": "p074",
+      "name": "张益肇",
+      "title": "Google AI总监",
+      "company": "Google",
+      "background": "麻省理工学院博士",
+      "tags": "AI,医疗健康",
+      "notes": "Google AI医疗健康方向负责人",
+      "createdAt": "2026-06-13"
+    },
+    {
+      "id": "p075",
+      "name": "张宏江",
+      "title": "源码资本创始合伙人",
+      "company": "源码资本",
+      "background": "郑州大学学士，丹麦技术大学博士",
+      "tags": "VC,AI",
+      "notes": "原金山软件CEO，微软亚洲研究院创始成员",
+      "createdAt": "2026-06-13"
+    },
+    {
+      "id": "p076",
+      "name": "符绩勋",
+      "title": "GGV纪源资本管理合伙人",
+      "company": "GGV纪源资本",
+      "background": "新加坡国立大学学士",
+      "tags": "VC,投资",
+      "notes": "投资过滴滴、美团、去哪儿等",
+      "createdAt": "2026-06-13"
+    },
+    {
+      "id": "p077",
+      "name": "刘芹",
+      "title": "五源资本创始合伙人",
+      "company": "五源资本",
+      "background": "北京科技大学学士，清华大学MBA",
+      "tags": "VC,投资",
+      "notes": "投资过小米、快手、地平线等",
+      "createdAt": "2026-06-13"
+    },
+    {
+      "id": "p078",
+      "name": "曹曦",
+      "title": "Monolith Management管理合伙人",
+      "company": "Monolith Management",
+      "background": "北京大学",
+      "tags": "VC,投资",
+      "notes": "原红杉资本中国基金合伙人",
+      "createdAt": "2026-06-13"
+    },
+    {
+      "id": "p079",
+      "name": "张震",
+      "title": "高榕资本创始合伙人",
+      "company": "高榕资本",
+      "background": "北京交通大学学士、硕士",
+      "tags": "VC,投资",
+      "notes": "原IDG资本合伙人",
+      "createdAt": "2026-06-13"
+    },
+    {
+      "id": "p080",
+      "name": "涂鸿川",
+      "title": "高原资本中国创始人",
+      "company": "高原资本",
+      "background": "美国西北大学学士",
+      "tags": "VC,投资",
+      "notes": "投资过奇虎360、途牛等",
+      "createdAt": "2026-06-13"
+    },
+    {
+      "id": "p081",
+      "name": "吴晓波",
+      "title": "著名财经作家",
+      "company": "吴晓波频道",
+      "background": "复旦大学新闻学士，哈佛大学访问学者",
+      "tags": "财经,媒体",
+      "notes": "《激荡三十年》《跌荡一百年》作者",
+      "createdAt": "2026-06-13"
+    },
+    {
+      "id": "p082",
+      "name": "罗振宇",
+      "title": "得到App创始人",
+      "company": "得到",
+      "background": "华中科技大学新闻学学士，中国传媒大学博士",
+      "tags": "知识付费,媒体",
+      "notes": "原央视《对话》制片人",
+      "createdAt": "2026-06-13"
+    },
+    {
+      "id": "p083",
+      "name": "吴声",
+      "title": "场景实验室创始人",
+      "company": "场景实验室",
+      "background": "南京大学",
+      "tags": "商业研究,咨询",
+      "notes": "原凡客诚品副总裁，京东高级副总裁",
+      "createdAt": "2026-06-13"
+    },
+    {
+      "id": "p084",
+      "name": "李翔",
+      "title": "资深媒体人",
+      "company": "李翔商业内参",
+      "background": "浙江大学",
+      "tags": "财经,媒体",
+      "notes": "原《财经天下》主编，得到App总编辑",
+      "createdAt": "2026-06-13"
+    },
+    {
+      "id": "p085",
+      "name": "樊登",
+      "title": "樊登读书创始人",
+      "company": "樊登读书",
+      "background": "西安交通大学材料学士、硕士，北京师范大学电影学博士",
+      "tags": "知识付费,阅读",
+      "notes": "读书会模式开创者",
+      "createdAt": "2026-06-13"
+    },
+    {
+      "id": "p086",
+      "name": "王兴兴",
+      "title": "宇树科技创始人兼CEO",
+      "company": "宇树科技",
+      "background": "上海大学机械工程硕士",
+      "tags": "机器人,四足机器人",
+      "notes": "研发Laikago、Go1等四足机器人",
+      "createdAt": "2026-06-13"
+    },
+    {
+      "id": "p087",
+      "name": "冷晓琨",
+      "title": "乐聚机器人创始人兼CEO",
+      "company": "乐聚机器人",
+      "background": "哈尔滨工业大学博士",
+      "tags": "机器人,人形机器人",
+      "notes": "哈工大机器人研究所背景",
+      "createdAt": "2026-06-13"
+    },
+    {
+      "id": "p088",
+      "name": "杨帆",
+      "title": "商汤科技联合创始人兼CTO",
+      "company": "商汤科技",
+      "background": "清华大学电子工程学士、硕士",
+      "tags": "CV,AI",
+      "notes": "商汤科技技术负责人",
+      "createdAt": "2026-06-13"
+    },
+    {
+      "id": "p089",
+      "name": "徐立",
+      "title": "商汤科技联合创始人兼CEO",
+      "company": "商汤科技",
+      "background": "上海交通大学学士、硕士，香港中文大学博士",
+      "tags": "CV,AI",
+      "notes": "商汤科技联合创始人",
+      "createdAt": "2026-06-13"
+    },
+    {
+      "id": "p090",
+      "name": "印奇的旷视科技联合创始人",
+      "title": "旷视科技总裁",
+      "company": "旷视科技",
+      "background": "清华大学姚班",
+      "tags": "CV,AI",
+      "notes": "已包含在p034中",
+      "createdAt": "2026-06-13"
+    },
+    {
+      "id": "p091",
+      "name": "赵勇",
+      "title": "格灵深瞳创始人兼CEO",
+      "company": "格灵深瞳",
+      "background": "北京大学学士，布朗大学博士",
+      "tags": "CV,AI",
+      "notes": "原Google Glass核心团队成员",
+      "createdAt": "2026-06-13"
+    },
+    {
+      "id": "p092",
+      "name": "段奕宏（AI领域）",
+      "title": "清华大学智能产业研究院助理教授",
+      "company": "清华大学",
+      "background": "清华大学学士、博士",
+      "tags": "AI,自动驾驶",
+      "notes": "自动驾驶感知与决策",
+      "createdAt": "2026-06-13"
+    },
+    {
+      "id": "p093",
+      "name": "王乃岩",
+      "title": "图森未来联合创始人",
+      "company": "图森未来",
+      "background": "香港科技大学博士",
+      "tags": "自动驾驶,AI",
+      "notes": "原图森未来首席技术官",
+      "createdAt": "2026-06-13"
+    },
+    {
+      "id": "p094",
+      "name": "陈天石",
+      "title": "寒武纪创始人兼CEO",
+      "company": "寒武纪",
+      "background": "中国科学技术大学学士、博士",
+      "tags": "AI芯片",
+      "notes": "中科院计算所背景，AI芯片第一股",
+      "createdAt": "2026-06-13"
+    },
+    {
+      "id": "p095",
+      "name": "姚颂",
+      "title": "赛灵思前AI产品市场总监，星空计划创始人",
+      "company": "星空计划",
+      "background": "清华大学电子工程学士",
+      "tags": "AI芯片,创业",
+      "notes": "深鉴科技联合创始人（被赛灵思收购）",
+      "createdAt": "2026-06-13"
+    },
+    {
+      "id": "p096",
+      "name": "汪玉",
+      "title": "清华大学电子工程系主任、深鉴科技联合创始人",
+      "company": "清华大学",
+      "background": "清华大学电子工程博士",
+      "tags": "AI芯片,FPGA",
+      "notes": "深鉴科技联合创始人（被赛灵思收购）",
+      "createdAt": "2026-06-13"
+    },
+    {
+      "id": "p097",
+      "name": "单羿",
+      "title": "深鉴科技联合创始人兼CTO",
+      "company": "深鉴科技（已收购）",
+      "background": "清华大学电子工程博士",
+      "tags": "AI芯片,FPGA",
+      "notes": "深鉴科技联合创始人",
+      "createdAt": "2026-06-13"
+    },
+    {
+      "id": "p098",
+      "name": "胡宁",
+      "title": "360集团首席科学家",
+      "company": "360集团",
+      "background": "北京大学学士，美国威斯康星大学麦迪逊分校博士",
+      "tags": "网络安全,AI",
+      "notes": "360集团技术负责人",
+      "createdAt": "2026-06-13"
+    },
+    {
+      "id": "p099",
+      "name": "王坚",
+      "title": "阿里云创始人",
+      "company": "阿里巴巴",
+      "background": "杭州大学心理系博士",
+      "tags": "云计算,城市大脑",
+      "notes": "中国工程院院士，阿里云之父",
+      "createdAt": "2026-06-13"
+    },
+    {
+      "id": "p100",
+      "name": "张建锋（行癫）",
+      "title": "阿里巴巴达摩院院长",
+      "company": "阿里巴巴",
+      "background": "浙江大学计算机学士",
+      "tags": "云计算,AI",
+      "notes": "原阿里云CEO，负责达摩院",
+      "createdAt": "2026-06-13"
+    }
+  ],
+  "events": [
+    {
+      "id": "e001",
+      "personId": "p001",
+      "type": "离职",
+      "company": "字节跳动",
+      "position": "CEO",
+      "date": "2021-05-20",
+      "description": "张一鸣宣布卸任字节跳动CEO，由梁汝波接任"
+    },
+    {
+      "id": "e002",
+      "personId": "p001",
+      "type": "离职",
+      "company": "字节跳动",
+      "position": "董事长",
+      "date": "2023-01-01",
+      "description": "张一鸣卸任字节跳动董事长职务"
+    },
+    {
+      "id": "e003",
+      "personId": "p004",
+      "type": "离职",
+      "company": "拼多多",
+      "position": "董事长",
+      "date": "2021-03-17",
+      "description": "黄峥卸任拼多多董事长，转向科研和慈善事业"
+    },
+    {
+      "id": "e004",
+      "personId": "p009",
+      "type": "离职",
+      "company": "京东",
+      "position": "CEO",
+      "date": "2022-04-07",
+      "description": "刘强东卸任京东CEO，由徐雷接任"
+    },
+    {
+      "id": "e005",
+      "personId": "p012",
+      "type": "离职",
+      "company": "快手",
+      "position": "CEO",
+      "date": "2023-10-20",
+      "description": "宿华卸任快手CEO，由程一笑接任"
+    },
+    {
+      "id": "e006",
+      "personId": "p031",
+      "type": "离职",
+      "company": "搜狗",
+      "position": "CEO",
+      "date": "2021-09-01",
+      "description": "搜狗被腾讯收购，王小川离开搜狗"
+    },
+    {
+      "id": "e007",
+      "personId": "p031",
+      "type": "入职",
+      "company": "百川智能",
+      "position": "创始人兼CEO",
+      "date": "2023-03-01",
+      "description": "王小川宣布创办百川智能，专注大模型研发"
+    },
+    {
+      "id": "e008",
+      "personId": "p027",
+      "type": "离职",
+      "company": "阿里巴巴",
+      "position": "CEO",
+      "date": "2023-09-10",
+      "description": "张勇卸任阿里巴巴集团CEO"
+    },
+    {
+      "id": "e009",
+      "personId": "p033",
+      "type": "离职",
+      "company": "百度",
+      "position": "深度学习研究院负责人",
+      "date": "2015-07-01",
+      "description": "余凯离开百度，创办地平线机器人"
+    },
+    {
+      "id": "e010",
+      "personId": "p038",
+      "type": "离职",
+      "company": "百度",
+      "position": "无人车团队技术负责人",
+      "date": "2016-12-01",
+      "description": "楼天城离开百度，与彭军共同创办小马智行"
+    },
+    {
+      "id": "e011",
+      "personId": "p039",
+      "type": "离职",
+      "company": "百度",
+      "position": "自动驾驶事业部首席科学家",
+      "date": "2016-12-01",
+      "description": "彭军离开百度，与楼天城共同创办小马智行"
+    },
+    {
+      "id": "e012",
+      "personId": "p066",
+      "type": "离职",
+      "company": "阿里巴巴",
+      "position": "阿里云首席科学家",
+      "date": "2019-06-01",
+      "description": "闵万里（山景）离开阿里云，创办北高峰资本"
+    },
+    {
+      "id": "e013",
+      "personId": "p067",
+      "type": "入职",
+      "company": "阿里巴巴",
+      "position": "副总裁",
+      "date": "2023-03-01",
+      "description": "贾扬清加入阿里巴巴，负责AI架构和业务"
+    },
+    {
+      "id": "e014",
+      "personId": "p094",
+      "type": "入职",
+      "company": "寒武纪",
+      "position": "创始人兼CEO",
+      "date": "2016-03-01",
+      "description": "陈天石创办寒武纪科技，专注AI芯片"
+    },
+    {
+      "id": "e015",
+      "personId": "p014",
+      "type": "入职",
+      "company": "理想汽车",
+      "position": "创始人兼CEO",
+      "date": "2015-07-01",
+      "description": "李想创办理想汽车（原名车和家）"
+    },
+    {
+      "id": "e016",
+      "personId": "p015",
+      "type": "入职",
+      "company": "小鹏汽车",
+      "position": "创始人兼CEO",
+      "date": "2014-08-01",
+      "description": "何小鹏创办小鹏汽车"
+    },
+    {
+      "id": "e017",
+      "personId": "p016",
+      "type": "入职",
+      "company": "蔚来汽车",
+      "position": "创始人兼CEO",
+      "date": "2014-11-01",
+      "description": "李斌创办蔚来汽车"
+    },
+    {
+      "id": "e018",
+      "personId": "p046",
+      "type": "离职",
+      "company": "小米",
+      "position": "CFO",
+      "date": "2020-08-01",
+      "description": "周受资离开小米，加入字节跳动担任CFO"
+    },
+    {
+      "id": "e019",
+      "personId": "p046",
+      "type": "离职",
+      "company": "TikTok",
+      "position": "CEO",
+      "date": "2023-06-30",
+      "description": "周受资辞去TikTok CEO职务"
+    },
+    {
+      "id": "e020",
+      "personId": "p086",
+      "type": "入职",
+      "company": "宇树科技",
+      "position": "创始人兼CEO",
+      "date": "2016-08-01",
+      "description": "王兴兴创办宇树科技，专注四足机器人研发"
+    }
+  ]
+}
