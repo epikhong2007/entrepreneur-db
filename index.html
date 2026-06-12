@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>互联网创业者人物库</title>
+    <title>互联网创业者人物库 - 增强版</title>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * { margin:0; padding:0; box-sizing: border-box; }
         body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif; background: #f5f7fa; color: #333; }
         
         .header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 20px 30px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
         .header h1 { font-size: 24px; font-weight: 600; }
         .header p { font-size: 14px; opacity: 0.9; margin-top: 5px; }
         
-        .nav { background: white; padding: 0 30px; box-shadow: 0 1px 5px rgba(0,0,0,0.05); display: flex; gap: 5px; }
-        .nav-btn { padding: 12px 20px; border: none; background: none; cursor: pointer; font-size: 14px; color: #666; border-bottom: 3px solid transparent; transition: all 0.3s; }
+        .nav { background: white; padding: 0 30px; box-shadow: 0 1px 5px rgba(0,0,0,0.05); display: flex; gap: 5px; overflow-x: auto; }
+        .nav-btn { padding: 12px 20px; border: none; background: none; cursor: pointer; font-size: 14px; color: #666; border-bottom: 3px solid transparent; transition: all 0.3s; white-space: nowrap; }
         .nav-btn:hover { color: #667eea; }
         .nav-btn.active { color: #667eea; border-bottom-color: #667eea; font-weight: 500; }
         
@@ -23,7 +23,7 @@
         .page.active { display: block; }
         
         .card { background: white; border-radius: 8px; padding: 20px; margin-bottom: 15px; box-shadow: 0 1px 5px rgba(0,0,0,0.05); }
-        .card-title { font-size: 16px; font-weight: 600; margin-bottom: 15px; color: #333; }
+        .card-title { font-size: 16px; font-weight: 600; margin-bottom: 15px; color: #333; display: flex; align-items: center; gap: 8px; }
         
         .btn { padding: 8px 16px; border: none; border-radius: 6px; cursor: pointer; font-size: 14px; transition: all 0.3s; }
         .btn-primary { background: #667eea; color: white; }
@@ -34,6 +34,9 @@
         .btn-danger:hover { background: #e04345; }
         .btn-secondary { background: #f0f0f0; color: #666; }
         .btn-secondary:hover { background: #e0e0e0; }
+        .btn-warning { background: #faad14; color: white; }
+        .btn-warning:hover { background: #d99a10; }
+        .btn-small { padding: 4px 10px; font-size: 12px; }
         
         .form-group { margin-bottom: 15px; }
         .form-group label { display: block; margin-bottom: 5px; font-size: 14px; color: #666; }
@@ -43,13 +46,19 @@
         .search-box { display: flex; gap: 10px; margin-bottom: 20px; }
         .search-box input { flex: 1; }
         
-        .person-card { border: 1px solid #eee; border-radius: 8px; padding: 15px; margin-bottom: 10px; transition: all 0.3s; cursor: pointer; }
+        .person-card { border: 1px solid #eee; border-radius: 8px; padding: 15px; margin-bottom: 10px; transition: all 0.3s; cursor: pointer; position: relative; }
         .person-card:hover { border-color: #667eea; box-shadow: 0 2px 10px rgba(102,126,234,0.1); }
+        .person-card.stale { border-left: 4px solid #faad14; }
+        .person-card.very-stale { border-left: 4px solid #ff4d4f; }
         .person-name { font-size: 18px; font-weight: 600; color: #333; }
         .person-title { font-size: 14px; color: #667eea; margin-top: 5px; }
         .person-company { font-size: 13px; color: #999; margin-top: 3px; }
         .person-tags { margin-top: 8px; }
         .tag { display: inline-block; padding: 2px 8px; background: #f0f5ff; color: #667eea; border-radius: 4px; font-size: 12px; margin-right: 5px; }
+        
+        .stale-badge { position: absolute; top: 10px; right: 10px; padding: 2px 8px; border-radius: 4px; font-size: 11px; }
+        .stale-badge.warn { background: #fff7e6; color: #faad14; }
+        .stale-badge.alert { background: #fff1f0; color: #ff4d4f; }
         
         .timeline { position: relative; padding-left: 30px; }
         .timeline::before { content: ''; position: absolute; left: 10px; top: 0; bottom: 0; width: 2px; background: #eee; }
@@ -71,9 +80,8 @@
         .stat-label { font-size: 14px; color: #999; margin-top: 5px; }
         
         .empty-state { text-align: center; padding: 60px 20px; color: #999; }
-        .empty-state svg { width: 80px; height: 80px; margin-bottom: 20px; opacity: 0.3; }
         
-        .action-bar { display: flex; gap: 10px; margin-bottom: 15px; align-items: center; }
+        .action-bar { display: flex; gap: 10px; margin-bottom: 15px; align-items: center; flex-wrap: wrap; }
         .action-bar-right { margin-left: auto; }
         
         .toast { position: fixed; top: 20px; right: 20px; padding: 12px 20px; background: #52c41a; color: white; border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); z-index: 2000; animation: slideIn 0.3s; }
@@ -83,17 +91,41 @@
         .detail-section h3 { font-size: 16px; font-weight: 600; margin-bottom: 10px; color: #333; }
         
         .event-form { background: #f9f9f9; padding: 15px; border-radius: 8px; margin-top: 10px; }
+        
+        .verify-btn { position: absolute; bottom: 10px; right: 10px; }
+        
+        .change-log-item { padding: 10px 0; border-bottom: 1px solid #f0f0f0; font-size: 13px; }
+        .change-log-date { color: #999; font-size: 12px; }
+        .change-log-action { color: #667eea; font-weight: 500; }
+        
+        .filter-bar { display: flex; gap: 10px; margin-bottom: 15px; flex-wrap: wrap; }
+        .filter-bar select, .filter-bar input { padding: 8px 12px; border: 1px solid #ddd; border-radius: 6px; font-size: 14px; }
+        
+        .alert-box { background: #fff7e6; border: 1px solid #ffd591; border-radius: 8px; padding: 15px; margin-bottom: 15px; }
+        .alert-box-title { font-weight: 600; color: #d48806; margin-bottom: 8px; }
+        
+        .verify-modal-content { max-width: 500px; }
+        .quick-verify-options { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 15px; }
+        
+        @media (max-width: 768px) {
+            .nav { padding: 0 10px; }
+            .nav-btn { padding: 10px 12px; font-size: 13px; }
+            .container { padding: 0 10px; }
+            .stats { grid-template-columns: 1fr; }
+        }
     </style>
 </head>
 <body>
     <div class="header">
         <h1>🚀 互联网创业者人物库</h1>
-        <p>追踪中文互联网大厂背景人物的职业动态</p>
+        <p>追踪中文互联网大厂背景人物的职业动态 | 支持动态更新检测</p>
     </div>
     
     <div class="nav">
         <button class="nav-btn active" onclick="showPage('dashboard')">📊 总览</button>
         <button class="nav-btn" onclick="showPage('people')">👥 人物库</button>
+        <button class="nav-btn" onclick="showPage('updates')">🔔 更新提醒</button>
+        <button class="nav-btn" onclick="showPage('history')">📜 变动历史</button>
         <button class="nav-btn" onclick="showPage('add')">➕ 添加人物</button>
         <button class="nav-btn" onclick="showPage('import-export')">💾 导入导出</button>
     </div>
@@ -114,15 +146,24 @@
                     <div class="stat-number" id="stat-events">0</div>
                     <div class="stat-label">动态总数</div>
                 </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="stat-stale">0</div>
+                    <div class="stat-label">需更新信息</div>
+                </div>
+            </div>
+            
+            <div class="alert-box" id="stale-alert" style="display: none;">
+                <div class="alert-box-title">⚠️ 信息待更新提醒</div>
+                <div id="stale-alert-content"></div>
             </div>
             
             <div class="card">
-                <div class="card-title">最近添加的人物</div>
+                <div class="card-title">🕐 最近添加的人物</div>
                 <div id="recent-people"></div>
             </div>
             
             <div class="card">
-                <div class="card-title">最新动态</div>
+                <div class="card-title">📰 最新动态</div>
                 <div id="recent-events"></div>
             </div>
         </div>
@@ -136,8 +177,32 @@
                 <select id="filter-company" onchange="filterPeople()" style="padding: 8px; border: 1px solid #ddd; border-radius: 6px;">
                     <option value="">所有公司</option>
                 </select>
+                <select id="filter-stale" onchange="filterPeople()" style="padding: 8px; border: 1px solid #ddd; border-radius: 6px;">
+                    <option value="">所有状态</option>
+                    <option value="stale">需更新（30+天）</option>
+                    <option value="very-stale">急需更新（90+天）</option>
+                    <option value="fresh">近期已核实</option>
+                </select>
             </div>
             <div id="people-list"></div>
+        </div>
+        
+        <!-- 更新提醒页面 -->
+        <div id="page-updates" class="page">
+            <div class="card">
+                <div class="card-title">🔔 信息待更新人物列表</div>
+                <p style="font-size: 14px; color: #999; margin-bottom: 15px;">以下人物的信息可能已过时，建议核实并更新</p>
+                <div id="stale-people-list"></div>
+            </div>
+        </div>
+        
+        <!-- 变动历史页面 -->
+        <div id="page-history" class="page">
+            <div class="card">
+                <div class="card-title">📜 数据变动历史</div>
+                <p style="font-size: 14px; color: #999; margin-bottom: 15px;">记录所有人物和动态的增删改操作</p>
+                <div id="change-history-list"></div>
+            </div>
         </div>
         
         <!-- 添加人物页面 -->
@@ -185,6 +250,20 @@
             </div>
         </div>
         
+        <!-- 核实信息模态框 -->
+        <div id="modal-verify" class="modal">
+            <div class="modal-content verify-modal-content">
+                <div class="modal-title">✅ 核实人物信息</div>
+                <div id="verify-person-name" style="font-size: 18px; font-weight: 600; margin-bottom: 15px;"></div>
+                <p style="font-size: 14px; color: #666; margin-bottom: 20px;">请确认以下信息是否为最新状态：</p>
+                <div id="verify-info" style="background: #f9f9f9; padding: 15px; border-radius: 8px; margin-bottom: 20px;"></div>
+                <div class="quick-verify-options">
+                    <button class="btn btn-success" onclick="verifyPersonConfirm(true)">✅ 信息无误，标记已核实</button>
+                    <button class="btn btn-warning" onclick="verifyPersonConfirm(false)">⚠️ 信息有变化，去更新</button>
+                </div>
+            </div>
+        </div>
+        
         <!-- 导入导出页面 -->
         <div id="page-import-export" class="page">
             <div class="card">
@@ -201,6 +280,19 @@
             </div>
             
             <div class="card">
+                <div class="card-title">⚙️ 更新检测设置</div>
+                <div class="form-group">
+                    <label>提醒阈值（天数）：超过此天数未核实，标记为"需更新"</label>
+                    <input type="number" id="stale-threshold" value="30" min="1" max="365" onchange="saveSettings()">
+                </div>
+                <div class="form-group">
+                    <label>紧急提醒阈值（天数）：超过此天数未核实，标记为"急需更新"</label>
+                    <input type="number" id="very-stale-threshold" value="90" min="1" max="365" onchange="saveSettings()">
+                </div>
+                <button class="btn btn-primary" onclick="saveSettings()">保存设置</button>
+            </div>
+            
+            <div class="card">
                 <div class="card-title">🗑️ 危险操作</div>
                 <p style="font-size: 14px; color: #666; margin-bottom: 15px;">清空所有数据，此操作不可恢复！</p>
                 <button class="btn btn-danger" onclick="clearAllData()">清空全部数据</button>
@@ -209,10 +301,10 @@
     </div>
     
     <script>
-        // 数据库初始化
+        // ============ 数据库初始化 ============
         let db = null;
         const DB_NAME = 'EntrepreneurDB';
-        const DB_VERSION = 1;
+        const DB_VERSION = 2;  // 升级版本号
         
         function initDB() {
             return new Promise((resolve, reject) => {
@@ -233,6 +325,8 @@
                         peopleStore.createIndex('name', 'name', { unique: false });
                         peopleStore.createIndex('company', 'company', { unique: false });
                         peopleStore.createIndex('createdAt', 'createdAt', { unique: false });
+                        peopleStore.createIndex('updatedAt', 'updatedAt', { unique: false });
+                        peopleStore.createIndex('lastVerifiedAt', 'lastVerifiedAt', { unique: false });
                     }
                     
                     // 创建动态表
@@ -241,16 +335,88 @@
                         eventsStore.createIndex('personId', 'personId', { unique: false });
                         eventsStore.createIndex('date', 'date', { unique: false });
                     }
+                    
+                    // 创建变动历史表（新增）
+                    if (!db.objectStoreNames.contains('history')) {
+                        const historyStore = db.createObjectStore('history', { keyPath: 'id' });
+                        historyStore.createIndex('timestamp', 'timestamp', { unique: false });
+                        historyStore.createIndex('action', 'action', { unique: false });
+                        historyStore.createIndex('personId', 'personId', { unique: false });
+                    }
+                    
+                    // 创建设置表（新增）
+                    if (!db.objectStoreNames.contains('settings')) {
+                        const settingsStore = db.createObjectStore('settings', { keyPath: 'key' });
+                    }
                 };
             });
         }
         
-        // 生成ID
+        // ============ 设置管理 ============
+        function getSetting(key, defaultValue) {
+            return new Promise((resolve) => {
+                const transaction = db.transaction(['settings'], 'readonly');
+                const store = transaction.objectStore('settings');
+                const request = store.get(key);
+                request.onsuccess = () => {
+                    resolve(request.result ? request.result.value : defaultValue);
+                };
+                request.onerror = () => resolve(defaultValue);
+            });
+        }
+        
+        function setSetting(key, value) {
+            return new Promise((resolve, reject) => {
+                const transaction = db.transaction(['settings'], 'readwrite');
+                const store = transaction.objectStore('settings');
+                const request = store.put({ key, value });
+                request.onsuccess = () => resolve();
+                request.onerror = () => reject(request.error);
+            });
+        }
+        
+        async function saveSettings() {
+            const staleThreshold = parseInt(document.getElementById('stale-threshold').value) || 30;
+            const veryStaleThreshold = parseInt(document.getElementById('very-stale-threshold').value) || 90;
+            await setSetting('staleThreshold', staleThreshold);
+            await setSetting('veryStaleThreshold', veryStaleThreshold);
+            showToast('设置已保存');
+            loadDashboard();
+            loadPeople();
+        }
+        
+        // ============ 工具函数 ============
         function generateId() {
             return Date.now().toString(36) + Math.random().toString(36).substr(2, 9);
         }
         
-        // 显示页面
+        function daysSince(dateString) {
+            if (!dateString) return 9999;
+            const date = new Date(dateString);
+            const now = new Date();
+            return Math.floor((now - date) / (1000 * 60 * 60 * 24));
+        }
+        
+        // ============ 历史记录 ============
+        function addHistory(action, personId, personName, details) {
+            return new Promise((resolve, reject) => {
+                const history = {
+                    id: generateId(),
+                    timestamp: new Date().toISOString(),
+                    action: action,  // 'create', 'update', 'delete', 'add_event', 'verify'
+                    personId: personId,
+                    personName: personName,
+                    details: details || ''
+                };
+                const transaction = db.transaction(['history'], 'readwrite');
+                const store = transaction.objectStore('history');
+                const request = store.add(history);
+                request.onsuccess = () => resolve();
+                request.onerror = () => reject(request.error);
+            });
+        }
+        
+        // ============ 页面导航 ============
         function showPage(pageName) {
             document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
             document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
@@ -259,30 +425,11 @@
             
             if (pageName === 'dashboard') loadDashboard();
             if (pageName === 'people') loadPeople();
+            if (pageName === 'updates') loadUpdatesPage();
+            if (pageName === 'history') loadHistoryPage();
         }
         
-        // 添加人物
-        document.getElementById('add-person-form').addEventListener('submit', async (e) => {
-            e.preventDefault();
-            
-            const person = {
-                id: generateId(),
-                name: document.getElementById('person-name').value,
-                title: document.getElementById('person-title').value,
-                company: document.getElementById('person-company').value,
-                background: document.getElementById('person-background').value,
-                tags: document.getElementById('person-tags').value.split(',').map(t => t.trim()).filter(t => t),
-                notes: document.getElementById('person-notes').value,
-                createdAt: new Date().toISOString(),
-                updatedAt: new Date().toISOString()
-            };
-            
-            await addToDB('people', person);
-            showToast('人物添加成功！');
-            document.getElementById('add-person-form').reset();
-        });
-        
-        // 数据库操作
+        // ============ 数据库操作 ============
         function addToDB(storeName, data) {
             return new Promise((resolve, reject) => {
                 const transaction = db.transaction([storeName], 'readwrite');
@@ -333,11 +480,14 @@
             });
         }
         
-        // 加载总览
+        // ============ 仪表盘 ============
         async function loadDashboard() {
             const people = await getAllFromDB('people');
             const events = await getAllFromDB('events');
+            const staleThreshold = await getSetting('staleThreshold', 30);
+            const veryStaleThreshold = await getSetting('veryStaleThreshold', 90);
             
+            // 统计
             document.getElementById('stat-total').textContent = people.length;
             document.getElementById('stat-events').textContent = events.length;
             
@@ -345,15 +495,39 @@
             const recentCount = people.filter(p => p.createdAt && p.createdAt.startsWith(thisMonth)).length;
             document.getElementById('stat-recent').textContent = recentCount;
             
+            // 需更新统计
+            const staleCount = people.filter(p => {
+                const days = daysSince(p.lastVerifiedAt || p.updatedAt || p.createdAt);
+                return days > staleThreshold;
+            }).length;
+            document.getElementById('stat-stale').textContent = staleCount;
+            
+            // 提醒框
+            const staleAlert = document.getElementById('stale-alert');
+            if (staleCount > 0) {
+                staleAlert.style.display = 'block';
+                document.getElementById('stale-alert-content').innerHTML = 
+                    `有 <strong>${staleCount}</strong> 位人物的信息超过 ${staleThreshold} 天未核实，<a href="#" onclick="showPage('updates'); return false;" style="color: #667eea;">点击查看详情</a>`;
+            } else {
+                staleAlert.style.display = 'none';
+            }
+            
             // 最近添加的人物
             const recentPeople = people.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt)).slice(0, 5);
-            const recentPeopleHtml = recentPeople.map(p => `
-                <div class="person-card" onclick="showPersonDetail('${p.id}')">
-                    <div class="person-name">${p.name}</div>
-                    <div class="person-title">${p.title}</div>
-                    ${p.company ? `<div class="person-company">${p.company}</div>` : ''}
-                </div>
-            `).join('') || '<div class="empty-state">暂无数据</div>';
+            const recentPeopleHtml = recentPeople.map(p => {
+                const days = daysSince(p.lastVerifiedAt || p.updatedAt || p.createdAt);
+                let staleBadge = '';
+                if (days > veryStaleThreshold) staleBadge = '<span class="stale-badge alert">⚠️ 急需更新</span>';
+                else if (days > staleThreshold) staleBadge = '<span class="stale-badge warn">⏰ 待更新</span>';
+                return `
+                    <div class="person-card" onclick="showPersonDetail('${p.id}')">
+                        ${staleBadge}
+                        <div class="person-name">${p.name}</div>
+                        <div class="person-title">${p.title}</div>
+                        ${p.company ? `<div class="person-company">${p.company}</div>` : ''}
+                    </div>
+                `;
+            }).join('') || '<div class="empty-state">暂无数据</div>';
             document.getElementById('recent-people').innerHTML = recentPeopleHtml;
             
             // 最新动态
@@ -373,10 +547,13 @@
             document.getElementById('recent-events').innerHTML = recentEventsHtml;
         }
         
-        // 加载人物列表
+        // ============ 人物列表 ============
         async function loadPeople(filter = '') {
             let people = await getAllFromDB('people');
+            const staleThreshold = await getSetting('staleThreshold', 30);
+            const veryStaleThreshold = await getSetting('veryStaleThreshold', 90);
             
+            // 筛选
             if (filter) {
                 people = people.filter(p => 
                     p.name.includes(filter) || 
@@ -386,21 +563,56 @@
                 );
             }
             
-            const html = people.sort((a, b) => new Date(b.updatedAt) - new Date(a.updatedAt)).map(p => `
-                <div class="person-card" onclick="showPersonDetail('${p.id}')">
-                    <div style="display: flex; justify-content: space-between; align-items: start;">
-                        <div>
-                            <div class="person-name">${p.name}</div>
-                            <div class="person-title">${p.title}</div>
-                            ${p.company ? `<div class="person-company">${p.company}</div>` : ''}
-                            ${p.background ? `<div style="font-size: 12px; color: #999; margin-top: 3px;">背景：${p.background}</div>` : ''}
+            // 状态筛选
+            const staleFilter = document.getElementById('filter-stale').value;
+            if (staleFilter) {
+                people = people.filter(p => {
+                    const days = daysSince(p.lastVerifiedAt || p.updatedAt || p.createdAt);
+                    if (staleFilter === 'stale') return days > staleThreshold && days <= veryStaleThreshold;
+                    if (staleFilter === 'very-stale') return days > veryStaleThreshold;
+                    if (staleFilter === 'fresh') return days <= staleThreshold;
+                    return true;
+                });
+            }
+            
+            const html = people.sort((a, b) => {
+                // 按是否需要更新排序（需更新的在前）
+                const daysA = daysSince(a.lastVerifiedAt || a.updatedAt || a.createdAt);
+                const daysB = daysSince(b.lastVerifiedAt || b.updatedAt || b.createdAt);
+                return daysB - daysA;
+            }).map(p => {
+                const days = daysSince(p.lastVerifiedAt || p.updatedAt || p.createdAt);
+                let staleClass = '';
+                let staleBadge = '';
+                if (days > veryStaleThreshold) {
+                    staleClass = 'very-stale';
+                    staleBadge = '<span class="stale-badge alert">⚠️ 急需更新</span>';
+                } else if (days > staleThreshold) {
+                    staleClass = 'stale';
+                    staleBadge = '<span class="stale-badge warn">⏰ 待更新</span>';
+                }
+                
+                return `
+                    <div class="person-card ${staleClass}" onclick="showPersonDetail('${p.id}')">
+                        ${staleBadge}
+                        <div style="display: flex; justify-content: space-between; align-items: start;">
+                            <div>
+                                <div class="person-name">${p.name}</div>
+                                <div class="person-title">${p.title}</div>
+                                ${p.company ? `<div class="person-company">${p.company}</div>` : ''}
+                                ${p.background ? `<div style="font-size: 12px; color: #999; margin-top: 3px;">背景：${p.background}</div>` : ''}
+                                <div style="font-size: 11px; color: #bbb; margin-top: 5px;">
+                                    最后核实：${p.lastVerifiedAt ? p.lastVerifiedAt.split('T')[0] : (p.updatedAt || p.createdAt || '未知').split('T')[0]}（${days}天前）
+                                </div>
+                            </div>
+                            <div style="text-align: right;">
+                                ${p.tags.map(t => `<span class="tag">${t}</span>`).join('')}
+                            </div>
                         </div>
-                        <div style="text-align: right;">
-                            ${p.tags.map(t => `<span class="tag">${t}</span>`).join('')}
-                        </div>
+                        <button class="btn btn-success btn-small verify-btn" onclick="event.stopPropagation(); openVerifyModal('${p.id}')">✅ 标记已核实</button>
                     </div>
-                </div>
-            `).join('') || '<div class="empty-state">暂无人物数据，点击"添加人物"开始</div>';
+                `;
+            }).join('') || '<div class="empty-state">暂无人物数据，点击"添加人物"开始</div>';
             
             document.getElementById('people-list').innerHTML = html;
             
@@ -439,7 +651,109 @@
             }
         }
         
-        // 显示人物详情
+        // ============ 更新提醒页面 ============
+        async function loadUpdatesPage() {
+            const people = await getAllFromDB('people');
+            const staleThreshold = await getSetting('staleThreshold', 30);
+            const veryStaleThreshold = await getSetting('veryStaleThreshold', 90);
+            
+            const stalePeople = people.filter(p => {
+                const days = daysSince(p.lastVerifiedAt || p.updatedAt || p.createdAt);
+                return days > staleThreshold;
+            }).sort((a, b) => {
+                const daysA = daysSince(a.lastVerifiedAt || a.updatedAt || a.createdAt);
+                const daysB = daysSince(b.lastVerifiedAt || b.updatedAt || b.createdAt);
+                return daysB - daysA;
+            });
+            
+            const veryStalePeople = stalePeople.filter(p => {
+                const days = daysSince(p.lastVerifiedAt || p.updatedAt || p.createdAt);
+                return days > veryStaleThreshold;
+            });
+            
+            let html = '';
+            
+            if (veryStalePeople.length > 0) {
+                html += `<div class="alert-box" style="margin-bottom: 20px;">
+                    <div class="alert-box-title">🔴 急需更新（${veryStalePeople.length}人）</div>
+                    <p style="font-size: 14px; color: #666;">以下人物的信息已超过 ${veryStaleThreshold} 天未核实，强烈建议优先更新：</p>
+                </div>`;
+                html += veryStalePeople.map(p => renderStalePersonItem(p, veryStaleThreshold)).join('');
+            }
+            
+            const normalStalePeople = stalePeople.filter(p => {
+                const days = daysSince(p.lastVerifiedAt || p.updatedAt || p.createdAt);
+                return days <= veryStaleThreshold;
+            });
+            
+            if (normalStalePeople.length > 0) {
+                html += `<div style="margin-top: 20px;">
+                    <div style="font-weight: 600; color: #faad14; margin-bottom: 10px;">🟡 建议更新（${normalStalePeople.length}人）</div>`;
+                html += normalStalePeople.map(p => renderStalePersonItem(p, staleThreshold)).join('');
+                html += `</div>`;
+            }
+            
+            if (stalePeople.length === 0) {
+                html = '<div class="empty-state"><div style="font-size: 48px; margin-bottom: 20px;">✅</div>所有人物信息都是最新的！</div>';
+            }
+            
+            document.getElementById('stale-people-list').innerHTML = html;
+        }
+        
+        function renderStalePersonItem(person, threshold) {
+            const days = daysSince(person.lastVerifiedAt || person.updatedAt || person.createdAt);
+            return `
+                <div class="person-card" style="display: flex; justify-content: space-between; align-items: center;">
+                    <div>
+                        <div class="person-name">${person.name}</div>
+                        <div class="person-title">${person.title} ${person.company ? `· ${person.company}` : ''}</div>
+                        <div style="font-size: 12px; color: #999; margin-top: 3px;">
+                            最后核实：${(person.lastVerifiedAt || person.updatedAt || person.createdAt || '').split('T')[0]}（${days}天前）
+                        </div>
+                    </div>
+                    <div>
+                        <button class="btn btn-success btn-small" onclick="openVerifyModal('${person.id}')">✅ 已核实</button>
+                        <button class="btn btn-primary btn-small" onclick="showPersonDetail('${person.id}')" style="margin-left: 5px;">查看详情</button>
+                    </div>
+                </div>
+            `;
+        }
+        
+        // ============ 变动历史页面 ============
+        async function loadHistoryPage() {
+            const history = await getAllFromDB('history');
+            const people = await getAllFromDB('people');
+            
+            const sortedHistory = history.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
+            
+            const html = sortedHistory.length > 0 ? sortedHistory.map(h => {
+                const actionText = {
+                    'create': '➕ 添加人物',
+                    'update': '✏️ 更新信息',
+                    'delete': '🗑️ 删除人物',
+                    'add_event': '📝 添加动态',
+                    'verify': '✅ 核实信息'
+                }[h.action] || h.action;
+                
+                const person = people.find(p => p.id === h.personId);
+                const personName = h.personName || (person ? person.name : '未知');
+                
+                return `
+                    <div class="change-log-item">
+                        <div class="change-log-date">${h.timestamp.split('T')[0]} ${h.timestamp.split('T')[1].split('.')[0]}</div>
+                        <div>
+                            <span class="change-log-action">${actionText}</span>
+                            <strong>${personName}</strong>
+                            ${h.details ? `<div style="color: #666; margin-top: 3px; font-size: 12px;">${h.details}</div>` : ''}
+                        </div>
+                    </div>
+                `;
+            }).join('') : '<div class="empty-state">暂无历史记录</div>';
+            
+            document.getElementById('change-history-list').innerHTML = html;
+        }
+        
+        // ============ 人物详情 ============
         async function showPersonDetail(personId) {
             const person = await getByIdFromDB('people', personId);
             if (!person) return;
@@ -449,7 +763,21 @@
             const events = await getAllFromDB('events');
             const personEvents = events.filter(e => e.personId === personId).sort((a, b) => new Date(b.date) - new Date(a.date));
             
+            const days = daysSince(person.lastVerifiedAt || person.updatedAt || person.createdAt);
+            const staleThreshold = await getSetting('staleThreshold', 30);
+            const veryStaleThreshold = await getSetting('veryStaleThreshold', 90);
+            
+            let verifyStatus = '';
+            if (days > veryStaleThreshold) {
+                verifyStatus = '<div style="background: #fff1f0; border: 1px solid #ffa39e; border-radius: 6px; padding: 10px; margin-bottom: 15px; color: #ff4d4f; font-size: 14px;">⚠️ <strong>信息可能已过时</strong>（${days}天未核实）</div>';
+            } else if (days > staleThreshold) {
+                verifyStatus = '<div style="background: #fff7e6; border: 1px solid #ffd591; border-radius: 6px; padding: 10px; margin-bottom: 15px; color: #d48806; font-size: 14px;">⏰ <strong>建议核实信息</strong>（${days}天未核实）</div>';
+            } else {
+                verifyStatus = '<div style="background: #f6ffed; border: 1px solid #b7eb8f; border-radius: 6px; padding: 10px; margin-bottom: 15px; color: #52c41a; font-size: 14px;">✅ <strong>信息已核实</strong>（${days}天前）</div>';
+            }
+            
             const content = `
+                ${verifyStatus}
                 <div class="detail-section">
                     <h3>基本信息</h3>
                     <p><strong>职位：</strong>${person.title}</p>
@@ -457,7 +785,13 @@
                     ${person.background ? `<p><strong>大厂背景：</strong>${person.background}</p>` : ''}
                     ${person.tags.length ? `<p><strong>标签：</strong>${person.tags.map(t => `<span class="tag">${t}</span>`).join(' ')}</p>` : ''}
                     ${person.notes ? `<p><strong>备注：</strong>${person.notes}</p>` : ''}
-                    <button class="btn btn-secondary" style="margin-top: 10px;" onclick="editPerson('${personId}')">编辑信息</button>
+                    <p style="font-size: 12px; color: #999; margin-top: 10px;">
+                        创建时间：${(person.createdAt || '').split('T')[0]}<br>
+                        最后更新：${(person.updatedAt || '').split('T')[0]}<br>
+                        最后核实：${(person.lastVerifiedAt || '未核实').split('T')[0]}
+                    </p>
+                    <button class="btn btn-success" style="margin-top: 10px;" onclick="openVerifyModal('${personId}')">✅ 标记已核实</button>
+                    <button class="btn btn-secondary" style="margin-top: 10px; margin-left: 5px;" onclick="editPerson('${personId}')">编辑信息</button>
                 </div>
                 
                 <div class="detail-section">
@@ -522,6 +856,77 @@
             document.getElementById('add-event-form').style.display = 'block';
         }
         
+        // ============ 核实功能 ============
+        let currentVerifyPersonId = null;
+        
+        async function openVerifyModal(personId) {
+            currentVerifyPersonId = personId;
+            const person = await getByIdFromDB('people', personId);
+            
+            document.getElementById('verify-person-name').textContent = person.name;
+            document.getElementById('verify-info').innerHTML = `
+                <p><strong>当前职位：</strong>${person.title}</p>
+                ${person.company ? `<p><strong>当前公司：</strong>${person.company}</p>` : ''}
+                ${person.background ? `<p><strong>背景：</strong>${person.background}</p>` : ''}
+                <p style="margin-top: 10px; font-size: 12px; color: #999;">
+                    最后核实时间：${(person.lastVerifiedAt || '从未核实').split('T')[0]}
+                </p>
+            `;
+            
+            document.getElementById('modal-verify').classList.add('active');
+        }
+        
+        async function verifyPersonConfirm(isAccurate) {
+            if (!currentVerifyPersonId) return;
+            
+            const person = await getByIdFromDB('people', currentVerifyPersonId);
+            
+            if (isAccurate) {
+                // 标记已核实
+                person.lastVerifiedAt = new Date().toISOString();
+                person.updatedAt = new Date().toISOString();
+                await updateInDB('people', person);
+                
+                // 记录历史
+                await addHistory('verify', person.id, person.name, '信息已核实，标记为最新');
+                
+                showToast(`✅ ${person.name} 的信息已标记为最新`);
+            } else {
+                // 关闭模态框，打开编辑页面
+                document.getElementById('modal-verify').classList.remove('active');
+                showPersonDetail(currentVerifyPersonId);
+                return;
+            }
+            
+            document.getElementById('modal-verify').classList.remove('active');
+            loadDashboard();
+            loadPeople();
+        }
+        
+        // ============ 添加/编辑人物 ============
+        document.getElementById('add-person-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const person = {
+                id: generateId(),
+                name: document.getElementById('person-name').value,
+                title: document.getElementById('person-title').value,
+                company: document.getElementById('person-company').value,
+                background: document.getElementById('person-background').value,
+                tags: document.getElementById('person-tags').value.split(',').map(t => t.trim()).filter(t => t),
+                notes: document.getElementById('person-notes').value,
+                createdAt: new Date().toISOString(),
+                updatedAt: new Date().toISOString(),
+                lastVerifiedAt: new Date().toISOString()  // 新建时自动标记为已核实
+            };
+            
+            await addToDB('people', person);
+            await addHistory('create', person.id, person.name, `添加人物：${person.name}，职位：${person.title}`);
+            
+            showToast('人物添加成功！');
+            document.getElementById('add-person-form').reset();
+        });
+        
         async function addEvent(personId) {
             const event = {
                 id: generateId(),
@@ -545,12 +950,17 @@
             person.updatedAt = new Date().toISOString();
             await updateInDB('people', person);
             
+            await addHistory('add_event', personId, person.name, `${event.type === 'join' ? '入职' : '离职'}：${event.company}`);
+            
             showToast('动态添加成功！');
             showPersonDetail(personId); // 刷新详情
         }
         
         async function deletePerson(personId) {
             if (!confirm('确定要删除此人物及其所有动态吗？')) return;
+            
+            const person = await getByIdFromDB('people', personId);
+            await addHistory('delete', personId, person.name, `删除人物：${person.name}`);
             
             await deleteFromDB('people', personId);
             
@@ -567,34 +977,43 @@
         
         async function editPerson(personId) {
             const person = await getByIdFromDB('people', personId);
-            // 简单的prompt编辑，实际可以做成表单
             const name = prompt('姓名：', person.name);
             if (name) {
+                const oldName = person.name;
                 person.name = name;
                 person.title = prompt('职位：', person.title) || person.title;
                 person.company = prompt('公司：', person.company) || '';
                 person.updatedAt = new Date().toISOString();
                 await updateInDB('people', person);
+                
+                await addHistory('update', personId, person.name, `更新信息：${oldName} → ${person.name}`);
+                
                 showToast('信息已更新');
                 showPersonDetail(personId);
             }
         }
         
-        // 关闭模态框
+        // ============ 模态框 ============
         function closeModal(modalId) {
             document.getElementById(modalId).classList.remove('active');
         }
         
-        // 导出数据
+        // ============ 导入导出 ============
         async function exportData() {
             const people = await getAllFromDB('people');
             const events = await getAllFromDB('events');
+            const history = await getAllFromDB('history');
+            const settings = {};
+            const allSettings = await getAllFromDB('settings');
+            allSettings.forEach(s => settings[s.key] = s.value);
             
             const data = {
-                version: 1,
+                version: 2,
                 exportDate: new Date().toISOString(),
                 people: people,
-                events: events
+                events: events,
+                history: history,
+                settings: settings
             };
             
             const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
@@ -608,7 +1027,6 @@
             showToast('数据导出成功！');
         }
         
-        // 导入数据
         async function importData() {
             const fileInput = document.getElementById('import-file');
             if (!fileInput.files[0]) {
@@ -626,6 +1044,8 @@
                     if (data.people) {
                         for (const person of data.people) {
                             try {
+                                // 确保有新字段
+                                if (!person.lastVerifiedAt) person.lastVerifiedAt = person.updatedAt || person.createdAt;
                                 await addToDB('people', person);
                             } catch (err) {
                                 // 如果已存在则跳过
@@ -643,6 +1063,22 @@
                         }
                     }
                     
+                    if (data.history) {
+                        for (const h of data.history) {
+                            try {
+                                await addToDB('history', h);
+                            } catch (err) {
+                                // 如果已存在则跳过
+                            }
+                        }
+                    }
+                    
+                    if (data.settings) {
+                        for (const [key, value] of Object.entries(data.settings)) {
+                            await setSetting(key, value);
+                        }
+                    }
+                    
                     showToast('数据导入成功！');
                     loadDashboard();
                 } catch (err) {
@@ -653,15 +1089,16 @@
             reader.readAsText(file);
         }
         
-        // 清空数据
+        // ============ 清空数据 ============
         async function clearAllData() {
             if (!confirm('确定要清空所有数据吗？此操作不可恢复！')) return;
             if (!confirm('再次确认：所有人物和动态将被删除！')) return;
             
-            const transaction = db.transaction(['people', 'events'], 'readwrite');
+            const transaction = db.transaction(['people', 'events', 'history'], 'readwrite');
             await new Promise((resolve) => {
                 transaction.objectStore('people').clear();
                 transaction.objectStore('events').clear();
+                transaction.objectStore('history').clear();
                 transaction.oncomplete = resolve;
             });
             
@@ -669,7 +1106,7 @@
             loadDashboard();
         }
         
-        // Toast提示
+        // ============ Toast提示 ============
         function showToast(message) {
             const toast = document.createElement('div');
             toast.className = 'toast';
@@ -678,10 +1115,17 @@
             setTimeout(() => toast.remove(), 3000);
         }
         
-        // 初始化
+        // ============ 初始化 ============
         async function init() {
             try {
                 await initDB();
+                
+                // 加载设置
+                const staleThreshold = await getSetting('staleThreshold', 30);
+                const veryStaleThreshold = await getSetting('veryStaleThreshold', 90);
+                document.getElementById('stale-threshold').value = staleThreshold;
+                document.getElementById('very-stale-threshold').value = veryStaleThreshold;
+                
                 await loadDashboard();
                 showToast('人物库加载成功！');
             } catch (err) {
