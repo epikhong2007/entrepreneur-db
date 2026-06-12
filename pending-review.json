@@ -1,6 +1,59 @@
 {
-  "lastCheck": "",
-  "totalDetected": 0,
-  "items": [],
-  "message": "等待首次自动检测运行..."
+  "lastCheck": "2026-06-12T17:43:10.077634",
+  "totalDetected": 4,
+  "items": [
+    {
+      "personId": "p008",
+      "personName": "马云",
+      "detectedEvent": "离职",
+      "eventType": "leave",
+      "company": "帖爆火",
+      "title": "7万字离职帖爆火！钉钉深陷管理争议，马云紧急表态 - Sohu",
+      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE8wWmJiRTNkRWh2Y3FKaXE2alNIZTNBeGQ0OTVNQUx2NWkySjZraWJ1V1VTUEdvWXlqUmxFdDZyLVNoa2N3OF95cV9vZ0FNTkVzQm1EUVFn?oc=5",
+      "date": "Wed, 10 Jun 2026 14:10:00 GMT",
+      "source": "Google News",
+      "confidence": "medium",
+      "reviewed": false
+    },
+    {
+      "personId": "p015",
+      "personName": "何小鹏",
+      "detectedEvent": "离职",
+      "eventType": "leave",
+      "company": "机器人业务CEO",
+      "title": "小鹏集团董事长何小鹏亲自担任机器人业务CEO 原机器人负责人已离职 - 新浪财经",
+      "link": "https://news.google.com/rss/articles/CBMinAJBVV95cUxPUDlzQWZHVFZGY1VNcG1NQzdrQlRqUUphUVd0bjZjMzQ5djgwbU1oelZHWUJJaHpDcGc4OTVxcGF3Ti13eTBaYkg0dVRwMHZaSVowMUtsMTVnTXNOTmtuT1VBRlZjZFVfQURIZzBWMFgyLUh0WmdGMFhPQTlGal85bDBSdUpheGpQYWY2SkZiNmtZQkU1c2gwS2dDWk9FLVNOUklod0kwT0E2ak90YUZYTkJqczQtTmVFX0pUczJOWVZsUzFXTWFOb1p4NFJ3c295aVl2WnhuVUc5OXFSZEpmYlJPTXBGUTdYTVpWZTRwaEI2ZWNnUnFyUmh2emxDTDlDSWFLSThqQ1NYa2dBMThWbkxhZlZyR3VabW9BZw?oc=5",
+      "date": "Fri, 12 Jun 2026 08:34:17 GMT",
+      "source": "Google News",
+      "confidence": "medium",
+      "reviewed": false
+    },
+    {
+      "personId": "p015",
+      "personName": "何小鹏",
+      "detectedEvent": "离职",
+      "eventType": "leave",
+      "company": "",
+      "title": "小鹏机器人一号位离职！何小鹏发内部信：本人亲自带队 最后200天冲刺机器人量产 - 驱动之家",
+      "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9aUTl3U2FkYlVmVWhVQlc4QkoybHBmSllpN3NrcTRBRl9HU1F1UlV5czhZdXlBaTFCNGNnZE82ZkVXOGdyT0NTakpFeXlkcWFmTVFzSk9tSjk?oc=5",
+      "date": "Wed, 10 Jun 2026 04:42:00 GMT",
+      "source": "Google News",
+      "confidence": "medium",
+      "reviewed": false
+    },
+    {
+      "personId": "p015",
+      "personName": "何小鹏",
+      "detectedEvent": "离职",
+      "eventType": "leave",
+      "company": "机器人业务CEO",
+      "title": "小鹏集团董事长何小鹏亲自担任机器人业务CEO 原机器人负责人已离职 - 新浪财经",
+      "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9JY3N2STdIVVhRMHUzdmtlNk8zck9zck5IYXdfTWg4NmJoaHdwT2M4SVc2ejdRY2hBTkUtcjIzbGVMVVpVV0JWUVRGM0R0T0E2SEt6VlJGSlBnTzcyODFQbVVJRFRFeC16WTNaM0tPS1owQWRRUHRCOGNabEZiZ0E?oc=5",
+      "date": "Fri, 12 Jun 2026 08:18:00 GMT",
+      "source": "Google News",
+      "confidence": "medium",
+      "reviewed": false
+    }
+  ],
+  "message": "请人工审核以下检测到的变动，确认后更新到人物库。"
 }
