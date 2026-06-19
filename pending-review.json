@@ -1,20 +1,7 @@
 {
-  "lastCheck": "2026-06-18T05:56:30.218984",
-  "totalDetected": 2,
+  "lastCheck": "2026-06-19T06:21:04.020943",
+  "totalDetected": 1,
   "items": [
-    {
-      "personId": "p005",
-      "personName": "雷军",
-      "detectedEvent": "入职",
-      "eventType": "join",
-      "company": "小米",
-      "title": "雷军武汉过早引家长鼓励孩子加入小米 - 新浪财经",
-      "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOUEtuM1VIRW1PT1VJSGpPSnFQOEFTREc2RkY2N3Z3M3IxeHZDSDk0RXdMQlRHS3FiTEplNnhpTklYaGxRNHgzZDdiWk5lOGhSeUVmWmFULUJDX0VkMDlOS3N5UFhjcWRSZk1WQnZMVXE1STF4ZUNYUWk1UHFzckNlMGV2WVg?oc=5",
-      "date": "Mon, 15 Jun 2026 08:14:24 GMT",
-      "source": "Google News",
-      "confidence": "medium",
-      "reviewed": false
-    },
     {
       "personId": "p014",
       "personName": "李想",
