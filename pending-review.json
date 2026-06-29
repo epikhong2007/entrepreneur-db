@@ -1,6 +1,6 @@
 {
-  "lastCheck": "2026-06-28T05:17:10.643403",
-  "totalDetected": 4,
+  "lastCheck": "2026-06-29T05:51:12.842076",
+  "totalDetected": 1,
   "items": [
     {
       "personId": "p015",
@@ -11,45 +11,6 @@
       "title": "小鹏集团董事长何小鹏亲自担任机器人业务CEO 原负责人已离职 - 汽车之家",
       "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE96ZTR6clJKSnpib0dheFFRZHdlN3NseHIwZVE0b3R2c24xYTF1TG5iLTY5VFdBUmFsRDBVMWo3N3lOc3haVGZGSWtvZ2g3aERQNWVfbmJRS0swY3JXWVE?oc=5",
       "date": "Sat, 27 Jun 2026 14:56:09 GMT",
-      "source": "Google News",
-      "confidence": "medium",
-      "reviewed": false
-    },
-    {
-      "personId": "p015",
-      "personName": "何小鹏",
-      "detectedEvent": "入职",
-      "eventType": "join",
-      "company": "蚂蚁集团独立董事",
-      "title": "何小鹏出任蚂蚁集团独立董事，会对小鹏汽车的用户带来哪些具体影响？ - 新浪网",
-      "link": "https://news.google.com/rss/articles/CBMickFVX3lxTFBWYllBMTlUMXVQT1c5dk83UVNpNXl2Zmp5T2VJSmdwVE9DNHNvdmFnZjFXbGNLdG1OSF9GajhMVW9KNFNteVJ4OUItOVpqNUt2SmpKazNrUXlNckF6cG1zQUNFOFhiWmVFVzJEVlNXMWthZw?oc=5",
-      "date": "Fri, 26 Jun 2026 01:47:00 GMT",
-      "source": "Google News",
-      "confidence": "medium",
-      "reviewed": false
-    },
-    {
-      "personId": "p015",
-      "personName": "何小鹏",
-      "detectedEvent": "入职",
-      "eventType": "join",
-      "company": "蚂蚁集团独立董事后",
-      "title": "何小鹏出任蚂蚁集团独立董事后，小鹏汽车的车载支付体验会有哪些具体改变？ - 新浪网",
-      "link": "https://news.google.com/rss/articles/CBMickFVX3lxTFBHMlRTX2J0R1oxQnk0YTJXZWNtQTd1LVpfZndOeGpJcVpWNGFHWUo4UW1aeHZxRHBiLVNPQ3Y3Wjk4OWtrbmNTUVdpc3FWeGZJS3RkWHptWUhJTTBmRnVxVU5wcHZXczNXUDN6a0wxTGJSQQ?oc=5",
-      "date": "Fri, 26 Jun 2026 01:46:00 GMT",
-      "source": "Google News",
-      "confidence": "medium",
-      "reviewed": false
-    },
-    {
-      "personId": "p015",
-      "personName": "何小鹏",
-      "detectedEvent": "入职",
-      "eventType": "join",
-      "company": "蚂蚁集团独立董事后",
-      "title": "何小鹏出任蚂蚁集团独立董事后，年薪会有多少？ - 新浪网",
-      "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE5pYU5NY08zOUM3MkNiYkd5a19WbkM0cXlLRzNuTFk3TXB0OEJhcmZ2cVAtN0xHRDRGa1phODF4RlFLdWNhT2lRV1RoSnlpdVBxcWVyTHhCa3BDMEd5QjhRUjI2TUQyTEVXMHlaaG5IYk1NZw?oc=5",
-      "date": "Fri, 26 Jun 2026 01:47:00 GMT",
       "source": "Google News",
       "confidence": "medium",
       "reviewed": false
