@@ -1,7 +1,33 @@
 {
-  "lastCheck": "2026-06-29T05:51:12.842076",
-  "totalDetected": 1,
+  "lastCheck": "2026-06-30T05:03:49.448375",
+  "totalDetected": 3,
   "items": [
+    {
+      "personId": "p013",
+      "personName": "程一笑",
+      "detectedEvent": "入职",
+      "eventType": "join",
+      "company": "",
+      "title": "北京可灵智能科技工商变更：程一笑任董事长 盖坤履新多职 - 天脉网",
+      "link": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE52UGYzenlJY1RSWmJFTG9rNjJyYzQ1bVV5OTJQdW1oaHZNX3hYc29EcURUSU9rYll0TDNXd3RVUEs2NHB2czg4Wk9xd1RIbXNLVEhRaW54RQ?oc=5",
+      "date": "Mon, 29 Jun 2026 08:10:47 GMT",
+      "source": "Google News",
+      "confidence": "medium",
+      "reviewed": false
+    },
+    {
+      "personId": "p013",
+      "personName": "程一笑",
+      "detectedEvent": "入职",
+      "eventType": "join",
+      "company": "",
+      "title": "北京可灵智能科技工商变更：程一笑任董事长 盖坤履新多职 - 天脉网",
+      "link": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE52UGYzenlJY1RSWmJFTG9rNjJyYzQ1bVV5OTJQdW1oaHZNX3hYc29EcURUSU9rYll0TDNXd3RVUEs2NHB2czg4Wk9xd1RIbXNLVEhRaW54RQ?oc=5",
+      "date": "Mon, 29 Jun 2026 08:10:47 GMT",
+      "source": "Google News",
+      "confidence": "medium",
+      "reviewed": false
+    },
     {
       "personId": "p015",
       "personName": "何小鹏",
