@@ -1,59 +1,7 @@
 {
-  "lastCheck": "2026-07-06T05:11:53.592159",
-  "totalDetected": 6,
+  "lastCheck": "2026-07-07T04:52:16.643522",
+  "totalDetected": 1,
   "items": [
-    {
-      "personId": "p008",
-      "personName": "马云",
-      "detectedEvent": "入职",
-      "eventType": "join",
-      "company": "",
-      "title": "光明乳业：黄黎明辞任董事长、董事， 马云辞任职工代表董事 - MSN",
-      "link": "https://news.google.com/rss/articles/CBMiggNBVV95cUxQM3ZNQ3VWaDhpd29UZDdBQkpOazdNLVdGVjBQVVNsZHBqak4zaDFuTnNyTFRhQnE2dlZnUnJzR3hjN3lDVmhoSEd3S3RzMWJDcmljVGJwMVBNQ0VONHJtaEJLSHctOGQxU0I5bUJrMnhmcVNtR1ZnZjY2VUMtcVVRZElzWnJjTVNSOGVyRXBJaEZ4dG9BZUQwcHZDYzcwWHhkb2YzV09JeVpNTjlEaFlfM29hOHdIbnVDVGZxWWJjM3pEVGFlWVk4S2JkRENmczNVV1JZcTdxdzJ4TEdCSEhkN2ZMMTlPWjBxWTdzWl9BWHVaWHZGaHREdU1wVnVLRnJiZVI1ZmkxQjlzNGRBdm9WbHAzclh5MmZqdFJZVkVQcjJDa1B4OGRkc2M5M3YwM0tZbmdFanJDa21rVWl3QUJXWnZMZmlyeEtjTkFvdlZpM1p4VU5SX3AyRW0zTDhQZm16ZWtzOEoyN3pZeVNlZlpHQkRnUFoyVzhTNG5FN2lGSXRuUQ?oc=5",
-      "date": "Sun, 05 Jul 2026 09:34:48 GMT",
-      "source": "Google News",
-      "confidence": "medium",
-      "reviewed": false
-    },
-    {
-      "personId": "p012",
-      "personName": "宿华",
-      "detectedEvent": "离职",
-      "eventType": "leave",
-      "company": "CEO后",
-      "title": "宿华卸任CEO后，快手高层再次重大调整 - 新浪网",
-      "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE9QSXpiUU1CS1VuMTBKTmo4dERXa05xX3VhaDRsYjBPOWF5Z1J1d1AzTkVKTjhUWFNnc1RPSi1RVWN3aHZaRldaSWVVZk1LTk15MUZsQVhHNDNvcXVWVTVRVzVWY3hSY2RQWWx5RzdRV1Fwdw?oc=5",
-      "date": "Sat, 04 Jul 2026 20:59:19 GMT",
-      "source": "Google News",
-      "confidence": "medium",
-      "reviewed": false
-    },
-    {
-      "personId": "p012",
-      "personName": "宿华",
-      "detectedEvent": "离职",
-      "eventType": "leave",
-      "company": "CEO后",
-      "title": "宿华卸任CEO后，快手高层再次重大调整 - 新浪网",
-      "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE9QSXpiUU1CS1VuMTBKTmo4dERXa05xX3VhaDRsYjBPOWF5Z1J1d1AzTkVKTjhUWFNnc1RPSi1RVWN3aHZaRldaSWVVZk1LTk15MUZsQVhHNDNvcXVWVTVRVzVWY3hSY2RQWWx5RzdRV1Fwdw?oc=5",
-      "date": "Sat, 04 Jul 2026 20:59:19 GMT",
-      "source": "Google News",
-      "confidence": "medium",
-      "reviewed": false
-    },
-    {
-      "personId": "p013",
-      "personName": "程一笑",
-      "detectedEvent": "入职",
-      "eventType": "join",
-      "company": "这家公司董事长",
-      "title": "快手CEO程一笑，为何出任这家公司董事长？ - 东方财富",
-      "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOQldwUWUycC1saW9YeGdjTE54aUZHNHBsWmVRWTdwWDF0VU9WYk1tb0FNVnRncFNUWUJzbGZNekVtbDg4c1NLSnJxejN6MThtTkJiUVBacHFmbjVpSUZlLTBvenlGRllienVIWWtfYldUajBxQTRlZHYyNXo2NFE4a0FRV08zOHp1aU5zbjZxX19jTE01Qldqc2R1eFF6SmYzcnRUQU1RRGd3bURONGptYVV1WQ?oc=5",
-      "date": "Sat, 04 Jul 2026 01:03:49 GMT",
-      "source": "Google News",
-      "confidence": "medium",
-      "reviewed": false
-    },
     {
       "personId": "p015",
       "personName": "何小鹏",
@@ -63,19 +11,6 @@
       "title": "何小鹏辟谣：胡安马没有离职，MONA L03就是他设计的 - 21财经",
       "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNRklkV2Y1cmFTVzlLMU9hNDc4YW5MMGxrbDVsRmlyYVhVcUJCaEF3VlR1aTRnSzNqdk9BNVR6Vm1xandUZDYzbkhEOGtoUWVRS3VRa2o3TkJFa2pMdjdQSE1tT1ZVNDVEc3hyLTRJQVZHUUl0Uk1yUzVZd3dfRk0zQ055SkJpSHhjc2NxVg?oc=5",
       "date": "Sun, 05 Jul 2026 12:42:00 GMT",
-      "source": "Google News",
-      "confidence": "medium",
-      "reviewed": false
-    },
-    {
-      "personId": "p015",
-      "personName": "何小鹏",
-      "detectedEvent": "离职",
-      "eventType": "leave",
-      "company": "",
-      "title": "何小鹏辟谣前法拉利设计师离职！ - 搜狐网",
-      "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQYVJrb1YtSzBUV2NQR3FpNG8zd3Yxc0NmbXczQk02Z0hKY29ZbmttZGZwZDZUS2dlOWY5a0FNbVI5OHdZUmNXUGZQWFVrR1Y0RVE3M1NOT1hVN0lJVWxBazVKcG1qajVxWmw1MmdOMzIyVEVOenkwUnZrUGR5MkR2eHliRFJkRXp2?oc=5",
-      "date": "Fri, 03 Jul 2026 13:07:04 GMT",
       "source": "Google News",
       "confidence": "medium",
       "reviewed": false
