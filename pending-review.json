@@ -1,7 +1,20 @@
 {
-  "lastCheck": "2026-07-07T04:52:16.643522",
-  "totalDetected": 1,
+  "lastCheck": "2026-07-08T04:14:53.265134",
+  "totalDetected": 2,
   "items": [
+    {
+      "personId": "p015",
+      "personName": "何小鹏",
+      "detectedEvent": "离职",
+      "eventType": "leave",
+      "company": "传闻",
+      "title": "何小鹏辟谣设计师离职传闻，MONA L03为首作 - 新浪网",
+      "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPRnBQdGtVTDYzVXFQbU81UC1pN1dKdm5iMnJuazI5VDlfMlMyUE9hZ1VKTlZuQ0pnNFNMbkZnbGttVGNBUUUtblUzQmdVUlZCYW5ibnREbm1rdnBOOEFaMnFYX2szWldadVlOZFZLc2VpZzU3bE5RdGI3NzdYellTZlpHVDQ2RmpWaEdZ?oc=5",
+      "date": "Tue, 07 Jul 2026 13:07:36 GMT",
+      "source": "Google News",
+      "confidence": "medium",
+      "reviewed": false
+    },
     {
       "personId": "p015",
       "personName": "何小鹏",
