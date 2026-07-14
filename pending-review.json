@@ -1,20 +1,7 @@
 {
-  "lastCheck": "2026-07-13T04:29:58.633465",
-  "totalDetected": 6,
+  "lastCheck": "2026-07-14T03:56:49.333743",
+  "totalDetected": 2,
   "items": [
-    {
-      "personId": "p005",
-      "personName": "雷军",
-      "detectedEvent": "离职",
-      "eventType": "leave",
-      "company": "",
-      "title": "从大疆离职，被雷军投24亿，哈工大女教授造出百亿独角兽 - 手机网易网",
-      "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBzSDVQLWdMUElFbml1a2pGS2JndUxBYi12WGRXOWU3QUE4SnpUeWtjcDRGVi1OTFpjX1NoM2o1SzNhX0l3eXlmNzdwZ1RYTFBhRTZjb1h3UnZDTGFWNmRHU2Vn?oc=5",
-      "date": "Fri, 10 Jul 2026 08:13:01 GMT",
-      "source": "Google News",
-      "confidence": "medium",
-      "reviewed": false
-    },
     {
       "personId": "p011",
       "personName": "张小龙",
@@ -24,45 +11,6 @@
       "title": "湾财周报|人物高善文离世，一代“卖方首席”落幕；粉笔CEO张小龙辞职；倪飞谈“全球首款AI智能体手机” - 东方财富",
       "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1IRkNUSFlTZ3BVS3BKLU1RbHFyT0JXNU5vZTZKRVRGYmZQX2RxcHlLblprdU1iS2hpdnNMV2h2dWhrUm9SU3ZXUnQ5dUZ6b1dsdDRmZ3o0aHpCN2J6bkZRag?oc=5",
       "date": "Sun, 12 Jul 2026 14:50:01 GMT",
-      "source": "Google News",
-      "confidence": "medium",
-      "reviewed": false
-    },
-    {
-      "personId": "p011",
-      "personName": "张小龙",
-      "detectedEvent": "离职",
-      "eventType": "leave",
-      "company": "",
-      "title": "张小龙辞职，一切都结束了 - 21财经",
-      "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNWEg0X2dXLVFIS09TamE3RXdOZzladkRDRFhPa2M1SGhNS0ttcHZ5MVQzZUYyTDlRaUlENHJhcWRsdmFLQ0daWFNyQ0dwVEtmckRVQWRzTWtqRXQxQ0owc3ViTHIyVWhweXFYbmZ4STJjX1FCd1lnWEtMZVZFOU1mS0NYVlBRUE00VXpvaQ?oc=5",
-      "date": "Fri, 10 Jul 2026 07:20:00 GMT",
-      "source": "Google News",
-      "confidence": "medium",
-      "reviewed": false
-    },
-    {
-      "personId": "p011",
-      "personName": "张小龙",
-      "detectedEvent": "离职",
-      "eventType": "leave",
-      "company": "",
-      "title": "粉笔张小龙辞职，一切都结束了! - 手机网易网",
-      "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFB0QVM3am4tb1hRT2psVzAteUtKMTRSMW1xRy04c1JHT0JFTGQ2ZTRxRTdkMWh2OGtVZmNsX2lpMDk5LThBYmdGLUQ5TlNfZnZGX3dSWmpraVh6cVFvSDJsRmVn?oc=5",
-      "date": "Mon, 13 Jul 2026 04:00:03 GMT",
-      "source": "Google News",
-      "confidence": "medium",
-      "reviewed": false
-    },
-    {
-      "personId": "p015",
-      "personName": "何小鹏",
-      "detectedEvent": "离职",
-      "eventType": "leave",
-      "company": "：一直都在小鹏",
-      "title": "何小鹏辟谣前法拉利设计师胡安马离职：一直都在小鹏 - 新浪网",
-      "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE1oZ3YtSUNSbHZsOHE2cFZCdkxmUmt5aFBPVmVhNnNOenJ3eUVySUowTVFWVXZXQXZZRWVIdlM2NkxBM1N4UDdlNzY5SjRDc2M4Zm45TVloNGtLN1I4ZkhBYjlLazVzQ0t2M3JlVmRFbS1qQQ?oc=5",
-      "date": "Fri, 10 Jul 2026 17:07:00 GMT",
       "source": "Google News",
       "confidence": "medium",
       "reviewed": false
