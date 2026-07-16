@@ -1,6 +1,6 @@
 {
-  "lastCheck": "2026-07-15T03:58:03.097785",
-  "totalDetected": 2,
+  "lastCheck": "2026-07-16T04:09:08.054773",
+  "totalDetected": 1,
   "items": [
     {
       "personId": "p005",
@@ -11,19 +11,6 @@
       "title": "《置身米内》刷屏！离职校招生控诉雷军？小米的麻烦不止是裁员！ - 手机网易网",
       "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBXVGVfLXg2eWl6ME5OZUY2WHVQcG9Lazh5WXJPc0lOZVRteHlmTTREbnBka2dRYVJHRVJwek5GblhyMHRiRWkzeXd3NjY1Q29LUVBuXw?oc=5",
       "date": "Tue, 14 Jul 2026 22:25:42 GMT",
-      "source": "Google News",
-      "confidence": "medium",
-      "reviewed": false
-    },
-    {
-      "personId": "p011",
-      "personName": "张小龙",
-      "detectedEvent": "离职",
-      "eventType": "leave",
-      "company": "",
-      "title": "张小龙黯然离职，粉笔只剩10亿 - 手机网易网",
-      "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE5LTHVSRFFWaklxRTl2RTNFa3lpYUNxQmZWRGN4bjRyRlhBRE9LTHZqd3pRWjNJRXJ0eHc2aUQ4QlFRTV9BeHpMeFBybXJTVjhVSTRfMTRvWGFHTTNjRHk3NktR?oc=5",
-      "date": "Sun, 12 Jul 2026 05:57:29 GMT",
       "source": "Google News",
       "confidence": "medium",
       "reviewed": false
