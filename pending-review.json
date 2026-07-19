@@ -1,20 +1,7 @@
 {
-  "lastCheck": "2026-07-18T03:54:52.366876",
-  "totalDetected": 4,
+  "lastCheck": "2026-07-19T04:21:13.945467",
+  "totalDetected": 3,
   "items": [
-    {
-      "personId": "p011",
-      "personName": "张小龙",
-      "detectedEvent": "离职",
-      "eventType": "leave",
-      "company": "",
-      "title": "“讲座风波”满月，粉笔CEO张小龙离职 - thepaper.cn",
-      "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE1DMGp2WkNXWG5fNHAxNnRMNl8yeFpMN0Y1R1JLRF8yZ0VUMVVHWEQ3Z3pqRkpIUDFIc3AzbXBpNzBOQ2xGVVBzbG81YzY3ZTZIRzVrTkxhTUh5SGpoTnc?oc=5",
-      "date": "Wed, 15 Jul 2026 11:44:00 GMT",
-      "source": "Google News",
-      "confidence": "medium",
-      "reviewed": false
-    },
     {
       "personId": "p015",
       "personName": "何小鹏",
