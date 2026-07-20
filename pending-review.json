@@ -1,6 +1,6 @@
 {
-  "lastCheck": "2026-07-19T04:21:13.945467",
-  "totalDetected": 3,
+  "lastCheck": "2026-07-20T04:35:30.083193",
+  "totalDetected": 1,
   "items": [
     {
       "personId": "p015",
@@ -11,32 +11,6 @@
       "title": "小鹏集团机器人业务负责人米良川离职，何小鹏亲自担纲 - 新浪财经",
       "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE4wTEpvUzdWQ0NqaUxxNFUxbHF2TVNHTXBibTdXSWdzTXRMQlJ3OGxqNnpjMzhoc1k5NUp4cmlsSEVBQ0ZRNDdra1J2Q3l0VGFYY1BsaFlQNHZlU09TVFRiMmNaaDhyUGROSjN5bWZhcHdJbmxuaUFaNDBZdDF3Um8?oc=5",
       "date": "Fri, 17 Jul 2026 08:55:02 GMT",
-      "source": "Google News",
-      "confidence": "medium",
-      "reviewed": false
-    },
-    {
-      "personId": "p017",
-      "personName": "王传福",
-      "detectedEvent": "入职",
-      "eventType": "join",
-      "company": "比亚迪",
-      "title": "王传福再得一员虎将！匈牙利前外长宣布加入比亚迪！网友：别说他了，我也想去国外卖比亚迪 - 新浪财经",
-      "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQZ3F1TDZ3enliX2hKOFVWcGhtUlJOVndDbklwZHFrZzRGSGVUM09tbGh5LTVRVzlhTjg5a3Zod0lsdXVRd1RLaGNVdjduR1Q2X0U4ZjgtMFE2cVdXNlNSNUVwNzFMbm5ad0ZnVFoxTnpTSFBjNFFrUzZVcWU2WmJuaw?oc=5",
-      "date": "Thu, 16 Jul 2026 09:42:23 GMT",
-      "source": "Google News",
-      "confidence": "medium",
-      "reviewed": false
-    },
-    {
-      "personId": "p017",
-      "personName": "王传福",
-      "detectedEvent": "离职",
-      "eventType": "leave",
-      "company": "",
-      "title": "王传福有新帮手了：匈牙利前外长退出政坛，正式入职比亚迪！ - 汽车之家",
-      "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9PUjItWkxMdmxIZUNFYUR0X2g4LW93d0JmQUZZQWpyR1BuaXVuSldtWmJsX0lTekR2TDUzVlVPcE9lR1lqV010TzNDVnZKZGt2U3lBamdmVDRYSGtONGc?oc=5",
-      "date": "Thu, 16 Jul 2026 17:31:10 GMT",
       "source": "Google News",
       "confidence": "medium",
       "reviewed": false
