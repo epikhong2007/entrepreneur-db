@@ -1,16 +1,29 @@
 {
-  "lastCheck": "2026-07-20T04:35:30.083193",
-  "totalDetected": 1,
+  "lastCheck": "2026-07-21T04:15:21.546207",
+  "totalDetected": 2,
   "items": [
+    {
+      "personId": "p011",
+      "personName": "张小龙",
+      "detectedEvent": "离职",
+      "eventType": "leave",
+      "company": "",
+      "title": "张小龙离职，粉笔何去何从？ - 风闻",
+      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE44UFdkcjZqZE5iWkV1blh6a2ZYOWNQdDVxVDRJeEtia21rTEplVjlBYmtZcmd4STF0a1FaanJvY1gzV1BzWDFhLTZHdExDOV9wMV9obGxQdHFfUDA?oc=5",
+      "date": "Mon, 20 Jul 2026 08:24:25 GMT",
+      "source": "Google News",
+      "confidence": "medium",
+      "reviewed": false
+    },
     {
       "personId": "p015",
       "personName": "何小鹏",
       "detectedEvent": "离职",
       "eventType": "leave",
-      "company": "",
-      "title": "小鹏集团机器人业务负责人米良川离职，何小鹏亲自担纲 - 新浪财经",
-      "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE4wTEpvUzdWQ0NqaUxxNFUxbHF2TVNHTXBibTdXSWdzTXRMQlJ3OGxqNnpjMzhoc1k5NUp4cmlsSEVBQ0ZRNDdra1J2Q3l0VGFYY1BsaFlQNHZlU09TVFRiMmNaaDhyUGROSjN5bWZhcHdJbmxuaUFaNDBZdDF3Um8?oc=5",
-      "date": "Fri, 17 Jul 2026 08:55:02 GMT",
+      "company": "机器人业务CEO",
+      "title": "小鹏集团董事长何小鹏亲自担任机器人业务CEO 原负责人已离职 - 汽车之家",
+      "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE96ZTR6clJKSnpib0dheFFRZHdlN3NseHIwZVE0b3R2c24xYTF1TG5iLTY5VFdBUmFsRDBVMWo3N3lOc3haVGZGSWtvZ2g3aERQNWVfbmJRS0swY3JXWVE?oc=5",
+      "date": "Mon, 20 Jul 2026 05:51:27 GMT",
       "source": "Google News",
       "confidence": "medium",
       "reviewed": false
