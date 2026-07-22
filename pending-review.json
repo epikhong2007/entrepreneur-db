@@ -1,7 +1,20 @@
 {
-  "lastCheck": "2026-07-21T04:15:21.546207",
-  "totalDetected": 2,
+  "lastCheck": "2026-07-22T04:16:52.380389",
+  "totalDetected": 3,
   "items": [
+    {
+      "personId": "p005",
+      "personName": "雷军",
+      "detectedEvent": "离职",
+      "eventType": "leave",
+      "company": "是当头一棒",
+      "title": "周受资离职是当头一棒！雷军回应董明珠：从未说过米家空调销量第一！预计今年11月提前完成10万辆交付目标 - 每日经济新闻",
+      "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBwdWFBWXVnZzA4RGFoR2JHTk5zYXZmdXd4eUxPQlZDQVg3OTlnekNPMmR2Y1NJNHl5ampjVDlBa0s0VXpXV3RsS1E5YU5mNkdnc2k3U0xwaGZUSTF6TnpoZnFkbHFhdw?oc=5",
+      "date": "Sun, 19 Jul 2026 14:57:00 GMT",
+      "source": "Google News",
+      "confidence": "medium",
+      "reviewed": false
+    },
     {
       "personId": "p011",
       "personName": "张小龙",
