@@ -1,16 +1,16 @@
 {
-  "lastCheck": "2026-07-22T04:16:52.380389",
-  "totalDetected": 3,
+  "lastCheck": "2026-07-23T04:15:13.045187",
+  "totalDetected": 4,
   "items": [
     {
-      "personId": "p005",
-      "personName": "雷军",
+      "personId": "p009",
+      "personName": "刘强东",
       "detectedEvent": "离职",
       "eventType": "leave",
-      "company": "是当头一棒",
-      "title": "周受资离职是当头一棒！雷军回应董明珠：从未说过米家空调销量第一！预计今年11月提前完成10万辆交付目标 - 每日经济新闻",
-      "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBwdWFBWXVnZzA4RGFoR2JHTk5zYXZmdXd4eUxPQlZDQVg3OTlnekNPMmR2Y1NJNHl5ampjVDlBa0s0VXpXV3RsS1E5YU5mNkdnc2k3U0xwaGZUSTF6TnpoZnFkbHFhdw?oc=5",
-      "date": "Sun, 19 Jul 2026 14:57:00 GMT",
+      "company": "",
+      "title": "刘强东痛失大将！京东物流原CEO胡伟离职 - 驱动之家",
+      "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFB0eG9qU0NaSXNDRFFsdTJkRW5OOG90RHlTUXBicS04Y1czRmU3UGFUQXNUNVRibllPNUR5UURRWEFZaXRxd1p1ZGxqcEd4YUZtQjhhTjZtM0g?oc=5",
+      "date": "Wed, 22 Jul 2026 09:06:00 GMT",
       "source": "Google News",
       "confidence": "medium",
       "reviewed": false
@@ -23,7 +23,7 @@
       "company": "",
       "title": "张小龙离职，粉笔何去何从？ - 风闻",
       "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE44UFdkcjZqZE5iWkV1blh6a2ZYOWNQdDVxVDRJeEtia21rTEplVjlBYmtZcmd4STF0a1FaanJvY1gzV1BzWDFhLTZHdExDOV9wMV9obGxQdHFfUDA?oc=5",
-      "date": "Mon, 20 Jul 2026 08:24:25 GMT",
+      "date": "Wed, 22 Jul 2026 17:13:12 GMT",
       "source": "Google News",
       "confidence": "medium",
       "reviewed": false
@@ -37,6 +37,19 @@
       "title": "小鹏集团董事长何小鹏亲自担任机器人业务CEO 原负责人已离职 - 汽车之家",
       "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE96ZTR6clJKSnpib0dheFFRZHdlN3NseHIwZVE0b3R2c24xYTF1TG5iLTY5VFdBUmFsRDBVMWo3N3lOc3haVGZGSWtvZ2g3aERQNWVfbmJRS0swY3JXWVE?oc=5",
       "date": "Mon, 20 Jul 2026 05:51:27 GMT",
+      "source": "Google News",
+      "confidence": "medium",
+      "reviewed": false
+    },
+    {
+      "personId": "p017",
+      "personName": "王传福",
+      "detectedEvent": "离职",
+      "eventType": "leave",
+      "company": "",
+      "title": "王传福有新帮手了：匈牙利前外长退出政坛，正式入职比亚迪！ - 汽车之家",
+      "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9PUjItWkxMdmxIZUNFYUR0X2g4LW93d0JmQUZZQWpyR1BuaXVuSldtWmJsX0lTekR2TDUzVlVPcE9lR1lqV010TzNDVnZKZGt2U3lBamdmVDRYSGtONGc?oc=5",
+      "date": "Tue, 21 Jul 2026 19:30:41 GMT",
       "source": "Google News",
       "confidence": "medium",
       "reviewed": false
