@@ -1,5 +1,5 @@
 {
-  "lastCheck": "2026-07-24T04:14:20.920096",
+  "lastCheck": "2026-07-25T04:10:26.571323",
   "totalDetected": 4,
   "items": [
     {
@@ -8,9 +8,22 @@
       "detectedEvent": "离职",
       "eventType": "leave",
       "company": "",
-      "title": "刘强东痛失大将！京东物流原CEO胡伟离职 - 驱动之家",
-      "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFB0eG9qU0NaSXNDRFFsdTJkRW5OOG90RHlTUXBicS04Y1czRmU3UGFUQXNUNVRibllPNUR5UURRWEFZaXRxd1p1ZGxqcEd4YUZtQjhhTjZtM0g?oc=5",
+      "title": "刘强东痛失大将！京东物流原CEO胡伟离职 - 新浪财经",
+      "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE40ZmV5UmkyaEVWalB2Q2pUUmVSV2ZaSlpPbDZMSDJLZkhJWUJSVlp2QXIwaTFjekthdWx1MnhzazN3WWpiRmxrc0JWaHFIdVlRVTNpSFFqNEZsSFFjWlAtbDY2TWhuRlJHTnRNMXo5eEFhVU9hazNMbnJpSmw1TmM?oc=5",
       "date": "Wed, 22 Jul 2026 09:06:00 GMT",
+      "source": "Google News",
+      "confidence": "medium",
+      "reviewed": false
+    },
+    {
+      "personId": "p010",
+      "personName": "周鸿祎",
+      "detectedEvent": "离职",
+      "eventType": "leave",
+      "company": "七年未获兑付",
+      "title": "360首任董秘张帆追索2649万元股权激励，离职七年未获兑付，自爆被周鸿祎拉黑；多名前高管曾因同类问题起诉 - Sohu",
+      "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPb1FmTVdkMnBJUE5UdVQwY2FOOEhIRXpCdEZnTG5FaHlHZ3ZGYTkteGhHbGp2c2VpN0hsVG8wR3VHUVpjWWlSUldqWE0tdGVhcGZtbEU2MjZMTlB5Q0pLTVBHQndoNUFTd3BNcl9zS3lGYVJPM3cwMHE3aEp2NTZ4VzV5bktlU0lhbVBZOS1RSQ?oc=5",
+      "date": "Fri, 24 Jul 2026 14:41:25 GMT",
       "source": "Google News",
       "confidence": "medium",
       "reviewed": false
@@ -37,19 +50,6 @@
       "title": "小鹏集团董事长何小鹏亲自担任机器人业务CEO 原负责人已离职 - 汽车之家",
       "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE96ZTR6clJKSnpib0dheFFRZHdlN3NseHIwZVE0b3R2c24xYTF1TG5iLTY5VFdBUmFsRDBVMWo3N3lOc3haVGZGSWtvZ2g3aERQNWVfbmJRS0swY3JXWVE?oc=5",
       "date": "Wed, 22 Jul 2026 11:27:51 GMT",
-      "source": "Google News",
-      "confidence": "medium",
-      "reviewed": false
-    },
-    {
-      "personId": "p017",
-      "personName": "王传福",
-      "detectedEvent": "离职",
-      "eventType": "leave",
-      "company": "",
-      "title": "王传福有新帮手了：匈牙利前外长退出政坛，正式入职比亚迪！ - 汽车之家",
-      "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9PUjItWkxMdmxIZUNFYUR0X2g4LW93d0JmQUZZQWpyR1BuaXVuSldtWmJsX0lTekR2TDUzVlVPcE9lR1lqV010TzNDVnZKZGt2U3lBamdmVDRYSGtONGc?oc=5",
-      "date": "Tue, 21 Jul 2026 19:30:41 GMT",
       "source": "Google News",
       "confidence": "medium",
       "reviewed": false
