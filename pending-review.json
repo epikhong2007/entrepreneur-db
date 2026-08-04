@@ -1,29 +1,16 @@
 {
-  "lastCheck": "2026-08-03T04:29:46.718572",
-  "totalDetected": 2,
+  "lastCheck": "2026-08-04T04:14:05.660864",
+  "totalDetected": 1,
   "items": [
     {
-      "personId": "p005",
-      "personName": "雷军",
-      "detectedEvent": "入职",
-      "eventType": "join",
-      "company": "增程车赛道不晚、并用理想L6举例",
-      "title": "小米澎程发布，雷军称加入增程车赛道不晚、并用理想L6举例 - 新浪财经",
-      "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5CYTJVVkRZa0ZoV3VTVXE1ZlIzUWI5cU9Eank2UklhaFVIa1FLZTJEYnhqN0g0cllvNkMyQThLZFI4c0tzcFhsSEhpT1R2M0hhZVktRDcxRi1rX0pfWWZtcU95X3dSMWFEM0NaUmxB?oc=5",
-      "date": "Fri, 31 Jul 2026 09:42:14 GMT",
-      "source": "Google News",
-      "confidence": "medium",
-      "reviewed": false
-    },
-    {
-      "personId": "p015",
-      "personName": "何小鹏",
+      "personId": "p011",
+      "personName": "张小龙",
       "detectedEvent": "离职",
       "eventType": "leave",
       "company": "",
-      "title": "小鹏汽车智驾一号人物离职！何小鹏发文确认，下一站或为英伟达 - 证券时报",
-      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBlR0hSanpWV0hFR2ZjWnh5U1VTbVlQRmtCZGl2WmItbVFxMm1zTUNpVHZpSHpkMVFfSnpKTWxIYl9HUldSZWtJd3dyRGRwZ05WN3ZxSThRXzMwUE0?oc=5",
-      "date": "Sun, 02 Aug 2026 09:58:58 GMT",
+      "title": "【网经社月报】7月数字教育：昂立教育净利暴增973% 粉笔创始人张小龙辞职 - 搜狐网",
+      "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPSXV1c002eGFlbTBzUlA3NERKN0Q4bllLQmJLLTl1VW1SS1FiRjh0M2x4WGhNOFN5Q01weVQ2amU4bjFlNFNIby1FMTIxQkxnblk2am05dmRoWHFpbTdaeU9pX0JvakF1N0NDMFdXbDhRQ3AwVkZvbnpFa2dqX2ZpSmN4b01feW5sNUZsWg?oc=5",
+      "date": "Mon, 03 Aug 2026 06:56:14 GMT",
       "source": "Google News",
       "confidence": "medium",
       "reviewed": false
