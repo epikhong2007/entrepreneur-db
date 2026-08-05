@@ -1,7 +1,20 @@
 {
-  "lastCheck": "2026-08-04T04:14:05.660864",
-  "totalDetected": 1,
+  "lastCheck": "2026-08-05T04:09:16.990807",
+  "totalDetected": 2,
   "items": [
+    {
+      "personId": "p006",
+      "personName": "李彦宏",
+      "detectedEvent": "入职",
+      "eventType": "join",
+      "company": "香港特首顾问团",
+      "title": "港澳一周| 百度创始人李彦宏等4人加入香港特首顾问团 - content.foshanplus.com",
+      "link": "https://news.google.com/rss/articles/CBMiekFVX3lxTE5JZFF3UTRxUlIyTjZUNktWeS1LOEFjbnFVckM3RDlndTk5bFBqczEwdHJIVUU1amxrM3JVX1p2TG9pSWo0WkNOa1lLdGlpeDdORkU2eFN4UVpUZ2Y5YWJKRkdWTGh2bWptcjlUTmRTd1NmczFucG5ScGJR?oc=5",
+      "date": "Tue, 04 Aug 2026 20:13:59 GMT",
+      "source": "Google News",
+      "confidence": "medium",
+      "reviewed": false
+    },
     {
       "personId": "p011",
       "personName": "张小龙",
