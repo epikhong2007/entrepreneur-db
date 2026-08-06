@@ -1,6 +1,6 @@
 {
-  "lastCheck": "2026-08-05T04:09:16.990807",
-  "totalDetected": 2,
+  "lastCheck": "2026-08-06T04:12:00.110688",
+  "totalDetected": 1,
   "items": [
     {
       "personId": "p006",
@@ -11,19 +11,6 @@
       "title": "港澳一周| 百度创始人李彦宏等4人加入香港特首顾问团 - content.foshanplus.com",
       "link": "https://news.google.com/rss/articles/CBMiekFVX3lxTE5JZFF3UTRxUlIyTjZUNktWeS1LOEFjbnFVckM3RDlndTk5bFBqczEwdHJIVUU1amxrM3JVX1p2TG9pSWo0WkNOa1lLdGlpeDdORkU2eFN4UVpUZ2Y5YWJKRkdWTGh2bWptcjlUTmRTd1NmczFucG5ScGJR?oc=5",
       "date": "Tue, 04 Aug 2026 20:13:59 GMT",
-      "source": "Google News",
-      "confidence": "medium",
-      "reviewed": false
-    },
-    {
-      "personId": "p011",
-      "personName": "张小龙",
-      "detectedEvent": "离职",
-      "eventType": "leave",
-      "company": "",
-      "title": "【网经社月报】7月数字教育：昂立教育净利暴增973% 粉笔创始人张小龙辞职 - 搜狐网",
-      "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPSXV1c002eGFlbTBzUlA3NERKN0Q4bllLQmJLLTl1VW1SS1FiRjh0M2x4WGhNOFN5Q01weVQ2amU4bjFlNFNIby1FMTIxQkxnblk2am05dmRoWHFpbTdaeU9pX0JvakF1N0NDMFdXbDhRQ3AwVkZvbnpFa2dqX2ZpSmN4b01feW5sNUZsWg?oc=5",
-      "date": "Mon, 03 Aug 2026 06:56:14 GMT",
       "source": "Google News",
       "confidence": "medium",
       "reviewed": false
