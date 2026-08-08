@@ -1,6 +1,6 @@
 {
-  "lastCheck": "2026-08-07T03:49:10.304610",
-  "totalDetected": 2,
+  "lastCheck": "2026-08-08T02:54:24.596539",
+  "totalDetected": 1,
   "items": [
     {
       "personId": "p001",
@@ -11,19 +11,6 @@
       "title": "张一鸣最新发声：字节跳动“拒绝蒸馏”；DeepSeek官宣API大幅涨价；宇树科技王兴兴身家有望超200亿；可灵核心技术骨干王鑫涛离职... - 搜狐网",
       "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNeHNFallEX3FZeTNRWEVaSDZ1UXJrcFpUV1FMVFczblJ5dmlObWEtRVJRSTZ6bGZVME5IUW0wTm56QnMtQWpqaTdzMDU1QmhYVzlxWUFSa3lOeTl2Yl9KMGJSQWRFdUstX2cyNGw0akJQSExScDBCZm9GYlhwaFhBektLQ2VyckJV?oc=5",
       "date": "Fri, 07 Aug 2026 01:04:45 GMT",
-      "source": "Google News",
-      "confidence": "medium",
-      "reviewed": false
-    },
-    {
-      "personId": "p006",
-      "personName": "李彦宏",
-      "detectedEvent": "入职",
-      "eventType": "join",
-      "company": "香港特首顾问团",
-      "title": "港澳一周| 百度创始人李彦宏等4人加入香港特首顾问团 - content.foshanplus.com",
-      "link": "https://news.google.com/rss/articles/CBMiekFVX3lxTE5JZFF3UTRxUlIyTjZUNktWeS1LOEFjbnFVckM3RDlndTk5bFBqczEwdHJIVUU1amxrM3JVX1p2TG9pSWo0WkNOa1lLdGlpeDdORkU2eFN4UVpUZ2Y5YWJKRkdWTGh2bWptcjlUTmRTd1NmczFucG5ScGJR?oc=5",
-      "date": "Tue, 04 Aug 2026 20:13:59 GMT",
       "source": "Google News",
       "confidence": "medium",
       "reviewed": false
