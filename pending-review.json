@@ -1,16 +1,16 @@
 {
-  "lastCheck": "2026-08-09T03:01:38.997091",
+  "lastCheck": "2026-08-12T03:23:09.423003",
   "totalDetected": 1,
   "items": [
     {
-      "personId": "p001",
-      "personName": "张一鸣",
-      "detectedEvent": "离职",
-      "eventType": "leave",
-      "company": "",
-      "title": "张一鸣最新发声：字节跳动“拒绝蒸馏”；DeepSeek官宣API大幅涨价；宇树科技王兴兴身家有望超200亿；可灵核心技术骨干王鑫涛离职... - sohu.com",
-      "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNeHNFallEX3FZeTNRWEVaSDZ1UXJrcFpUV1FMVFczblJ5dmlObWEtRVJRSTZ6bGZVME5IUW0wTm56QnMtQWpqaTdzMDU1QmhYVzlxWUFSa3lOeTl2Yl9KMGJSQWRFdUstX2cyNGw0akJQSExScDBCZm9GYlhwaFhBektLQ2VyckJV?oc=5",
-      "date": "Fri, 07 Aug 2026 01:04:45 GMT",
+      "personId": "p016",
+      "personName": "李斌",
+      "detectedEvent": "入职",
+      "eventType": "join",
+      "company": "非执行董事",
+      "title": "山西安装：李斌获推荐担任非执行董事 - 东方财富",
+      "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBkT2JUUFBaem5qbTlLQThleklfb1BNbVZwV2xOTjZvQUtWZjhTWUJXRE8wUUZ4dnVvcENacE83WkJiUFRzZzRNZHN6cVM2b1p6NHdCV2h6Z3RfOTM4dXo4d1k0eTVKUQ?oc=5",
+      "date": "Tue, 11 Aug 2026 10:16:32 GMT",
       "source": "Google News",
       "confidence": "medium",
       "reviewed": false
