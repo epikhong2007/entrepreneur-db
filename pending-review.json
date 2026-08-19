@@ -1,16 +1,16 @@
 {
-  "lastCheck": "2026-08-14T03:23:55.927481",
+  "lastCheck": "2026-08-19T02:17:48.888471",
   "totalDetected": 1,
   "items": [
     {
-      "personId": "p016",
-      "personName": "李斌",
-      "detectedEvent": "入职",
-      "eventType": "join",
-      "company": "非执行董事",
-      "title": "山西安装：李斌获推荐担任非执行董事 - 东方财富",
-      "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBkT2JUUFBaem5qbTlLQThleklfb1BNbVZwV2xOTjZvQUtWZjhTWUJXRE8wUUZ4dnVvcENacE83WkJiUFRzZzRNZHN6cVM2b1p6NHdCV2h6Z3RfOTM4dXo4d1k0eTVKUQ?oc=5",
-      "date": "Tue, 11 Aug 2026 10:16:32 GMT",
+      "personId": "p015",
+      "personName": "何小鹏",
+      "detectedEvent": "离职",
+      "eventType": "leave",
+      "company": "高管",
+      "title": "小鹏汽车离职高管，扎堆去往同一家机器人公司|自动驾驶|李力耘|陈永海|何小鹏|众擎_手机新浪网 - finance.sina.cn",
+      "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOVk84d3pWV3hrWHVWUng0TFpmalVNVlQ0MXNPUlFBNnhwRGxmRnRxbHlrb1g0T3FJRmFtdDRlcHdnNDZjTEt4bFhyNEhRMmZOckJBVllkXzBIemJpaGpkb3dDRHZyeDRpa0NDNnJiRWVEOE81S01tWk43MGxnc0J6dXJhQmg?oc=5",
+      "date": "Sun, 16 Aug 2026 23:45:52 GMT",
       "source": "Google News",
       "confidence": "medium",
       "reviewed": false
