@@ -1,6 +1,6 @@
 {
-  "lastCheck": "2026-08-31T06:42:53.720532",
-  "totalDetected": 3,
+  "lastCheck": "2026-09-01T06:02:49.044662",
+  "totalDetected": 2,
   "items": [
     {
       "personId": "p005",
@@ -8,22 +8,9 @@
       "detectedEvent": "离职",
       "eventType": "leave",
       "company": "",
-      "title": "雷军回应郭炜炜离职 - 京报网",
-      "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE1qTUFOZDZCem5TNWp4dzlRNG1WUEZ6cWQyVmhVaWxpQnZ2UndoZUxXaVJiemhzbWlnOWhfU2YxLWZoeGU3VlcwX25rdGtkT2xWNHVOQnNBVmlzSXlBUG9YZ19zcjdnTEtsYnpIbVhHS29xZw?oc=5",
-      "date": "Fri, 28 Aug 2026 10:08:06 GMT",
-      "source": "Google News",
-      "confidence": "medium",
-      "reviewed": false
-    },
-    {
-      "personId": "p005",
-      "personName": "雷军",
-      "detectedEvent": "离职",
-      "eventType": "leave",
-      "company": "",
-      "title": "“剑网3之父”前西山居CEO郭炜炜官宣离开西山居，雷军6分钟后送上祝福，原来WPS和西山居都是雷军的 - 财富号",
-      "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBIV24wc3JaS3gzS2JMTU81OTJMd282Sm1zY0xFWVBMQUNXb2hrVXdGanRwVzgzZ0V1NEVva1F2SnI1MTdhdElMeHo4UEdJT1pPQXlMZGI3QnBydjNMekFISDlZT0kxUnhHOUtJ?oc=5",
-      "date": "Fri, 28 Aug 2026 13:22:00 GMT",
+      "title": "西山居CEO郭炜炜官宣明日离职，发文感谢雷军，雷军回应 - 新浪网",
+      "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTFA2OUxabklwOWxnLXllMFp0S0stN2ZDdFVjenZXMjF2Y3JDY0dkVmF4Z2JMVFRMV0g2WnRKZ09CQzV4SGl4dFpDaThpVkthQmMxdlRXc2FDb3BYb3N2SjhoZ1h1Q2taRmg4NVpWUXpoNWNPdEpDeS1XM3NXMjlUWjQ?oc=5",
+      "date": "Sun, 30 Aug 2026 00:04:21 GMT",
       "source": "Google News",
       "confidence": "medium",
       "reviewed": false
