@@ -1,6 +1,6 @@
 {
-  "lastCheck": "2026-09-01T06:02:49.044662",
-  "totalDetected": 2,
+  "lastCheck": "2026-09-17T05:48:22.966582",
+  "totalDetected": 1,
   "items": [
     {
       "personId": "p005",
@@ -8,22 +8,9 @@
       "detectedEvent": "离职",
       "eventType": "leave",
       "company": "",
-      "title": "西山居CEO郭炜炜官宣明日离职，发文感谢雷军，雷军回应 - 新浪网",
-      "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTFA2OUxabklwOWxnLXllMFp0S0stN2ZDdFVjenZXMjF2Y3JDY0dkVmF4Z2JMVFRMV0g2WnRKZ09CQzV4SGl4dFpDaThpVkthQmMxdlRXc2FDb3BYb3N2SjhoZ1h1Q2taRmg4NVpWUXpoNWNPdEpDeS1XM3NXMjlUWjQ?oc=5",
-      "date": "Sun, 30 Aug 2026 00:04:21 GMT",
-      "source": "Google News",
-      "confidence": "medium",
-      "reviewed": false
-    },
-    {
-      "personId": "p015",
-      "personName": "何小鹏",
-      "detectedEvent": "离职",
-      "eventType": "leave",
-      "company": "机器人业务CEO",
-      "title": "小鹏集团董事长何小鹏亲自担任机器人业务CEO 原负责人已离职 - 汽车之家",
-      "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE96ZTR6clJKSnpib0dheFFRZHdlN3NseHIwZVE0b3R2c24xYTF1TG5iLTY5VFdBUmFsRDBVMWo3N3lOc3haVGZGSWtvZ2g3aERQNWVfbmJRS0swY3JXWVE?oc=5",
-      "date": "Sat, 29 Aug 2026 08:25:34 GMT",
+      "title": "凯利游戏郭炜炜官宣离职！效力20年 发文感谢雷军 - 体坛加",
+      "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE0tUlhqMnM4QzlzME1vOGpYUVNHb3ZiaVVPeTNxZlJFZ0Q2TElzRl9iRi1LQTRyV0hzVFFIeXdOQ2xHaUpIV3Bnd0p2YnRkalhBY0h5WA?oc=5",
+      "date": "Tue, 15 Sep 2026 20:36:22 GMT",
       "source": "Google News",
       "confidence": "medium",
       "reviewed": false
