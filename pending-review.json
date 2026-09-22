@@ -1,16 +1,16 @@
 {
-  "lastCheck": "2026-09-18T05:34:59.402638",
+  "lastCheck": "2026-09-22T05:53:08.432429",
   "totalDetected": 1,
   "items": [
     {
-      "personId": "p005",
-      "personName": "雷军",
-      "detectedEvent": "离职",
-      "eventType": "leave",
-      "company": "",
-      "title": "凯利游戏郭炜炜官宣离职！效力20年 发文感谢雷军 - 体坛",
-      "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE0tUlhqMnM4QzlzME1vOGpYUVNHb3ZiaVVPeTNxZlJFZ0Q2TElzRl9iRi1LQTRyV0hzVFFIeXdOQ2xHaUpIV3Bnd0p2YnRkalhBY0h5WA?oc=5",
-      "date": "Tue, 15 Sep 2026 20:36:22 GMT",
+      "personId": "p017",
+      "personName": "王传福",
+      "detectedEvent": "入职",
+      "eventType": "join",
+      "company": "#腾势汽车#大家庭",
+      "title": "龙城赴约，幸福旅程启航！比亚迪总裁王传福为常州车主交车，欢迎大家加入#腾势汽车#大家庭，也感恩车主们的信赖与相伴，一路腾势而上，为热爱共精彩！#王传福为腾势车主交车 - 手机新浪网",
+      "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9rM3dxbjN3Y3RIcXRiMmtpa2Zma1VPUkhtNVNYYVlwNnpiRl9yRS1teGl3Y29TelJQWk5nZjhrU0o4T2hDekV1eEl3aF9RZGhHU2JMbTRCYy1xX2oxaWw0Yy00aw?oc=5",
+      "date": "Tue, 22 Sep 2026 01:30:00 GMT",
       "source": "Google News",
       "confidence": "medium",
       "reviewed": false
