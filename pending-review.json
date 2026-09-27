@@ -1,16 +1,16 @@
 {
-  "lastCheck": "2026-09-26T05:53:33.569598",
+  "lastCheck": "2026-09-27T06:18:59.304440",
   "totalDetected": 1,
   "items": [
     {
-      "personId": "p005",
-      "personName": "雷军",
-      "detectedEvent": "离职",
-      "eventType": "leave",
-      "company": "西山居",
-      "title": "BEPLAY娱乐官网_游戏资讯_历时九月完成交接，郭炜炜宣布离职西山居，雷军发微博感谢 - womenofchina.com",
-      "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5YVjVnamhBdWp5LTJneElzSnZIQlM5MnJQbnRkRHlkOFlOQ3BVTWhzdDcydEd5cUdPVVB0MGxlSVVWS0JmcW5QbG4zZ1I5ckxwXzItT0hteTQ?oc=5",
-      "date": "Thu, 24 Sep 2026 06:13:29 GMT",
+      "personId": "p016",
+      "personName": "李斌",
+      "detectedEvent": "入职",
+      "eventType": "join",
+      "company": "蔚乐萤大家庭",
+      "title": "李斌开ES9见证丝路换电全程贯通，车主称争取加入蔚乐萤大家庭 - 手机新浪网",
+      "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQemNOaEVZS3FOZFQtbXM0OFRnYUw2OXk2QnU0T0l3VlVDZmt3WkxoWkVtakNST0JSQ3RqZGxrQ3J5cXhrUmltZm9Ld3B0U2c5QXhLbHRXNGpnZmJXQ2ViVkhncGdlc1VBSmhwblJLMEE2T2VYZlR2MURxeHhQajJMZw?oc=5",
+      "date": "Sat, 26 Sep 2026 08:37:19 GMT",
       "source": "Google News",
       "confidence": "medium",
       "reviewed": false
