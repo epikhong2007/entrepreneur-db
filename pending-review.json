@@ -1,7 +1,46 @@
 {
-  "lastCheck": "2026-09-28T06:21:01.526744",
-  "totalDetected": 1,
+  "lastCheck": "2026-09-29T06:36:37.256540",
+  "totalDetected": 4,
   "items": [
+    {
+      "personId": "p005",
+      "personName": "雷军",
+      "detectedEvent": "入职",
+      "eventType": "join",
+      "company": "小米一年",
+      "title": "加入小米一年，31岁的AI天才少女，被雷军升到了最高职级！ - 搜狐网",
+      "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQWjRpejNKR29TaVNWY1k1UGhfS2ltOGZKdzBiUS03and6M3lweXdULWIxVk5CTVY3QzN6d3dlVmZtOGpVdEc1TTZVa3F1ZE1sNzhaYVN5SWhtNDdXMDFQcmktSGRpb0dRQnlkMkU2Y282T1FKek9lY0EzT1Jpak83Mlp2US15OVZ5OHltVw?oc=5",
+      "date": "Tue, 29 Sep 2026 06:19:26 GMT",
+      "source": "Google News",
+      "confidence": "medium",
+      "reviewed": false
+    },
+    {
+      "personId": "p010",
+      "personName": "周鸿祎",
+      "detectedEvent": "入职",
+      "eventType": "join",
+      "company": "享界S9明星车主后援团",
+      "title": "黄晓明高叶周鸿祎加入享界S9明星车主后援团 - 手机新浪网",
+      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTFBxOFZySlhpS0JVTUNCcl9RMU12d2doRUJfY1NOeXM3aGgwN3VaYXMyazdfazZrQ2VOWHlPZFBKZ1h1eWlrWWVHVVZwYThVdEpMWGozNTlMWXhhNjJRakxwbTBZX2Rlc0JWLUZ0RXhNWHdaLU0?oc=5",
+      "date": "Mon, 28 Sep 2026 06:32:59 GMT",
+      "source": "Google News",
+      "confidence": "medium",
+      "reviewed": false
+    },
+    {
+      "personId": "p016",
+      "personName": "李斌",
+      "detectedEvent": "入职",
+      "eventType": "join",
+      "company": "换电：中国汽车是时候告别重复投资了",
+      "title": "李斌回应吉利加入换电：中国汽车是时候告别重复投资了 - 电子工程专辑",
+      "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFB1Y3Q3QzMwY0tQQjUzaUp4TktIRlp3U0NITDY3RFI5ZFlLOFYwVVhRRzhITTR2RXhxU2hTTHRpMWJQRFIyek4zMEVNcDJNeGlGenZV?oc=5",
+      "date": "Tue, 29 Sep 2026 01:42:00 GMT",
+      "source": "Google News",
+      "confidence": "medium",
+      "reviewed": false
+    },
     {
       "personId": "p016",
       "personName": "李斌",
