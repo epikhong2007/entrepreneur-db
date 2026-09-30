@@ -1,5 +1,5 @@
 {
-  "lastCheck": "2026-09-29T06:36:37.256540",
+  "lastCheck": "2026-09-30T06:19:20.761683",
   "totalDetected": 4,
   "items": [
     {
@@ -9,7 +9,7 @@
       "eventType": "join",
       "company": "小米一年",
       "title": "加入小米一年，31岁的AI天才少女，被雷军升到了最高职级！ - 搜狐网",
-      "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQWjRpejNKR29TaVNWY1k1UGhfS2ltOGZKdzBiUS03and6M3lweXdULWIxVk5CTVY3QzN6d3dlVmZtOGpVdEc1TTZVa3F1ZE1sNzhaYVN5SWhtNDdXMDFQcmktSGRpb0dRQnlkMkU2Y282T1FKek9lY0EzT1Jpak83Mlp2US15OVZ5OHltVw?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNeEs4WXZlTWsxdzhBOUxORVlubUpxX2RzdnNoOE9vdERkNUZUT1hXbmI3RlBQNHUzeDh4R0NPT0ZiTFdyTFZNSk52c085dS1ERlZhOUI5MUFrT1FlbldMUnRKMnhwT1dEbFRKQjZTOVI0d3RHWEJYTGNoMnE2QS1fYzVIWQ?oc=5",
       "date": "Tue, 29 Sep 2026 06:19:26 GMT",
       "source": "Google News",
       "confidence": "medium",
@@ -42,14 +42,14 @@
       "reviewed": false
     },
     {
-      "personId": "p016",
-      "personName": "李斌",
+      "personId": "p017",
+      "personName": "王传福",
       "detectedEvent": "入职",
       "eventType": "join",
-      "company": "蔚乐萤大家庭",
-      "title": "李斌开ES9见证丝路换电全程贯通，车主称争取加入蔚乐萤大家庭 - 手机新浪网",
-      "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQemNOaEVZS3FOZFQtbXM0OFRnYUw2OXk2QnU0T0l3VlVDZmt3WkxoWkVtakNST0JSQ3RqZGxrQ3J5cXhrUmltZm9Ld3B0U2c5QXhLbHRXNGpnZmJXQ2ViVkhncGdlc1VBSmhwblJLMEE2T2VYZlR2MURxeHhQajJMZw?oc=5",
-      "date": "Sat, 26 Sep 2026 08:37:19 GMT",
+      "company": "公司第九届董事会董事长",
+      "title": "【#王传福被选为比亚迪董事会董事长#】比亚迪9月29日发布公告，经董事会审议，选举王传福出任公司第九届董事会董事长，任期三年。 这一次选举，本质是比亚迪发展进程里一次关键的治理确认。王传福继续掌舵，意味着比亚迪长期的技术路线、垂直整合战略不会发生 - 手机新浪网",
+      "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBRTDRGRjhReUg1UldZeHZSMnZ1MVVOUktVcDFqcTdtN3F1YVY3Q0s2SEVRQ1BkRFdFQTlCRHVlYU9mU1dmYUlnX1c3TmtaSngwb3A2OTZoQVdtdVljOWdMc016RQ?oc=5",
+      "date": "Tue, 29 Sep 2026 16:45:00 GMT",
       "source": "Google News",
       "confidence": "medium",
       "reviewed": false
