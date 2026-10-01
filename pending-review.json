@@ -1,6 +1,6 @@
 {
-  "lastCheck": "2026-09-30T06:19:20.761683",
-  "totalDetected": 4,
+  "lastCheck": "2026-10-01T06:54:10.642326",
+  "totalDetected": 3,
   "items": [
     {
       "personId": "p005",
@@ -9,21 +9,8 @@
       "eventType": "join",
       "company": "小米一年",
       "title": "加入小米一年，31岁的AI天才少女，被雷军升到了最高职级！ - 搜狐网",
-      "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNeEs4WXZlTWsxdzhBOUxORVlubUpxX2RzdnNoOE9vdERkNUZUT1hXbmI3RlBQNHUzeDh4R0NPT0ZiTFdyTFZNSk52c085dS1ERlZhOUI5MUFrT1FlbldMUnRKMnhwT1dEbFRKQjZTOVI0d3RHWEJYTGNoMnE2QS1fYzVIWQ?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOMW1CNnFwSW9EZ1Q0RFhwbVNacE5FaEczQVhIcWV5Z2RTeVZXTm5naUNtZWt3LWo3VWJSUTMtQm9GSXZxejZidU9wRmhWTFpKQTVrRHZHNGl5VjFCWkx5MUlzZk1hMl96SS04NzlXUEZGSTBWcW95RlhDMmdnWTFFN3psRWloY01XOWJqZk4zeGlMOGdKbnNfOXRR?oc=5",
       "date": "Tue, 29 Sep 2026 06:19:26 GMT",
-      "source": "Google News",
-      "confidence": "medium",
-      "reviewed": false
-    },
-    {
-      "personId": "p010",
-      "personName": "周鸿祎",
-      "detectedEvent": "入职",
-      "eventType": "join",
-      "company": "享界S9明星车主后援团",
-      "title": "黄晓明高叶周鸿祎加入享界S9明星车主后援团 - 手机新浪网",
-      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTFBxOFZySlhpS0JVTUNCcl9RMU12d2doRUJfY1NOeXM3aGgwN3VaYXMyazdfazZrQ2VOWHlPZFBKZ1h1eWlrWWVHVVZwYThVdEpMWGozNTlMWXhhNjJRakxwbTBZX2Rlc0JWLUZ0RXhNWHdaLU0?oc=5",
-      "date": "Mon, 28 Sep 2026 06:32:59 GMT",
       "source": "Google News",
       "confidence": "medium",
       "reviewed": false
@@ -46,10 +33,10 @@
       "personName": "王传福",
       "detectedEvent": "入职",
       "eventType": "join",
-      "company": "公司第九届董事会董事长",
-      "title": "【#王传福被选为比亚迪董事会董事长#】比亚迪9月29日发布公告，经董事会审议，选举王传福出任公司第九届董事会董事长，任期三年。 这一次选举，本质是比亚迪发展进程里一次关键的治理确认。王传福继续掌舵，意味着比亚迪长期的技术路线、垂直整合战略不会发生 - 手机新浪网",
-      "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBRTDRGRjhReUg1UldZeHZSMnZ1MVVOUktVcDFqcTdtN3F1YVY3Q0s2SEVRQ1BkRFdFQTlCRHVlYU9mU1dmYUlnX1c3TmtaSngwb3A2OTZoQVdtdVljOWdMc016RQ?oc=5",
-      "date": "Tue, 29 Sep 2026 16:45:00 GMT",
+      "company": "比亚迪董事长",
+      "title": "突发，王传福出任比亚迪董事长 - 电商派",
+      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1rbW5ZN0lCa3NKUTFXSDNTRFZGVFQzbXdkLVRQX0VQLW41NTZ5NnVwTnVfOXEzVzF5OTBrNGx0ZFE1SDB6SExKQVRUcUtMRnpGSmNod3dUVlcwX0l6dHp5ag?oc=5",
+      "date": "Wed, 30 Sep 2026 07:01:00 GMT",
       "source": "Google News",
       "confidence": "medium",
       "reviewed": false
