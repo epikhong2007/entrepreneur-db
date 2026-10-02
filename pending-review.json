@@ -1,29 +1,16 @@
 {
-  "lastCheck": "2026-10-01T06:54:10.642326",
-  "totalDetected": 3,
+  "lastCheck": "2026-10-02T06:44:50.689460",
+  "totalDetected": 2,
   "items": [
-    {
-      "personId": "p005",
-      "personName": "雷军",
-      "detectedEvent": "入职",
-      "eventType": "join",
-      "company": "小米一年",
-      "title": "加入小米一年，31岁的AI天才少女，被雷军升到了最高职级！ - 搜狐网",
-      "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOMW1CNnFwSW9EZ1Q0RFhwbVNacE5FaEczQVhIcWV5Z2RTeVZXTm5naUNtZWt3LWo3VWJSUTMtQm9GSXZxejZidU9wRmhWTFpKQTVrRHZHNGl5VjFCWkx5MUlzZk1hMl96SS04NzlXUEZGSTBWcW95RlhDMmdnWTFFN3psRWloY01XOWJqZk4zeGlMOGdKbnNfOXRR?oc=5",
-      "date": "Tue, 29 Sep 2026 06:19:26 GMT",
-      "source": "Google News",
-      "confidence": "medium",
-      "reviewed": false
-    },
     {
       "personId": "p016",
       "personName": "李斌",
       "detectedEvent": "入职",
       "eventType": "join",
-      "company": "换电：中国汽车是时候告别重复投资了",
-      "title": "李斌回应吉利加入换电：中国汽车是时候告别重复投资了 - 电子工程专辑",
-      "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFB1Y3Q3QzMwY0tQQjUzaUp4TktIRlp3U0NITDY3RFI5ZFlLOFYwVVhRRzhITTR2RXhxU2hTTHRpMWJQRFIyek4zMEVNcDJNeGlGenZV?oc=5",
-      "date": "Tue, 29 Sep 2026 01:42:00 GMT",
+      "company": "充换电合作李斌",
+      "title": "蔚来李斌：欢迎和期待更多的车企同行加入充换电合作李斌 #吉利汽车 - k.sina.com.cn",
+      "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOQS1LTEl0NWhZZWNzZGRZQlRnT25pNWdRaGlCZlF3SWtNTlJRLXRmbFJWWkNwLXBIbDVzSTFMUml3ZnFtT2pVQTBaRjV1M1pWMlBVX2paUFdqNUJyU1c0YU8xM05KektBbHg4enI2enprUXZjRE9vWW00TDZMN19Ecw?oc=5",
+      "date": "Fri, 02 Oct 2026 02:37:33 GMT",
       "source": "Google News",
       "confidence": "medium",
       "reviewed": false
