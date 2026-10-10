@@ -1,6 +1,6 @@
 {
-  "lastCheck": "2026-10-09T07:09:31.423219",
-  "totalDetected": 1,
+  "lastCheck": "2026-10-10T06:43:00.080012",
+  "totalDetected": 2,
   "items": [
     {
       "personId": "p016",
@@ -8,9 +8,22 @@
       "detectedEvent": "入职",
       "eventType": "join",
       "company": "",
-      "title": "中烟香港午前涨超5% 新任董事会主席李斌到任烟草行业履历深厚|香港特别行政区|国金证券|成交额|委员会|国标 - 新浪财经",
-      "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNVzFjYnA1XzQ2S2dGbGRRWmpQUDRFOTJwRnN4bkQ4Z2tjYXV5VEoybmNpVVVvUVQ4QzRkRmFsTXlUQ08tRk1VZ0lKSlJVd2U2STR0UE1fMTFQNG5GQ0RhaUxIYWNIS1FCc3FpNmlzcXJUSmo5T25CZ3Q1NmdpdFhqWERITDhKZzJ2VXh5cnBn?oc=5",
-      "date": "Thu, 08 Oct 2026 11:55:13 GMT",
+      "title": "中烟香港午前涨超5% 新任董事会主席李斌到任烟草行业履历深厚 - 新浪财经",
+      "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPeUtWSW5OV2lFWTBwcHNaV0l2NmRyWmZKZWhuYURLNU1JNDBXdVJMRllrTEEybE53TmZBb3NTS1MxUGFEbzI0dE5acE9UQXQ1ZXZheEtXWG9BWnliUlBFMG9UQWxoNTlXTTNpQ1ZPdXYtbzdYRUlPYTIxNG9xUjl6aDZDRGgzYUYwVVNuVVdKY2prMEtIOGc?oc=5",
+      "date": "Thu, 08 Oct 2026 03:45:00 GMT",
+      "source": "Google News",
+      "confidence": "medium",
+      "reviewed": false
+    },
+    {
+      "personId": "p017",
+      "personName": "王传福",
+      "detectedEvent": "入职",
+      "eventType": "join",
+      "company": "比亚迪的故事",
+      "title": "从廉玉波加入比亚迪的故事，看王传福的技术信仰与家国情怀 - 手机网易网",
+      "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBVa1Z4cGQ4TVBibkplZmVQcG5MejVFNm12VGhqdnRSLVhnZ0ZLZjg1bWR2TjBZTW9Kb1F4bk1kNUlFa2RKbHFYZ2lVY3huRzNzUERTMg?oc=5",
+      "date": "Thu, 08 Oct 2026 19:20:53 GMT",
       "source": "Google News",
       "confidence": "medium",
       "reviewed": false
