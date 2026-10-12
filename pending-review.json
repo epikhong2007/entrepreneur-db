@@ -1,6 +1,6 @@
 {
-  "lastCheck": "2026-10-11T06:50:03.808021",
-  "totalDetected": 3,
+  "lastCheck": "2026-10-12T07:00:24.539669",
+  "totalDetected": 2,
   "items": [
     {
       "personId": "p007",
@@ -24,19 +24,6 @@
       "title": "马化腾、姚顺雨罕见同框，一个27岁创办腾讯，一个27岁入职出任首席AI科学家 - 川观新闻",
       "link": "https://news.google.com/rss/articles/CBMiTkFVX3lxTFBHa0ZVd3BRX2ZqbXU0R0pRbFRCaDdLdUU1UHl4SDNmX29OaWNlUWRlNW5VVVFmSV9DeFVvQUZWNWxzRTF5bE9sdkt6anlfZw?oc=5",
       "date": "Sat, 10 Oct 2026 09:02:00 GMT",
-      "source": "Google News",
-      "confidence": "medium",
-      "reviewed": false
-    },
-    {
-      "personId": "p007",
-      "personName": "马化腾",
-      "detectedEvent": "入职",
-      "eventType": "join",
-      "company": "首席AI科学家",
-      "title": "罕见同框释放信号：54岁马化腾旁边坐着28岁的姚顺雨，一个27岁创办腾讯，一个27岁入职腾讯，出任首席AI科学家 - 手机新浪网",
-      "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE9jRjQzeDhUYmtJZmlrRm52bF9qV1lmXzZuYWRtVmdSd0ZZa1g1V3hWUkVZWGtteEstZG9RSkhScGVRQ2JyeU9tQ29RdV9fbmZqTmtxWGN4WXV5STBYb2F1UHFXeUs4RTg5THpPak1NdndTZw?oc=5",
-      "date": "Sat, 10 Oct 2026 07:45:27 GMT",
       "source": "Google News",
       "confidence": "medium",
       "reviewed": false
