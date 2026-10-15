@@ -1,5 +1,5 @@
 {
-  "lastCheck": "2026-10-14T05:52:18.923284",
+  "lastCheck": "2026-10-15T05:36:19.925082",
   "totalDetected": 2,
   "items": [
     {
@@ -16,14 +16,14 @@
       "reviewed": false
     },
     {
-      "personId": "p007",
-      "personName": "马化腾",
+      "personId": "p015",
+      "personName": "何小鹏",
       "detectedEvent": "离职",
       "eventType": "leave",
-      "company": "回国",
-      "title": "与马化腾罕见同框，28岁的年轻人姚顺雨是谁？OpenAI离职回国，27岁成腾讯AI“一号位”，接管多条业务线直接向高层汇报 - 搜狐",
-      "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9Wb0h0TWJGeTZocDRFT1J3V3M1UHhLcDFwaEp4T1ViX2ZhMTV6Sm9tVkxpblRrQXJrazBCeUNJQ3Jad3pwaDNDWWRlNExCWHZPTnNyMTdxUF8zb2dLYjBPUGIzN1RvdVk?oc=5",
-      "date": "Sun, 11 Oct 2026 21:14:46 GMT",
+      "company": "机器人业务CEO",
+      "title": "小鹏集团董事长何小鹏亲自担任机器人业务CEO 原负责人已离职 - 汽车之家",
+      "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE96ZTR6clJKSnpib0dheFFRZHdlN3NseHIwZVE0b3R2c24xYTF1TG5iLTY5VFdBUmFsRDBVMWo3N3lOc3haVGZGSWtvZ2g3aERQNWVfbmJRS0swY3JXWVE?oc=5",
+      "date": "Mon, 12 Oct 2026 10:01:46 GMT",
       "source": "Google News",
       "confidence": "medium",
       "reviewed": false
