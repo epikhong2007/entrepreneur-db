@@ -1,7 +1,20 @@
 {
-  "lastCheck": "2026-10-18T05:28:33.445594",
-  "totalDetected": 1,
+  "lastCheck": "2026-10-19T05:46:54.314464",
+  "totalDetected": 2,
   "items": [
+    {
+      "personId": "p005",
+      "personName": "雷军",
+      "detectedEvent": "离职",
+      "eventType": "leave",
+      "company": "创业",
+      "title": "雷军爱将王腾离职创业 聚焦AI睡眠赛道推出智能助眠业务 - 36Kr",
+      "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFBNXzAyWkVWR3hJS0ZnT3FzNENDQS12c1VzMGFtaFVFbXhkZzRqYi1uaWRlZFExNHpGeXlkZWZ3S3Q4QU1kdjZVYjMyYXFzVmMtVUJr?oc=5",
+      "date": "Sun, 18 Oct 2026 11:59:00 GMT",
+      "source": "Google News",
+      "confidence": "medium",
+      "reviewed": false
+    },
     {
       "personId": "p016",
       "personName": "李斌",
