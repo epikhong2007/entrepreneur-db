@@ -1,5 +1,5 @@
 {
-  "lastCheck": "2026-10-19T05:46:54.314464",
+  "lastCheck": "2026-10-20T05:41:31.600537",
   "totalDetected": 2,
   "items": [
     {
@@ -16,14 +16,14 @@
       "reviewed": false
     },
     {
-      "personId": "p016",
-      "personName": "李斌",
+      "personId": "p007",
+      "personName": "马化腾",
       "detectedEvent": "入职",
       "eventType": "join",
-      "company": "",
-      "title": "中烟香港午前涨超5% 新任董事会主席李斌到任烟草行业履历深厚|香港特别行政区|国金证券|成交额|委员会|国标 - finance.sina.com.cn",
-      "link": "https://news.google.com/rss/articles/CBMioANBVV95cUxNcXI1amU2MnpQU1hnaTNfMDNtdWRvQnhsUHRXWTMwVndzRzl2NllVX29kZUR3Q2lBN2FEdjRIS3ZaVmFnNEtnVzVjeE9RWjctM3oteW5DVjMtMmVjR3duXy1ULVVyR3IxbHdOSDJ4RDFZNkQ4bUdWbUVZNGx2dVllNmxpWWFTV242a2Fuc19HS09jbDQxZlNEdWhST1FWX3MwZ2pyOGRQMm82c1R5bTQyZU1uOFBUSkRvM0tIM1BTNDdDSnJpeHlIenhvbmNKWVRlak5YUnlnUDgxM204MGlsbHVwLUFoMWl6UzhfZWV3Z2ZJcUxrbl9iZ2dIREhGWjJlLVp2RGdJeGJMVXdCNFNaMUo4dHFmbHl4V2lKNUE5ZUhlZk1fTGc2T0hTRmF0YU9FTERlMWhTM3A3VV9Bak04LXJTTWY1djE1ZUpNQnJVNkliOUR1aXZUVG9OVklUTzNrdldpSWw2aGQ1a3VjYnRGSTlfMk5FRHgzRHVabG5aNjBfbWhNbW9UVkZGb3pfb1JBTlk4WXNfZ1paQlJvZUk2OQ?oc=5",
-      "date": "Sat, 17 Oct 2026 05:32:38 GMT",
+      "company": "腾讯“AI一号位”：最年轻首席AI科学家",
+      "title": "1998年姚顺雨出任腾讯“AI一号位”：最年轻首席AI科学家坐镇马化腾身侧 - SmartHey",
+      "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9FQVYxZ2tORS16d0RXbGVqQmdtVllQN2dkVUs5SXZNNmRWaFdLODNXZXB1bF8tYkZGRGdkVnVxTDNHWVBxVFBsMmsxLTZTSnFuX1Q2YzZrbmxmZXhqaXc?oc=5",
+      "date": "Mon, 19 Oct 2026 09:50:00 GMT",
       "source": "Google News",
       "confidence": "medium",
       "reviewed": false
