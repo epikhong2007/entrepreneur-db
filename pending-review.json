@@ -1,7 +1,20 @@
 {
-  "lastCheck": "2026-10-20T05:41:31.600537",
-  "totalDetected": 2,
+  "lastCheck": "2026-10-21T05:45:28.253353",
+  "totalDetected": 4,
   "items": [
+    {
+      "personId": "p005",
+      "personName": "雷军",
+      "detectedEvent": "离职",
+      "eventType": "leave",
+      "company": "是低谷",
+      "title": "王腾承认从小米离职是低谷，但非常感谢这段经历 尤其感谢雷军 - 新浪网",
+      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9SRmZDamxNeGtDcDZkWnNCXzhXVW9XUzBWLW1ZR0xGREFaT3hfTWtFWWs1QVQwWXZyNWhmMTdjS1JrTTJGMXhEc0VMY0hvWGhpMTZVZUx5dndCdTZINnRyZW1oVGRDN21uNlN1Uk9sb1BXUDA?oc=5",
+      "date": "Tue, 20 Oct 2026 19:13:07 GMT",
+      "source": "Google News",
+      "confidence": "medium",
+      "reviewed": false
+    },
     {
       "personId": "p005",
       "personName": "雷军",
@@ -24,6 +37,19 @@
       "title": "1998年姚顺雨出任腾讯“AI一号位”：最年轻首席AI科学家坐镇马化腾身侧 - SmartHey",
       "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9FQVYxZ2tORS16d0RXbGVqQmdtVllQN2dkVUs5SXZNNmRWaFdLODNXZXB1bF8tYkZGRGdkVnVxTDNHWVBxVFBsMmsxLTZTSnFuX1Q2YzZrbmxmZXhqaXc?oc=5",
       "date": "Mon, 19 Oct 2026 09:50:00 GMT",
+      "source": "Google News",
+      "confidence": "medium",
+      "reviewed": false
+    },
+    {
+      "personId": "p017",
+      "personName": "王传福",
+      "detectedEvent": "入职",
+      "eventType": "join",
+      "company": "比亚迪原因",
+      "title": "李柯透露加入比亚迪原因，称王传福极有远见能把梦想变为现实 - 新浪网",
+      "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPTlk0cEhhZG1lTnIxYzdBU0owUWRzaGhrT2xxckp2ckQzUFp1SzVoUmxBLVNxODc4bGZvOUViZkNrUkhfaWQ2MmxnM2NhWTFJanAxUEdJeUZsWHBwTnVaUWh0MnRjNFphcEZHSVdCNFliMnV1WlNUWE9DbjNzTWZOUg?oc=5",
+      "date": "Tue, 20 Oct 2026 17:02:20 GMT",
       "source": "Google News",
       "confidence": "medium",
       "reviewed": false
