@@ -1,5 +1,5 @@
 {
-  "lastCheck": "2026-10-21T05:45:28.253353",
+  "lastCheck": "2026-10-22T05:47:29.192593",
   "totalDetected": 4,
   "items": [
     {
@@ -7,10 +7,10 @@
       "personName": "雷军",
       "detectedEvent": "离职",
       "eventType": "leave",
-      "company": "是低谷",
-      "title": "王腾承认从小米离职是低谷，但非常感谢这段经历 尤其感谢雷军 - 新浪网",
-      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9SRmZDamxNeGtDcDZkWnNCXzhXVW9XUzBWLW1ZR0xGREFaT3hfTWtFWWs1QVQwWXZyNWhmMTdjS1JrTTJGMXhEc0VMY0hvWGhpMTZVZUx5dndCdTZINnRyZW1oVGRDN21uNlN1Uk9sb1BXUDA?oc=5",
-      "date": "Tue, 20 Oct 2026 19:13:07 GMT",
+      "company": "挤崩系统",
+      "title": "早报｜iPhone Duo限购两台/雷军：汽车没有安全其他都是0/宝马员工争相离职挤崩系统 - 爱范儿",
+      "link": "https://news.google.com/rss/articles/CBMiQ0FVX3lxTFBlTG9rSGNtTXJSM0g5YW5SS001b0d1Y3ZSYk4tY280a2NrOXNpRFpQU1V3NVVQQVZfQm9pLXJKT29NWmc?oc=5",
+      "date": "Thu, 22 Oct 2026 00:21:11 GMT",
       "source": "Google News",
       "confidence": "medium",
       "reviewed": false
@@ -20,10 +20,10 @@
       "personName": "雷军",
       "detectedEvent": "离职",
       "eventType": "leave",
-      "company": "创业",
-      "title": "雷军爱将王腾离职创业 聚焦AI睡眠赛道推出智能助眠业务 - 36Kr",
-      "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFBNXzAyWkVWR3hJS0ZnT3FzNENDQS12c1VzMGFtaFVFbXhkZzRqYi1uaWRlZFExNHpGeXlkZWZ3S3Q4QU1kdjZVYjMyYXFzVmMtVUJr?oc=5",
-      "date": "Sun, 18 Oct 2026 11:59:00 GMT",
+      "company": "是低谷",
+      "title": "#生活# 王腾承认从小米离职是低谷，但非常感谢这段经历 尤其感谢雷军 - 搜狐",
+      "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE50akN4aVI5Q3FrQUljalo0bkEwVEpHVzJaYTdhd29aczFNLTQ5S2g3cXRnc3RobFJWTEpwVzNRNHVDWmI5TXZjSUt4VDRRWWNVLXJRajlWLWVFM3FBeFBBN0Q4RmtsQlROdlFF?oc=5",
+      "date": "Tue, 20 Oct 2026 10:36:25 GMT",
       "source": "Google News",
       "confidence": "medium",
       "reviewed": false
