@@ -1,7 +1,20 @@
 {
-  "lastCheck": "2026-10-22T05:47:29.192593",
-  "totalDetected": 4,
+  "lastCheck": "2026-10-23T05:46:31.269358",
+  "totalDetected": 5,
   "items": [
+    {
+      "personId": "p005",
+      "personName": "雷军",
+      "detectedEvent": "离职",
+      "eventType": "leave",
+      "company": "后再谈雷军和小米",
+      "title": "赵明离职后再谈雷军和小米 - 新浪网",
+      "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQV3ZBVm1tQlgxY2dGazBZUm1zTy13bV9US3BkdVRrOFN6UXROelNPWjJRVWd2V2hYNFdMdDhvTGhDRzJWMjFuYUtURU1FYjFtcUpjQ1FOSEswLWI4Q0VjZjd5dDFOMWV3Q0VTV01YMDJvYVFoNExtQ0NiZjJvVE1aYw?oc=5",
+      "date": "Thu, 22 Oct 2026 19:16:24 GMT",
+      "source": "Google News",
+      "confidence": "medium",
+      "reviewed": false
+    },
     {
       "personId": "p005",
       "personName": "雷军",
@@ -29,19 +42,6 @@
       "reviewed": false
     },
     {
-      "personId": "p007",
-      "personName": "马化腾",
-      "detectedEvent": "入职",
-      "eventType": "join",
-      "company": "腾讯“AI一号位”：最年轻首席AI科学家",
-      "title": "1998年姚顺雨出任腾讯“AI一号位”：最年轻首席AI科学家坐镇马化腾身侧 - SmartHey",
-      "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9FQVYxZ2tORS16d0RXbGVqQmdtVllQN2dkVUs5SXZNNmRWaFdLODNXZXB1bF8tYkZGRGdkVnVxTDNHWVBxVFBsMmsxLTZTSnFuX1Q2YzZrbmxmZXhqaXc?oc=5",
-      "date": "Mon, 19 Oct 2026 09:50:00 GMT",
-      "source": "Google News",
-      "confidence": "medium",
-      "reviewed": false
-    },
-    {
       "personId": "p017",
       "personName": "王传福",
       "detectedEvent": "入职",
@@ -50,6 +50,19 @@
       "title": "李柯透露加入比亚迪原因，称王传福极有远见能把梦想变为现实 - 新浪网",
       "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPTlk0cEhhZG1lTnIxYzdBU0owUWRzaGhrT2xxckp2ckQzUFp1SzVoUmxBLVNxODc4bGZvOUViZkNrUkhfaWQ2MmxnM2NhWTFJanAxUEdJeUZsWHBwTnVaUWh0MnRjNFphcEZHSVdCNFliMnV1WlNUWE9DbjNzTWZOUg?oc=5",
       "date": "Tue, 20 Oct 2026 17:02:20 GMT",
+      "source": "Google News",
+      "confidence": "medium",
+      "reviewed": false
+    },
+    {
+      "personId": "p018",
+      "personName": "曾毓群",
+      "detectedEvent": "入职",
+      "eventType": "join",
+      "company": "宁德时代换电朋友圈多款车型接入巧克力换电",
+      "title": "【北汽加入宁德时代换电朋友圈多款车型接入巧克力换电系统】今日，北汽集团与宁德时代正式签署全面深化换电业务合作协议。北汽集团党委书记、董事长张建勇，宁德时代董事长兼CEO曾毓群出席签约仪式并见证签约。根据协议，双方将在整车与电池产品设计与研发 - 手机新浪网",
+      "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE90MnlBNjRKaTRJVF9jZS1BSWFpNnNtazdfVnJzSTl3NmNzQ1c2VkdycWdYQjFEbDVKWGh1bmhfYkhDWDBULXdqNkExQ3NjOEZuX0I3RDBqb2htZ1lPSnVqandqSQ?oc=5",
+      "date": "Thu, 22 Oct 2026 13:31:00 GMT",
       "source": "Google News",
       "confidence": "medium",
       "reviewed": false
