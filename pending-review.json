@@ -1,5 +1,5 @@
 {
-  "lastCheck": "2026-10-31T06:41:02.890891",
+  "lastCheck": "2026-11-01T07:09:45.423865",
   "totalDetected": 4,
   "items": [
     {
@@ -11,6 +11,19 @@
       "title": "从小米离职后王腾首次公开亮相，谈“蹭雷军流量”：真心感谢小米和雷总 - ThePaper.cn",
       "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBWV2UtSEdLcEJwY2F2NWctTGtYelpieUc3emdIazlFM3EyQ0ZhNEhjQjRIRnFhNWdMNW0yZEp1OERfOVl1QjMzUFRHdHJkZG8xOWhmLTdvUlpsb3BuamlLbg?oc=5",
       "date": "Sat, 31 Oct 2026 06:35:59 GMT",
+      "source": "Google News",
+      "confidence": "medium",
+      "reviewed": false
+    },
+    {
+      "personId": "p005",
+      "personName": "雷军",
+      "detectedEvent": "离职",
+      "eventType": "leave",
+      "company": "后曾有大厂邀请",
+      "title": "小米前高管王腾开新品发布会提到雷军，自己离职后曾有大厂邀请，但还是选择做智能戒指 - 极目新闻",
+      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1MM0VwVnhXOUVmWmtTRUJUNnVFUzRaZm95aTM0VjBCSHFKVkNvN2J3bGtjbTExWTNheTF6OGhNTUtkdVhpYlRYVHRjUElTOGM1blBsdWFYMW5rTGM?oc=5",
+      "date": "Thu, 29 Oct 2026 12:04:30 GMT",
       "source": "Google News",
       "confidence": "medium",
       "reviewed": false
@@ -37,19 +50,6 @@
       "title": "王腾发布会感谢小米和雷军，离职后创业做智能戒指，售价1799元起，智能温控系统9999元起，APP已上架小米应用商店 - 搜狐网",
       "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPMUdwY0FMV096cTFGQm9sWXk0a2x4bllKWDlvNDNBQ2NiV3VNTGZjWUp2VGVVam01UWM5NXZ3blEtWHdmNFRpeVFGU2sxdkdvNDNxaDJlLWZYSjJIZ25DbTQwVldaVjZ6LVFrQ0o3UDQtSXZmS3ktT3pYRlFrUGFWU2RyRXh0UldjWmNlcg?oc=5",
       "date": "Fri, 30 Oct 2026 07:38:57 GMT",
-      "source": "Google News",
-      "confidence": "medium",
-      "reviewed": false
-    },
-    {
-      "personId": "p005",
-      "personName": "雷军",
-      "detectedEvent": "离职",
-      "eventType": "leave",
-      "company": "后曾有大厂邀请",
-      "title": "小米前高管王腾开新品发布会提到雷军，自己离职后曾有大厂邀请，但还是选择做智能戒指 - 极目新闻",
-      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1MM0VwVnhXOUVmWmtTRUJUNnVFUzRaZm95aTM0VjBCSHFKVkNvN2J3bGtjbTExWTNheTF6OGhNTUtkdVhpYlRYVHRjUElTOGM1blBsdWFYMW5rTGM?oc=5",
-      "date": "Thu, 29 Oct 2026 12:04:30 GMT",
       "source": "Google News",
       "confidence": "medium",
       "reviewed": false
