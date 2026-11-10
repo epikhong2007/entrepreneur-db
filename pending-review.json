@@ -1,16 +1,16 @@
 {
-  "lastCheck": "2026-11-04T07:16:08.943448",
+  "lastCheck": "2026-11-10T08:01:36.298322",
   "totalDetected": 1,
   "items": [
     {
-      "personId": "p006",
-      "personName": "李彦宏",
-      "detectedEvent": "入职",
-      "eventType": "join",
-      "company": "三一集团出任集团副总裁|三一集团|李彦宏",
-      "title": "结束 20 年百度生涯，吴甜加入三一集团出任集团副总裁|三一集团|李彦宏|吴甜|百度|文心一言_新浪新闻 - 手机新浪网",
-      "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE83OWNUM19kenpGUEpoVmJHSFZsWk9OLXd1ZDBKaHYwNVZSMlBpNVlwandJM1lTVEpQTVU1bjJ1XzZjeHg3bG02R3RUSk1tWjJadTUwbEpQUXpzN3JlOU9tUEFJOA?oc=5",
-      "date": "Tue, 03 Nov 2026 05:41:00 GMT",
+      "personId": "p001",
+      "personName": "张一鸣",
+      "detectedEvent": "离职",
+      "eventType": "leave",
+      "company": "",
+      "title": "今日头条前CEO陈林首次公开离职！创业前曾和张一鸣聊过 - 驱动之家",
+      "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE55ZVFuYkZzQ2IxUXBmUXV6R2ZrUGtyYU1UR0Y5MnpRaVVrcjI4YzV3X1pwaEZzYmZBVHJJUGJoOU1RWk9yLWkyWlNwbUp2TFVKUlBVb0NoWHk?oc=5",
+      "date": "Tue, 10 Nov 2026 05:27:00 GMT",
       "source": "Google News",
       "confidence": "medium",
       "reviewed": false
