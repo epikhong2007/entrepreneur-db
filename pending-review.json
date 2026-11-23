@@ -1,5 +1,5 @@
 {
-  "lastCheck": "2026-11-22T07:47:50.499938",
+  "lastCheck": "2026-11-23T08:37:02.696881",
   "totalDetected": 1,
   "items": [
     {
@@ -7,10 +7,10 @@
       "personName": "雷军",
       "detectedEvent": "离职",
       "eventType": "leave",
-      "company": "",
-      "title": "网传雷军与罗福莉因MiMo分拆起分歧 罗福莉或离职 - www.itsdw.cn",
-      "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE41UkY5U3ZxQWRzWl9nVDNjM0lzeW9BMTd5NFM5TFpOVGdQS1hOMnNYOVN6VXFpR2diU0l1SnFrdWczMk00NGo3cXkyMGE?oc=5",
-      "date": "Thu, 19 Nov 2026 09:49:11 GMT",
+      "company": "后王腾首次公开亮相",
+      "title": "从小米离职后王腾首次公开亮相，谈“蹭雷军流量”：真心感谢小米和雷总 - 新浪财经",
+      "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1PYzdZRlB0eFZpdHpYQ19aaXJJNmVVN3ZTdi1nU3VwUjdacXNfRXFOOHAxWVhfV1BsM3RkUV8tVzNVdThGSHRiZnlZTlpmemFPRnY1Qy02cFd3Q3hNNnMta093X0hFR2JBRkhibU9oYkRFc3NwUGxzeA?oc=5",
+      "date": "Sun, 22 Nov 2026 11:07:06 GMT",
       "source": "Google News",
       "confidence": "medium",
       "reviewed": false
