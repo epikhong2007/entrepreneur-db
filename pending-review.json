@@ -1,6 +1,6 @@
 {
-  "lastCheck": "2026-11-23T08:37:02.696881",
-  "totalDetected": 1,
+  "lastCheck": "2026-11-24T10:41:47.466895",
+  "totalDetected": 5,
   "items": [
     {
       "personId": "p005",
@@ -11,6 +11,58 @@
       "title": "从小米离职后王腾首次公开亮相，谈“蹭雷军流量”：真心感谢小米和雷总 - 新浪财经",
       "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1PYzdZRlB0eFZpdHpYQ19aaXJJNmVVN3ZTdi1nU3VwUjdacXNfRXFOOHAxWVhfV1BsM3RkUV8tVzNVdThGSHRiZnlZTlpmemFPRnY1Qy02cFd3Q3hNNnMta093X0hFR2JBRkhibU9oYkRFc3NwUGxzeA?oc=5",
       "date": "Sun, 22 Nov 2026 11:07:06 GMT",
+      "source": "Google News",
+      "confidence": "medium",
+      "reviewed": false
+    },
+    {
+      "personId": "p016",
+      "personName": "李斌",
+      "detectedEvent": "入职",
+      "eventType": "join",
+      "company": "换电",
+      "title": "李斌谈理想、小米何时加入换电！非常欢迎：蔚来还得把车多卖点 - 驱动之家",
+      "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFAyTXpEd042SzZYLXRJRi1hOFp3ZGVab0dhWjVYNm44OTV6aFpmVWNXc20zZTlXSTVUWUZkWmlUYzZVVkw2LVlnTTkyTXhKVUxndXRYdjRTUGs?oc=5",
+      "date": "Tue, 24 Nov 2026 07:57:00 GMT",
+      "source": "Google News",
+      "confidence": "medium",
+      "reviewed": false
+    },
+    {
+      "personId": "p016",
+      "personName": "李斌",
+      "detectedEvent": "入职",
+      "eventType": "join",
+      "company": "蔚来换电",
+      "title": "李斌欢迎更多车企加入蔚来换电 - 汽车之家",
+      "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE96SVA0UTJJOUM3d1dNLWEwWFdQNklrVnZCNnExY1Uxc3FOR2t5MHJ1enc1NXFEMURDbnNzTUhDa2hmYUQ1R3prQmVDSEJBWFRxMUlsYlQ2SzY1TE9zRHdlRUVHX2pXeGdUazJN?oc=5",
+      "date": "Tue, 24 Nov 2026 08:29:19 GMT",
+      "source": "Google News",
+      "confidence": "medium",
+      "reviewed": false
+    },
+    {
+      "personId": "p016",
+      "personName": "李斌",
+      "detectedEvent": "入职",
+      "eventType": "join",
+      "company": "蔚来换电体系",
+      "title": "李斌喊话车企加入蔚来换电体系 - 汽车之家",
+      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFA5MXBsaGpwM3FMSDlIeFg2MnRLMFNLN09veHJsNFAtbHlVdXNuTEFaNEJ6VEdSSEgzWENIeXlabll1ZmYxZk9aREp1YTVwTXpLQ3hXN2tYbGFBRXM?oc=5",
+      "date": "Tue, 24 Nov 2026 08:44:38 GMT",
+      "source": "Google News",
+      "confidence": "medium",
+      "reviewed": false
+    },
+    {
+      "personId": "p016",
+      "personName": "李斌",
+      "detectedEvent": "入职",
+      "eventType": "join",
+      "company": "换电",
+      "title": "李斌谈理想小米何时加入换电，李斌称蔚来车多卖点他们就愿意了 - 手机新浪网",
+      "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPQllzREhFaGEzUEhsZ3A3eEpuRTNkc0t5TjNlM1lVRnRhVUJKZXZUUGdCejZCNXFaYnBMdWk3ZnZjWE1tcmFGd2FKQjIzdHdZUzRkNWFHOFpuNlJ5dWpVTDBQbXc4ZlRXdXhfQnRKbHRvMzg2dXdGZGo5amxhZFBWcA?oc=5",
+      "date": "Tue, 24 Nov 2026 03:08:58 GMT",
       "source": "Google News",
       "confidence": "medium",
       "reviewed": false
