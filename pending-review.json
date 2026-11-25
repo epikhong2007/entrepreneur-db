@@ -1,6 +1,6 @@
 {
-  "lastCheck": "2026-11-24T10:41:47.466895",
-  "totalDetected": 5,
+  "lastCheck": "2026-11-25T09:35:44.574516",
+  "totalDetected": 6,
   "items": [
     {
       "personId": "p005",
@@ -35,8 +35,8 @@
       "eventType": "join",
       "company": "蔚来换电",
       "title": "李斌欢迎更多车企加入蔚来换电 - 汽车之家",
-      "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE96SVA0UTJJOUM3d1dNLWEwWFdQNklrVnZCNnExY1Uxc3FOR2t5MHJ1enc1NXFEMURDbnNzTUhDa2hmYUQ1R3prQmVDSEJBWFRxMUlsYlQ2SzY1TE9zRHdlRUVHX2pXeGdUazJN?oc=5",
-      "date": "Tue, 24 Nov 2026 08:29:19 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5QVFdmTm9zVkFqNG8zTTlISHlrRmJTb0c5d0RwWjk1NzdIaFJncGt1alp6dmI0RTVlNnJ5TUdNWGVWRjIwclVZMVFxaFloblpXMjlrZ0M0WUthZzA?oc=5",
+      "date": "Tue, 24 Nov 2026 08:28:19 GMT",
       "source": "Google News",
       "confidence": "medium",
       "reviewed": false
@@ -48,8 +48,21 @@
       "eventType": "join",
       "company": "蔚来换电体系",
       "title": "李斌喊话车企加入蔚来换电体系 - 汽车之家",
-      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFA5MXBsaGpwM3FMSDlIeFg2MnRLMFNLN09veHJsNFAtbHlVdXNuTEFaNEJ6VEdSSEgzWENIeXlabll1ZmYxZk9aREp1YTVwTXpLQ3hXN2tYbGFBRXM?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBFc2FWTkc3TUFMaU10RUxiM3c2eHFXLXljNzJENXpSM0hJV2ZObUxkWjFLXzNDX0xWeTRaMlZSbF9IbGVxTnZCOGlkbk5WQzBQX1hRRUY5RlMwRGdrcGVGT0pwcWZESGRNeXE4?oc=5",
       "date": "Tue, 24 Nov 2026 08:44:38 GMT",
+      "source": "Google News",
+      "confidence": "medium",
+      "reviewed": false
+    },
+    {
+      "personId": "p016",
+      "personName": "李斌",
+      "detectedEvent": "入职",
+      "eventType": "join",
+      "company": "蔚来换电",
+      "title": "李斌欢迎更多车企加入蔚来换电 - 汽车之家",
+      "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE96SVA0UTJJOUM3d1dNLWEwWFdQNklrVnZCNnExY1Uxc3FOR2t5MHJ1enc1NXFEMURDbnNzTUhDa2hmYUQ1R3prQmVDSEJBWFRxMUlsYlQ2SzY1TE9zRHdlRUVHX2pXeGdUazJN?oc=5",
+      "date": "Tue, 24 Nov 2026 08:29:19 GMT",
       "source": "Google News",
       "confidence": "medium",
       "reviewed": false
