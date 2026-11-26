@@ -1,20 +1,7 @@
 {
-  "lastCheck": "2026-11-25T09:35:44.574516",
-  "totalDetected": 6,
+  "lastCheck": "2026-11-26T09:12:02.305051",
+  "totalDetected": 5,
   "items": [
-    {
-      "personId": "p005",
-      "personName": "雷军",
-      "detectedEvent": "离职",
-      "eventType": "leave",
-      "company": "后王腾首次公开亮相",
-      "title": "从小米离职后王腾首次公开亮相，谈“蹭雷军流量”：真心感谢小米和雷总 - 新浪财经",
-      "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1PYzdZRlB0eFZpdHpYQ19aaXJJNmVVN3ZTdi1nU3VwUjdacXNfRXFOOHAxWVhfV1BsM3RkUV8tVzNVdThGSHRiZnlZTlpmemFPRnY1Qy02cFd3Q3hNNnMta093X0hFR2JBRkhibU9oYkRFc3NwUGxzeA?oc=5",
-      "date": "Sun, 22 Nov 2026 11:07:06 GMT",
-      "source": "Google News",
-      "confidence": "medium",
-      "reviewed": false
-    },
     {
       "personId": "p016",
       "personName": "李斌",
